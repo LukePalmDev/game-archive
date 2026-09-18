@@ -1,0 +1,64 @@
+{
+  "photo": "foto-04.jpg",
+  "items": [
+    {
+      "title_raw": "Watch Dogs 2",
+      "platform": "Xbox One",
+      "confidence": "high",
+      "edition": "Deluxe Edition"
+    },
+    {
+      "title_raw": "Watch Dogs",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Watch Dogs 2",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Watch Dogs: Legion",
+      "platform": "Xbox One",
+      "confidence": "high",
+      "note": "custodia con dorso XBOX (Series X|S)",
+      "edition": "Resistance Edition"
+    },
+    {
+      "title_raw": "Mafia: Definitive Edition",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Mafia III",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Metro Exodus",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Grand Theft Auto V",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Grand Theft Auto: The Trilogy - The Definitive Edition",
+      "platform": "Xbox One",
+      "confidence": "high",
+      "note": "custodia con dorso XBOX (Series X|S)"
+    },
+    {
+      "title_raw": "Tom Clancy's Ghost Recon Wildlands",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Tom Clancy's The Division",
+      "platform": "Xbox One",
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "photo": "foto-12.jpg",
+  "items": [
+    {
+      "title_raw": "Hitman HD Trilogy",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Hitman: Absolution",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "TimeShift",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Medal of Honor: Airborne",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Tom Clancy's Ghost Recon Advanced Warfighter",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Tom Clancy's H.A.W.X",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Syndicate",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Just Cause",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Just Cause 2",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Dark Void",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Alan Wake",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    }
+  ]
+}

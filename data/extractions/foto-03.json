@@ -1,0 +1,66 @@
+{
+  "photo": "foto-03.jpg",
+  "items": [
+    {
+      "title_raw": "DOOM Eternal",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Gears of War: Ultimate Edition",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Halo 5: Guardians",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Halo: The Master Chief Collection",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Halo Wars 2",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "The Witcher 3: Wild Hunt",
+      "platform": "Xbox One",
+      "confidence": "high",
+      "edition": "Game of the Year Edition"
+    },
+    {
+      "title_raw": "The Outer Worlds",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Prey",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Dishonored: Definitive Edition",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Dishonored 2",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Shadow of the Tomb Raider",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Rise of the Tomb Raider",
+      "platform": "Xbox One",
+      "confidence": "high"
+    }
+  ]
+}

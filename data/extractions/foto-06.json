@@ -1,0 +1,65 @@
+{
+  "photo": "foto-06.jpg",
+  "items": [
+    {
+      "title_raw": "FIFA 15",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "FIFA 16",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "FIFA 17",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "FIFA 18",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "FIFA 19",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Forza Motorsport 5",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Forza Motorsport 6",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Forza Motorsport 7",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "MotoGP 15",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "F1 2015",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Need for Speed",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "The Crew",
+      "platform": "Xbox One",
+      "confidence": "high"
+    }
+  ]
+}

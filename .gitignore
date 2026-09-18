@@ -1,0 +1,14 @@
+# credenziali e stato locale
+.env
+.igdb-token.json
+
+# database: rigenerabile da data/extractions/ + IGDB
+data/games.db
+data/games.db-wal
+data/games.db-shm
+
+# foto originali degli scaffali: restano solo in locale
+photos/
+
+.DS_Store
+node_modules/

@@ -1,0 +1,55 @@
+{
+  "photo": "foto-13.jpg",
+  "items": [
+    {
+      "title_raw": "New Super Mario Bros. Wii",
+      "platform": "Wii",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Mario Kart Wii",
+      "platform": "Wii",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Mario & Sonic ai Giochi Olimpici Invernali",
+      "platform": "Wii",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Sonic & Sega All-Stars Racing",
+      "platform": "Wii",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Donkey Kong Country Returns",
+      "platform": "Wii",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Wii Party",
+      "platform": "Wii",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Wii Play",
+      "platform": "Wii",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Wii Fit Plus",
+      "platform": "Wii",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "PokePark Wii: La grande avventura di Pikachu",
+      "platform": "Wii",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Just Dance 2014",
+      "platform": "Wii",
+      "confidence": "high"
+    }
+  ]
+}

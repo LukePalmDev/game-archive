@@ -1,0 +1,66 @@
+{
+  "photo": "foto-05.jpg",
+  "items": [
+    {
+      "title_raw": "Wolfenstein II: The New Colossus",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "It Takes Two",
+      "platform": "Xbox One",
+      "confidence": "high",
+      "note": "custodia con dorso XBOX (Series X|S)"
+    },
+    {
+      "title_raw": "Crysis Remastered Trilogy",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "ReCore",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Murdered: Soul Suspect",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Biomutant",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Adam's Venture: Origins",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "ARK: Survival Evolved",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Minecraft",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Rugby World Cup 2015",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Pro Evolution Soccer 2015",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Quantum Break",
+      "platform": "Xbox One",
+      "confidence": "high"
+    }
+  ]
+}

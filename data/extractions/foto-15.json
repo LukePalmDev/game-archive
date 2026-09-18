@@ -1,0 +1,44 @@
+{
+  "photo": "foto-15.jpg",
+  "items": [
+    {
+      "title_raw": "Dark Souls Trilogy",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Mafia Trilogy",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "BioShock: The Collection",
+      "platform": "PS4",
+      "confidence": "high",
+      "copies": 2,
+      "note": "due custodie (CUSA-03986 e CUSA-03985)"
+    },
+    {
+      "title_raw": "WRC",
+      "platform": "PSP",
+      "confidence": "high",
+      "edition": "edizione Platinum"
+    },
+    {
+      "title_raw": "WipEout Pulse",
+      "platform": "PSP",
+      "confidence": "high",
+      "edition": "PSP Essentials"
+    },
+    {
+      "title_raw": "ModNation Racers",
+      "platform": "PSP",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "World Series of Poker",
+      "platform": "PSP",
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "photo": "foto-07.jpg",
+  "items": [
+    {
+      "title_raw": "Forza Motorsport 2",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Forza Motorsport 3",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Forza Motorsport 4",
+      "platform": "Xbox 360",
+      "confidence": "high",
+      "copies": 2
+    },
+    {
+      "title_raw": "Colin McRae: DiRT",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Dead Rising",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "The Evil Within",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Crash Bandicoot N. Sane Trilogy",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Thief",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Ryse: Son of Rome",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Just Cause 3",
+      "platform": "Xbox One",
+      "confidence": "high"
+    }
+  ]
+}

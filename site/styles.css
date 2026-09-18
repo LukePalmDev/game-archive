@@ -1,0 +1,374 @@
+/* Game Archive — palette editoriale giapponese anni 80: crema, vermiglio, nero */
+:root {
+  --paper:       #efeae0;
+  --paper-card:  #f7f4ec;
+  --ink:         #16130f;
+  --ink-soft:    #6f665a;
+  --vermilion:   #e3431f;
+  --rule:        #16130f;
+  --rule-soft:   #cfc6b4;
+  --shadow:      6px 6px 0 var(--ink);
+  --shadow-red:  6px 6px 0 var(--vermilion);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper:      #14110e;
+    --paper-card: #1d1a15;
+    --ink:        #f1ece1;
+    --ink-soft:   #9d9384;
+    --vermilion:  #f2522c;
+    --rule:       #3b352c;
+    --rule-soft:  #2b271f;
+    --shadow:     6px 6px 0 #3b352c;
+    --shadow-red: 6px 6px 0 var(--vermilion);
+  }
+}
+:root[data-theme="dark"] {
+  --paper:      #14110e;
+  --paper-card: #1d1a15;
+  --ink:        #f1ece1;
+  --ink-soft:   #9d9384;
+  --vermilion:  #f2522c;
+  --rule:       #3b352c;
+  --rule-soft:  #2b271f;
+  --shadow:     6px 6px 0 #3b352c;
+  --shadow-red: 6px 6px 0 var(--vermilion);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 15px/1.5 "Helvetica Neue", Helvetica, Inter, Arial, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--vermilion); }
+
+/* ---------- testata ---------- */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--paper);
+  border-bottom: 2px solid var(--ink);
+  padding: 20px 28px 14px;
+}
+
+.topbar-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: clamp(26px, 4vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  line-height: 0.95;
+}
+
+.topbar h1 .dot { color: var(--vermilion); }
+
+.mark {
+  position: absolute;
+  top: -14px;
+  left: -10px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--vermilion);
+  opacity: .92;
+  z-index: -1;
+}
+
+.count {
+  margin: 0 0 4px;
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.serial {
+  margin-left: auto;
+  font-size: 12px;
+  letter-spacing: .2em;
+  color: var(--ink-soft);
+  padding-bottom: 4px;
+}
+
+/* ---------- controlli ---------- */
+
+.controls { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.controls > * { min-width: 0; max-width: 100%; }
+
+.search, .select, .ghost {
+  background: var(--paper-card);
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+  border-radius: 0;
+  padding: 9px 12px;
+  font: inherit;
+  font-size: 13px;
+  letter-spacing: .02em;
+}
+.search { flex: 1 1 240px; min-width: 170px; }
+.search::placeholder { color: var(--ink-soft); }
+.select { appearance: none; padding-right: 30px; cursor: pointer;
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position: calc(100% - 15px) 16px, calc(100% - 10px) 16px;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+.search:focus, .select:focus, .ghost:focus-visible {
+  outline: 2px solid var(--vermilion);
+  outline-offset: 2px;
+}
+.ghost {
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--ink);
+  color: var(--paper);
+}
+.ghost:hover { background: var(--vermilion); }
+
+.theme-toggle {
+  width: 38px;
+  padding: 0;
+  font-size: 14px;
+  background: var(--paper-card);
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+  cursor: pointer;
+}
+.theme-toggle:hover { background: var(--vermilion); color: #fff; }
+
+/* ---------- griglia ---------- */
+
+main { padding: 28px 28px 70px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+  gap: 30px 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: none;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.card-art {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--paper-card);
+  border: 1.5px solid var(--ink);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.card:hover .card-art, .card:focus-visible .card-art {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-red);
+}
+.card-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 12px;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  background:
+    repeating-linear-gradient(45deg, transparent 0 7px, var(--rule-soft) 7px 8px);
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 30px;
+  padding: 4px 6px;
+  font-size: 11px;
+  font-weight: 800;
+  text-align: center;
+  background: var(--ink);
+  color: var(--paper);
+}
+.badge.high { background: var(--vermilion); color: #fff; }
+
+.card-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;        /* due righe: le card restano allineate */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.5em;
+}
+.card-sub {
+  font-size: 10.5px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.empty {
+  color: var(--ink-soft);
+  text-align: center;
+  padding: 70px 0;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+/* ---------- scheda ---------- */
+
+.dialog { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; padding: 24px; }
+.dialog[hidden] { display: none; }   /* [hidden] da solo perderebbe contro display:grid */
+.dialog-backdrop { position: absolute; inset: 0; background: rgba(22, 19, 15, .55); }
+
+.dialog-card {
+  position: relative;
+  width: min(780px, 100%);
+  max-height: 86vh;
+  overflow: auto;
+  background: var(--paper-card);
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow);
+  padding: 28px;
+}
+
+.dialog-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 34px;
+  height: 34px;
+  background: var(--ink);
+  color: var(--paper);
+  border: 0;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+.dialog-close:hover { background: var(--vermilion); }
+
+.dialog-body { display: flex; gap: 26px; flex-wrap: wrap; }
+
+.dialog-cover {
+  width: 210px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 1.5px solid var(--ink);
+  background: var(--paper);
+  display: block;
+}
+.dialog-cover[hidden] { display: none; }
+
+.dialog-info { flex: 1 1 320px; min-width: 250px; }
+.dialog-info h2 {
+  margin: 0 0 6px;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.dialog-meta {
+  margin: 0 0 16px;
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  padding-bottom: 14px;
+  border-bottom: 1.5px solid var(--ink);
+}
+
+.dialog-summary { margin: 0 0 18px; font-size: 14px; line-height: 1.55; }
+
+.dialog-details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 7px 18px;
+  margin: 0 0 20px;
+  font-size: 13px;
+}
+.dialog-details dt {
+  color: var(--ink-soft);
+  font-size: 10.5px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding-top: 2px;
+}
+.dialog-details dd { margin: 0; }
+
+.dialog-link {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--paper);
+  background: var(--vermilion);
+  padding: 9px 14px;
+}
+.dialog-link:hover { background: var(--ink); }
+.dialog-link[hidden] { display: none; }
+
+/* ---------- piede ---------- */
+
+.footer {
+  padding: 0 28px 34px;
+  color: var(--ink-soft);
+  font-size: 10.5px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.footer .bar { flex: 1; height: 2px; background: var(--ink); }
+
+@media (max-width: 620px) {
+  .grid { grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 22px 14px; }
+  main, .topbar, .footer { padding-left: 16px; padding-right: 16px; }
+  .serial { display: none; }
+  .count { flex-basis: 100%; }
+  /* su schermo stretto i controlli stanno in una griglia 2 colonne: niente overflow */
+  .controls { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .search { grid-column: 1 / -1; width: 100%; }
+  .select { width: 100%; }
+  .ghost { grid-column: 1; }
+  .theme-toggle { grid-column: 2; width: 100%; }
+  .dialog-card { padding: 20px; }
+  .dialog-cover { width: 150px; }
+  .dialog { padding: 14px; }
+}

@@ -1,0 +1,68 @@
+{
+  "photo": "foto-01.jpg",
+  "items": [
+    {
+      "title_raw": "Hogwarts Legacy",
+      "platform": "Xbox One",
+      "confidence": "high",
+      "note": "custodia con dorso XBOX (Series X|S)"
+    },
+    {
+      "title_raw": "Assassin's Creed Chronicles",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Assassin's Creed: The Ezio Collection",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Assassin's Creed III Remastered",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Assassin's Creed Rogue Remastered",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Assassin's Creed IV: Black Flag",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Assassin's Creed Unity",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Assassin's Creed Syndicate",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Assassin's Creed Origins",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Assassin's Creed Odyssey",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Assassin's Creed Valhalla",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Assassin's Creed Mirage",
+      "platform": "Xbox One",
+      "confidence": "high",
+      "note": "custodia con dorso XBOX (Series X|S)",
+      "edition": "Launch Edition"
+    }
+  ]
+}

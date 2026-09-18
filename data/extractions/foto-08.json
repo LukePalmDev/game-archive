@@ -1,0 +1,60 @@
+{
+  "photo": "foto-08.jpg",
+  "items": [
+    {
+      "title_raw": "Battlefield 2: Modern Combat",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Call of Duty 2",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Call of Duty 3",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Call of Duty 4: Modern Warfare",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Call of Duty: World at War",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Call of Duty: Modern Warfare 2",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Call of Duty: Black Ops",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Call of Duty: Modern Warfare 3",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Call of Duty: Black Ops II",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Halo: Reach",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Halo Wars",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    }
+  ]
+}

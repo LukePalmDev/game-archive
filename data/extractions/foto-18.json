@@ -1,0 +1,61 @@
+{
+  "photo": "foto-18.jpg",
+  "items": [
+    {
+      "title_raw": "Metal Gear Solid V: The Definitive Experience",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Borderlands: The Handsome Collection",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Bloodborne",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Nioh",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Fallout 4",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "The Last of Us Remastered",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "God of War III Remastered",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "God of War",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Horizon Zero Dawn",
+      "platform": "PS4",
+      "confidence": "high",
+      "edition": "Complete Edition"
+    },
+    {
+      "title_raw": "Horizon Forbidden West",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "God of War Ragnarok",
+      "platform": "PS4",
+      "confidence": "high"
+    }
+  ]
+}

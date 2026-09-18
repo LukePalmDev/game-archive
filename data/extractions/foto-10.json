@@ -1,0 +1,61 @@
+{
+  "photo": "foto-10.jpg",
+  "items": [
+    {
+      "title_raw": "Grand Theft Auto IV",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Grand Theft Auto V",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Final Fantasy XIII",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Ninja Gaiden II",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "La Terra di Mezzo: L'Ombra di Mordor",
+      "platform": "Xbox 360",
+      "confidence": "high",
+      "note": "Middle-earth: Shadow of Mordor, edizione italiana"
+    },
+    {
+      "title_raw": "Dante's Inferno",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Mafia II",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Rage",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Dark Souls",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Dragon Age: Origins",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Battlefield: Bad Company",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    }
+  ]
+}

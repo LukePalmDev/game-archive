@@ -1,0 +1,60 @@
+{
+  "photo": "foto-16.jpg",
+  "items": [
+    {
+      "title_raw": "Death Stranding",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Ghost of Tsushima",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Red Dead Redemption",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Marvel's Spider-Man",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Atomic Heart",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Grand Theft Auto V",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Project CARS",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Killzone Shadow Fall",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "LEGO Harry Potter Collection",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Hidden Agenda",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Gang Beasts",
+      "platform": "PS4",
+      "confidence": "high"
+    }
+  ]
+}

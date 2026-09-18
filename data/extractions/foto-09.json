@@ -1,0 +1,60 @@
+{
+  "photo": "foto-09.jpg",
+  "items": [
+    {
+      "title_raw": "Dead Space",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Dead Space 2",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Dead Space 3",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Crysis 2",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Crysis 3",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Mass Effect",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Prey",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Fallout 3",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Far Cry 2",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Gears of War",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "BioShock",
+      "platform": "Xbox 360",
+      "confidence": "high"
+    }
+  ]
+}

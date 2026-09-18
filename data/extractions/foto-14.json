@@ -1,0 +1,57 @@
+{
+  "photo": "foto-14.jpg",
+  "items": [
+    {
+      "title_raw": "Blinx: The Time Sweeper",
+      "platform": "Xbox",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Call of Duty: L'Ora degli Eroi",
+      "platform": "Xbox",
+      "confidence": "high",
+      "note": "Call of Duty: Finest Hour, edizione italiana"
+    },
+    {
+      "title_raw": "Call of Duty 2: Big Red One",
+      "platform": "Xbox",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Prince of Persia: The Sands of Time",
+      "platform": "Xbox",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Tom Clancy's Splinter Cell",
+      "platform": "Xbox",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Tom Clancy's Splinter Cell: Pandora Tomorrow",
+      "platform": "Xbox",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Star Wars Jedi Knight: Jedi Academy",
+      "platform": "Xbox",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Blood Wake",
+      "platform": "Xbox",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Need for Speed: Most Wanted",
+      "platform": "Xbox",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Battlefield 2: Modern Combat",
+      "platform": "Xbox",
+      "confidence": "high",
+      "copies": 2
+    }
+  ]
+}

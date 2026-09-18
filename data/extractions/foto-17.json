@@ -1,0 +1,57 @@
+{
+  "photo": "foto-17.jpg",
+  "items": [
+    {
+      "title_raw": "For Honor",
+      "platform": "Xbox One",
+      "confidence": "high",
+      "edition": "Deluxe Edition"
+    },
+    {
+      "title_raw": "TRON: Evolution",
+      "platform": "PSP",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Need for Speed: Most Wanted 5-1-0",
+      "platform": "PSP",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Pirati dei Caraibi: La Maledizione del Forziere Fantasma",
+      "platform": "PSP",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Assassin's Creed: Bloodlines",
+      "platform": "PSP",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "FIFA 06",
+      "platform": "PSP",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Harry Potter e il Calice di Fuoco",
+      "platform": "PSP",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "F1 Grand Prix",
+      "platform": "PSP",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Gran Turismo",
+      "platform": "PSP",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Scudetto 2007",
+      "platform": "PSP",
+      "confidence": "high",
+      "note": "World Tour Soccer / Scudetto 2007"
+    }
+  ]
+}

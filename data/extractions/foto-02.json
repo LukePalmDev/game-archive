@@ -1,0 +1,67 @@
+{
+  "photo": "foto-02.jpg",
+  "items": [
+    {
+      "title_raw": "Battlefield 1",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Battlefield 1 Revolution",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Battlefield 4",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Battlefield Hardline",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Call of Duty: Ghosts",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Call of Duty: Advanced Warfare",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Call of Duty: Black Ops III",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Call of Duty: Infinite Warfare",
+      "platform": "Xbox One",
+      "confidence": "high",
+      "edition": "Legacy Edition"
+    },
+    {
+      "title_raw": "Call of Duty: WWII",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Call of Duty: Black Ops IIII",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Call of Duty: Modern Warfare",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Call of Duty: Black Ops Cold War",
+      "platform": "Xbox One",
+      "confidence": "high",
+      "note": "custodia con dorso XBOX (Series X|S)"
+    }
+  ]
+}
