@@ -1,5 +1,7 @@
 # Game Archive
 
+**Sito online: <https://lukepalmdev.github.io/game-archive/>**
+
 Archivio personale della collezione di videogiochi: i titoli vengono letti dalle foto degli scaffali,
 arricchiti con metadati e copertine ufficiali da [IGDB](https://www.igdb.com) e consultati in un sito statico.
 
@@ -64,6 +66,16 @@ fisiche identiche (una riga sola). Un gioco è unico per titolo + piattaforma + 
 
 `platform` accetta le abbreviazioni comuni (`PS2`, `X360`, `Switch`, `GBA`…): vengono tradotte nei nomi
 IGDB da `scripts/lib/platforms.js`. L'import è idempotente: rilanciarlo non crea doppioni.
+
+## Pubblicazione
+
+Ogni push su `main` aggiorna il sito: il workflow `.github/workflows/pages.yml` pubblica la cartella
+`site/` su GitHub Pages. Dopo aver modificato l'archivio basta:
+
+```bash
+node scripts/export-site.js
+git add -A && git commit -m "aggiorna archivio" && git push
+```
 
 ## Interfaccia
 
