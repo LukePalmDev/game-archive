@@ -44,6 +44,32 @@ CREATE TABLE IF NOT EXISTS photos (
   notes       TEXT
 );
 
+CREATE TABLE IF NOT EXISTS recommendations (
+  id            INTEGER PRIMARY KEY,
+  title         TEXT NOT NULL,
+  platform      TEXT NOT NULL DEFAULT '',
+  kind          TEXT NOT NULL DEFAULT 'genere',   -- saga | edizione | genere
+  because       TEXT NOT NULL DEFAULT '',
+  source        TEXT NOT NULL DEFAULT '',          -- i tuoi giochi da cui nasce il consiglio
+  priority      INTEGER NOT NULL DEFAULT 2,
+  igdb_id       INTEGER,
+  igdb_slug     TEXT,
+  release_year  INTEGER,
+  genres        TEXT,
+  developer     TEXT,
+  publisher     TEXT,
+  summary       TEXT,
+  rating        REAL,
+  cover_url     TEXT,
+  cover_path    TEXT,
+  match_status  TEXT NOT NULL DEFAULT 'pending',
+  created_at    TEXT NOT NULL DEFAULT (datetime('now')),
+  updated_at    TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE UNIQUE INDEX IF NOT EXISTS recommendations_title_platform
+  ON recommendations (lower(title), lower(platform));
+
 CREATE TABLE IF NOT EXISTS match_candidates (
   id        INTEGER PRIMARY KEY,
   game_id   INTEGER NOT NULL REFERENCES games(id) ON DELETE CASCADE,

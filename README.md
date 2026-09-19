@@ -14,6 +14,7 @@ arricchiti con metadati e copertine ufficiali da [IGDB](https://www.igdb.com) e 
 | Titoli estratti | `data/extractions/*.json` | un file per foto, generato leggendo l'immagine |
 | Script | `scripts/` | import, arricchimento IGDB, export |
 | Sito | `site/` | HTML/CSS/JS vanilla, apribile anche con doppio clic (`file://`) |
+| Consigli | `data/recommendations.json` | titoli suggeriti, con motivo e giochi di riferimento |
 | Copertine | `site/covers/` | scaricate in locale, il sito funziona offline |
 
 ## Prima configurazione (una volta sola)
@@ -66,6 +67,29 @@ fisiche identiche (una riga sola). Un gioco è unico per titolo + piattaforma + 
 
 `platform` accetta le abbreviazioni comuni (`PS2`, `X360`, `Switch`, `GBA`…): vengono tradotte nei nomi
 IGDB da `scripts/lib/platforms.js`. L'import è idempotente: rilanciarlo non crea doppioni.
+
+## Giochi consigliati
+
+Il tasto **?** in alto a sinistra apre `consigliati.html`: stessa impaginazione dell'archivio, ma
+popolata da un catalogo di titoli da comprare, costruito analizzando la collezione. Tre criteri:
+
+| Etichetta | Criterio |
+|---|---|
+| `SAGA` | capitoli mancanti di serie che possiedi (hai 1 e 2 → ti propone il 3) |
+| `EDIZIONE` | remaster, collection ed edizioni definitive di giochi che hai già |
+| `AFFINE` | titoli vicini per genere, studio o struttura a quelli che collezioni |
+
+I consigli si scrivono a mano in `data/recommendations.json` (titolo, piattaforma, motivo e giochi
+di riferimento) e poi si arricchiscono con IGDB come l'archivio:
+
+```bash
+node scripts/import-recommendations.js
+node scripts/enrich-recommendations.js
+node scripts/export-site.js
+```
+
+`enrich-recommendations.js` segnala anche i consigli che risultano già presenti in collezione,
+confrontando gli id IGDB.
 
 ## Pubblicazione
 

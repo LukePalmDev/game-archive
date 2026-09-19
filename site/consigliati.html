@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Game Archive</title>
+<title>Consigliati · Game Archive</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="topbar">
   <div class="topbar-row">
-    <a class="nav-btn" href="consigliati.html" title="Giochi consigliati per te" aria-label="Giochi consigliati per te">?</a>
+    <a class="nav-btn" href="index.html" title="Torna al tuo archivio" aria-label="Torna al tuo archivio">←</a>
     <span class="mark" aria-hidden="true"></span>
-    <h1>Game Archive<span class="dot">.</span></h1>
+    <h1>Consigliati<span class="dot">.</span></h1>
     <p class="count" id="count">—</p>
     <p class="serial" id="serial">A—01</p>
   </div>
@@ -21,6 +21,7 @@
     <select id="genre" class="select" aria-label="Genere"><option value="">Tutti i generi</option></select>
     <select id="decade" class="select" aria-label="Decennio"><option value="">Tutti gli anni</option></select>
     <select id="sort" class="select" aria-label="Ordinamento">
+      <option value="priority">Rilevanza</option>
       <option value="title">Titolo A→Z</option>
       <option value="title-desc">Titolo Z→A</option>
       <option value="year-desc">Più recenti</option>
@@ -61,7 +62,7 @@
   <span>Dati e copertine: <a href="https://www.igdb.com" target="_blank" rel="noopener">IGDB</a></span>
 </footer>
 
-<script src="data/games.js"></script>
+<script src="data/recommendations.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

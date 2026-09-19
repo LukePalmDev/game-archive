@@ -1,0 +1,596 @@
+{
+  "items": [
+    {
+      "title": "Mass Effect Legendary Edition",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Hai il primo Mass Effect su 360 ma non il seguito: la Legendary Edition rimasterizza tutti e tre i capitoli con i DLC, chiudendo la trilogia in un colpo solo.",
+      "source": "Mass Effect",
+      "priority": 1
+    },
+    {
+      "title": "Gears of War 4",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Hai Gears of War e la Ultimate Edition: il 4 riprende la storia una generazione dopo la trilogia originale.",
+      "source": "Gears of War, Gears of War: Ultimate Edition",
+      "priority": 1
+    },
+    {
+      "title": "Gears 5",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Seguito diretto di Gears of War 4, con la campagna più ambiziosa della serie.",
+      "source": "Gears of War: Ultimate Edition",
+      "priority": 2
+    },
+    {
+      "title": "Halo Infinite",
+      "platform": "Xbox Series X|S",
+      "kind": "saga",
+      "because": "Hai Master Chief Collection, Halo 5 e i due Halo Wars: Infinite è l'unico capitolo principale che ti manca.",
+      "source": "Halo: The Master Chief Collection, Halo 5: Guardians",
+      "priority": 1
+    },
+    {
+      "title": "Doom",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Hai Doom Eternal ma non il reboot del 2016 che lo precede.",
+      "source": "Doom Eternal",
+      "priority": 1
+    },
+    {
+      "title": "Dishonored: Death of the Outsider",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Hai Dishonored Definitive Edition e Dishonored 2: questo è l'episodio conclusivo, giocabile da solo.",
+      "source": "Dishonored: Definitive Edition, Dishonored 2",
+      "priority": 1
+    },
+    {
+      "title": "Tomb Raider: Definitive Edition",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Hai Rise e Shadow: manca il primo capitolo del reboot, qui in versione rimasterizzata.",
+      "source": "Rise of the Tomb Raider, Shadow of the Tomb Raider",
+      "priority": 1
+    },
+    {
+      "title": "Wolfenstein: The New Order",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "The New Colossus è il seguito diretto di questo: senza il primo ti perdi metà della storia.",
+      "source": "Wolfenstein II: The New Colossus",
+      "priority": 1
+    },
+    {
+      "title": "Wolfenstein: Youngblood",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Spin-off cooperativo ambientato dopo The New Colossus.",
+      "source": "Wolfenstein II: The New Colossus",
+      "priority": 3
+    },
+    {
+      "title": "The Evil Within 2",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Seguito del primo capitolo che hai già, con struttura più aperta.",
+      "source": "The Evil Within",
+      "priority": 2
+    },
+    {
+      "title": "Just Cause 4",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Hai i primi tre Just Cause tra 360 e Xbox One: il quarto completa la serie.",
+      "source": "Just Cause, Just Cause 2, Just Cause 3",
+      "priority": 2
+    },
+    {
+      "title": "Far Cry 3",
+      "platform": "Xbox 360",
+      "kind": "saga",
+      "because": "Dopo Far Cry 2 il terzo è il salto di qualità della serie, e su 360 costa pochissimo.",
+      "source": "Far Cry 2",
+      "priority": 2
+    },
+    {
+      "title": "Far Cry 5",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Il capitolo moderno della serie, se vuoi proseguire su Xbox One.",
+      "source": "Far Cry 2",
+      "priority": 3
+    },
+    {
+      "title": "Tom Clancy's The Division 2",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Seguito diretto del primo Division che hai già.",
+      "source": "Tom Clancy's The Division",
+      "priority": 2
+    },
+    {
+      "title": "Tom Clancy's Ghost Recon Breakpoint",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Prosegue Wildlands con la stessa formula open world.",
+      "source": "Tom Clancy's Ghost Recon: Wildlands",
+      "priority": 3
+    },
+    {
+      "title": "Middle-earth: Shadow of War",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Seguito di Shadow of Mordor, con il sistema Nemesis ampliato.",
+      "source": "Middle-earth: Shadow of Mordor",
+      "priority": 1
+    },
+    {
+      "title": "Dead Rising 4",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Hai il primo Dead Rising su 360: il quarto riporta Frank West su Xbox One.",
+      "source": "Dead Rising",
+      "priority": 3
+    },
+    {
+      "title": "Rage 2",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Seguito di Rage, molto più veloce e colorato del primo.",
+      "source": "Rage",
+      "priority": 3
+    },
+    {
+      "title": "Dragon Age II",
+      "platform": "Xbox 360",
+      "kind": "saga",
+      "because": "Seguito diretto di Origins, che hai già su 360.",
+      "source": "Dragon Age: Origins",
+      "priority": 2
+    },
+    {
+      "title": "Dragon Age: Inquisition",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Terzo capitolo della saga BioWare, il più vasto dei tre.",
+      "source": "Dragon Age: Origins",
+      "priority": 2
+    },
+    {
+      "title": "The Witcher 2: Assassins of Kings",
+      "platform": "Xbox 360",
+      "kind": "saga",
+      "because": "Hai The Witcher 3: il secondo capitolo è esclusiva Xbox 360 tra le console e prepara la storia di Geralt.",
+      "source": "The Witcher 3: Wild Hunt",
+      "priority": 2
+    },
+    {
+      "title": "Final Fantasy XIII-2",
+      "platform": "Xbox 360",
+      "kind": "saga",
+      "because": "Seguito diretto di Final Fantasy XIII, che hai già su 360.",
+      "source": "Final Fantasy XIII",
+      "priority": 2
+    },
+    {
+      "title": "Lightning Returns: Final Fantasy XIII",
+      "platform": "Xbox 360",
+      "kind": "saga",
+      "because": "Capitolo conclusivo della trilogia di Lightning.",
+      "source": "Final Fantasy XIII",
+      "priority": 3
+    },
+    {
+      "title": "Tom Clancy's Splinter Cell: Chaos Theory",
+      "platform": "Xbox",
+      "kind": "saga",
+      "because": "Hai i primi due Splinter Cell su Xbox: Chaos Theory è considerato il migliore della serie.",
+      "source": "Tom Clancy's Splinter Cell, Tom Clancy's Splinter Cell: Pandora Tomorrow",
+      "priority": 1
+    },
+    {
+      "title": "Tom Clancy's Splinter Cell: Blacklist",
+      "platform": "Xbox 360",
+      "kind": "saga",
+      "because": "Il capitolo moderno della serie, se vuoi continuare Sam Fisher su 360.",
+      "source": "Tom Clancy's Splinter Cell",
+      "priority": 3
+    },
+    {
+      "title": "Prince of Persia: Warrior Within",
+      "platform": "Xbox",
+      "kind": "saga",
+      "because": "Seguito diretto de Le Sabbie del Tempo che hai su Xbox.",
+      "source": "Prince of Persia: The Sands of Time",
+      "priority": 2
+    },
+    {
+      "title": "Tekken 7",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Hai Tekken 6 su 360: il 7 è il capitolo current-gen della serie.",
+      "source": "Tekken 6",
+      "priority": 3
+    },
+    {
+      "title": "The Crew 2",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Seguito di The Crew, con auto, barche e aerei.",
+      "source": "The Crew",
+      "priority": 3
+    },
+    {
+      "title": "Battlefield V",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Dopo Battlefield 1 il capitolo sulla Seconda guerra mondiale completa il dittico storico di DICE.",
+      "source": "Battlefield 1, Battlefield 4",
+      "priority": 2
+    },
+    {
+      "title": "Battlefield: Bad Company 2",
+      "platform": "Xbox 360",
+      "kind": "saga",
+      "because": "Seguito di Bad Company, con la campagna più amata del filone.",
+      "source": "Battlefield: Bad Company",
+      "priority": 2
+    },
+    {
+      "title": "Crash Bandicoot 4: It's About Time",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Dopo la N. Sane Trilogy è il seguito ufficiale dei tre capitoli originali.",
+      "source": "Crash Bandicoot N. Sane Trilogy",
+      "priority": 2
+    },
+    {
+      "title": "Red Dead Redemption 2",
+      "platform": "PlayStation 4",
+      "kind": "saga",
+      "because": "Hai il primo Red Dead su PS4: il secondo è il prequel, e il punto più alto di Rockstar.",
+      "source": "Red Dead Redemption",
+      "priority": 1
+    },
+    {
+      "title": "The Last of Us Part II",
+      "platform": "PlayStation 4",
+      "kind": "saga",
+      "because": "Seguito diretto del primo, che hai in versione Remastered.",
+      "source": "The Last of Us Remastered",
+      "priority": 1
+    },
+    {
+      "title": "Marvel's Spider-Man: Miles Morales",
+      "platform": "PlayStation 4",
+      "kind": "saga",
+      "because": "Espansione standalone del tuo Marvel's Spider-Man.",
+      "source": "Marvel's Spider-Man",
+      "priority": 2
+    },
+    {
+      "title": "Nioh 2",
+      "platform": "PlayStation 4",
+      "kind": "saga",
+      "because": "Seguito di Nioh, più ricco nella personalizzazione.",
+      "source": "Nioh",
+      "priority": 2
+    },
+    {
+      "title": "Borderlands 3",
+      "platform": "PlayStation 4",
+      "kind": "saga",
+      "because": "Hai la Handsome Collection con Borderlands 2 e Pre-Sequel: il 3 continua da lì.",
+      "source": "Borderlands: The Handsome Collection",
+      "priority": 3
+    },
+    {
+      "title": "Forza Horizon 4",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Hai tutti i Forza Motorsport dal 2 al 7 ma nessun Horizon: è la costola open world della serie.",
+      "source": "Forza Motorsport 5, Forza Motorsport 6, Forza Motorsport 7",
+      "priority": 1
+    },
+    {
+      "title": "Forza Horizon 5",
+      "platform": "Xbox Series X|S",
+      "kind": "saga",
+      "because": "Il capitolo più recente della serie Horizon, ambientato in Messico.",
+      "source": "Forza Motorsport 7",
+      "priority": 2
+    },
+    {
+      "title": "Fallout: New Vegas",
+      "platform": "Xbox 360",
+      "kind": "saga",
+      "because": "Hai Fallout 3 su 360 e Fallout 4 su PS4: New Vegas è il capitolo in mezzo, con la scrittura migliore della serie.",
+      "source": "Fallout 3, Fallout 4",
+      "priority": 1
+    },
+    {
+      "title": "BioShock Infinite",
+      "platform": "Xbox 360",
+      "kind": "saga",
+      "because": "Hai il primo BioShock su 360: Infinite chiude il cerchio della serie.",
+      "source": "BioShock",
+      "priority": 2
+    },
+    {
+      "title": "Fable II",
+      "platform": "Xbox 360",
+      "kind": "saga",
+      "because": "Hai Fable Anniversary, cioè il remake del primo: il secondo è esclusiva 360.",
+      "source": "Fable Anniversary",
+      "priority": 2
+    },
+    {
+      "title": "Alan Wake Remastered",
+      "platform": "Xbox One",
+      "kind": "edizione",
+      "because": "Hai l'originale su 360: la remaster gira in 4K e include i due DLC.",
+      "source": "Alan Wake",
+      "priority": 1
+    },
+    {
+      "title": "Metro Redux",
+      "platform": "Xbox One",
+      "kind": "edizione",
+      "because": "Raccoglie Metro 2033 e Last Light rifatti: sono i due capitoli che precedono il tuo Exodus.",
+      "source": "Metro Exodus",
+      "priority": 1
+    },
+    {
+      "title": "Mafia II: Definitive Edition",
+      "platform": "Xbox One",
+      "kind": "edizione",
+      "because": "Hai Mafia II su 360 e le Definitive di Mafia I e III: questa completa la trilogia rimasterizzata.",
+      "source": "Mafia II, Mafia: Definitive Edition, Mafia III",
+      "priority": 1
+    },
+    {
+      "title": "Dead Space",
+      "platform": "Xbox Series X|S",
+      "kind": "edizione",
+      "because": "Il remake del 2023 del primo Dead Space, di cui hai l'intera trilogia su 360.",
+      "source": "Dead Space, Dead Space 2, Dead Space 3",
+      "priority": 1
+    },
+    {
+      "title": "Ninja Gaiden: Master Collection",
+      "platform": "Xbox One",
+      "kind": "edizione",
+      "because": "Raccoglie Sigma 1, 2 e 3 Razor's Edge: hai solo Ninja Gaiden II su 360.",
+      "source": "Ninja Gaiden II",
+      "priority": 3
+    },
+    {
+      "title": "Halo Wars: Definitive Edition",
+      "platform": "Xbox One",
+      "kind": "edizione",
+      "because": "La versione rifatta del primo Halo Wars, di cui hai l'originale 360 e il seguito su Xbox One.",
+      "source": "Halo Wars, Halo Wars 2",
+      "priority": 2
+    },
+    {
+      "title": "Metal Gear Solid: Master Collection Vol. 1",
+      "platform": "PlayStation 4",
+      "kind": "edizione",
+      "because": "Hai MGS V Definitive Experience: questa raccolta copre MGS 1, 2 e 3, cioè tutto quello che viene prima.",
+      "source": "Metal Gear Solid V: The Definitive Experience",
+      "priority": 2
+    },
+    {
+      "title": "Street Fighter V: Champion Edition",
+      "platform": "PlayStation 4",
+      "kind": "edizione",
+      "because": "Hai Street Fighter IV su 360: la Champion Edition include tutti i personaggi e le fasi del quinto.",
+      "source": "Street Fighter IV",
+      "priority": 3
+    },
+    {
+      "title": "Uncharted: The Nathan Drake Collection",
+      "platform": "PlayStation 4",
+      "kind": "edizione",
+      "because": "I primi tre Uncharted rimasterizzati: l'equivalente PlayStation dei tuoi Tomb Raider.",
+      "source": "Rise of the Tomb Raider, Shadow of the Tomb Raider",
+      "priority": 2
+    },
+    {
+      "title": "Elden Ring",
+      "platform": "Xbox One",
+      "kind": "genere",
+      "because": "Hai Dark Souls su 360, la Trilogy su PS4 e Bloodborne: è il FromSoftware più grande, in versione open world.",
+      "source": "Dark Souls, Dark Souls Trilogy, Bloodborne",
+      "priority": 1
+    },
+    {
+      "title": "Sekiro: Shadows Die Twice",
+      "platform": "Xbox One",
+      "kind": "genere",
+      "because": "FromSoftware in chiave action giapponese: perfetto se ti sono piaciuti Souls e Nioh.",
+      "source": "Dark Souls Trilogy, Nioh",
+      "priority": 2
+    },
+    {
+      "title": "Cyberpunk 2077",
+      "platform": "Xbox One",
+      "kind": "genere",
+      "because": "Stesso studio di The Witcher 3, stessa densità di scrittura e missioni secondarie.",
+      "source": "The Witcher 3: Wild Hunt",
+      "priority": 1
+    },
+    {
+      "title": "The Elder Scrolls V: Skyrim Special Edition",
+      "platform": "Xbox One",
+      "kind": "genere",
+      "because": "Il grande assente della tua collezione RPG, tra Fallout, Dragon Age e Witcher.",
+      "source": "Fallout 3, Dragon Age: Origins, The Witcher 3: Wild Hunt",
+      "priority": 1
+    },
+    {
+      "title": "Control",
+      "platform": "Xbox One",
+      "kind": "genere",
+      "because": "Stesso studio di Alan Wake e Quantum Break, con lo stesso gusto per il soprannaturale.",
+      "source": "Quantum Break, Alan Wake",
+      "priority": 1
+    },
+    {
+      "title": "Batman: Arkham Knight",
+      "platform": "Xbox One",
+      "kind": "genere",
+      "because": "Action-adventure open world nello stile di Shadow of Mordor e degli Assassin's Creed che colleziona.",
+      "source": "Middle-earth: Shadow of Mordor",
+      "priority": 2
+    },
+    {
+      "title": "Star Wars Jedi: Fallen Order",
+      "platform": "Xbox One",
+      "kind": "genere",
+      "because": "Hai Jedi Academy su Xbox: questo è l'erede moderno, con combattimento alla Souls.",
+      "source": "Star Wars: Jedi Knight - Jedi Academy",
+      "priority": 1
+    },
+    {
+      "title": "Resident Evil 2",
+      "platform": "Xbox One",
+      "kind": "genere",
+      "because": "Il remake del 2019: horror in terza persona come The Evil Within, di cui condivide il creatore della serie.",
+      "source": "The Evil Within",
+      "priority": 2
+    },
+    {
+      "title": "Deus Ex: Human Revolution",
+      "platform": "Xbox 360",
+      "kind": "genere",
+      "because": "Immersive sim nella stessa famiglia di Dishonored e Prey, che hai entrambi.",
+      "source": "Dishonored: Definitive Edition, Prey",
+      "priority": 2
+    },
+    {
+      "title": "Titanfall 2",
+      "platform": "Xbox One",
+      "kind": "genere",
+      "because": "La campagna sparatutto più inventiva della generazione, se ti piacciono Call of Duty e Battlefield.",
+      "source": "Call of Duty: Modern Warfare, Battlefield 1",
+      "priority": 1
+    },
+    {
+      "title": "A Way Out",
+      "platform": "Xbox One",
+      "kind": "genere",
+      "because": "Stesso autore di It Takes Two: cooperativa a schermo diviso obbligatoria in due.",
+      "source": "It Takes Two",
+      "priority": 2
+    },
+    {
+      "title": "Ori and the Will of the Wisps",
+      "platform": "Xbox One",
+      "kind": "genere",
+      "because": "Platform d'autore, il contraltare leggero alla tua collezione di sparatutto.",
+      "source": "Crash Bandicoot N. Sane Trilogy",
+      "priority": 3
+    },
+    {
+      "title": "Days Gone",
+      "platform": "PlayStation 4",
+      "kind": "genere",
+      "because": "Open world post-apocalittico: il naturale seguito ideale a The Last of Us e Horizon.",
+      "source": "The Last of Us Remastered, Horizon Zero Dawn",
+      "priority": 2
+    },
+    {
+      "title": "Until Dawn",
+      "platform": "PlayStation 4",
+      "kind": "genere",
+      "because": "Stesso studio di Hidden Agenda, horror interattivo a scelte multiple.",
+      "source": "Hidden Agenda",
+      "priority": 2
+    },
+    {
+      "title": "Detroit: Become Human",
+      "platform": "PlayStation 4",
+      "kind": "genere",
+      "because": "Narrativo a bivi come Hidden Agenda, ma molto più ampio.",
+      "source": "Hidden Agenda",
+      "priority": 3
+    },
+    {
+      "title": "Star Wars: Knights of the Old Republic",
+      "platform": "Xbox",
+      "kind": "genere",
+      "because": "RPG BioWare su Xbox originale: si sposa con Jedi Academy e con i tuoi Dragon Age.",
+      "source": "Star Wars: Jedi Knight - Jedi Academy, Dragon Age: Origins",
+      "priority": 2
+    },
+    {
+      "title": "Super Mario Galaxy",
+      "platform": "Wii",
+      "kind": "genere",
+      "because": "Il platform simbolo della Wii: con New Super Mario Bros. e Mario Kart ti manca solo questo.",
+      "source": "New Super Mario Bros. Wii, Mario Kart Wii",
+      "priority": 1
+    },
+    {
+      "title": "The Legend of Zelda: Twilight Princess",
+      "platform": "Wii",
+      "kind": "genere",
+      "because": "L'avventura Nintendo per eccellenza su Wii, assente dalla tua libreria.",
+      "source": "New Super Mario Bros. Wii",
+      "priority": 1
+    },
+    {
+      "title": "Super Smash Bros. Brawl",
+      "platform": "Wii",
+      "kind": "genere",
+      "because": "Picchiaduro per serate in compagnia, in linea con Wii Party e Mario Kart.",
+      "source": "Wii Party, Mario Kart Wii",
+      "priority": 2
+    },
+    {
+      "title": "Wii Sports Resort",
+      "platform": "Wii",
+      "kind": "genere",
+      "because": "Completa il trittico Wii Play / Wii Fit Plus con il MotionPlus.",
+      "source": "Wii Play, Wii Fit Plus",
+      "priority": 3
+    },
+    {
+      "title": "God of War: Chains of Olympus",
+      "platform": "PlayStation Portable",
+      "kind": "genere",
+      "because": "God of War portatile: hai tutta la serie moderna su PS4 ma niente su PSP.",
+      "source": "God of War, God of War III: Remastered",
+      "priority": 2
+    },
+    {
+      "title": "Grand Theft Auto: Liberty City Stories",
+      "platform": "PlayStation Portable",
+      "kind": "saga",
+      "because": "Hai GTA IV, V e la Trilogy: i capitoli PSP sono gli unici che ti mancano.",
+      "source": "Grand Theft Auto V, Grand Theft Auto: The Trilogy - The Definitive Edition",
+      "priority": 2
+    },
+    {
+      "title": "Metal Gear Solid: Peace Walker",
+      "platform": "PlayStation Portable",
+      "kind": "saga",
+      "because": "Precede direttamente MGS V, che hai su PS4: stesso Kojima, stessa base madre.",
+      "source": "Metal Gear Solid V: The Definitive Experience",
+      "priority": 2
+    },
+    {
+      "title": "WipEout Pure",
+      "platform": "PlayStation Portable",
+      "kind": "saga",
+      "because": "Il capitolo PSP che precede il tuo WipEout Pulse.",
+      "source": "Wipeout Pulse",
+      "priority": 3
+    }
+  ]
+}

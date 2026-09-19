@@ -1,6 +1,6 @@
 // Generato da scripts/export-site.js — non modificare a mano.
 window.GAMES_META = {
-  "generated": "2026-09-18T21:50:37.031Z",
+  "generated": "2026-09-19T11:46:46.125Z",
   "total": 195,
   "cases": 198,
   "matched": 195,

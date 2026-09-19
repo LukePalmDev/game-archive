@@ -9,6 +9,9 @@
     reset: $('reset'), theme: $('theme'), dialog: $('dialog'), generated: $('generated'),
   };
 
+  const isRecs = META.page === 'consigliati';
+  const defaultSort = isRecs ? 'priority' : 'title';
+
   const norm = (s) => String(s ?? '').toLowerCase()
     .normalize('NFD').replace(/[̀-ͯ]/g, '')
     .replace(/[^a-z0-9]+/g, ' ').trim();
@@ -26,12 +29,28 @@
   fillSelect(els.decade, [...new Set(GAMES.map((g) => g.year).filter(Boolean).map((y) => `${Math.floor(y / 10) * 10}s`))]
     .sort((a, b) => parseInt(b) - parseInt(a)));
 
+  // la pagina dei consigli porta con sé un filtro in più: il motivo del suggerimento
+  let kindSelect = null;
+  if (META.kinds?.length) {
+    kindSelect = document.createElement('select');
+    kindSelect.className = 'select';
+    kindSelect.setAttribute('aria-label', 'Motivo del consiglio');
+    kindSelect.innerHTML = '<option value="">Tutti i motivi</option>';
+    for (const k of META.kinds) {
+      const opt = document.createElement('option');
+      opt.value = k.value; opt.textContent = k.label;
+      kindSelect.append(opt);
+    }
+    els.platform.before(kindSelect);
+  }
+
   const SORTS = {
     'title': (a, b) => a.title.localeCompare(b.title, 'it'),
     'title-desc': (a, b) => b.title.localeCompare(a.title, 'it'),
     'year-desc': (a, b) => (b.year ?? -1) - (a.year ?? -1) || a.title.localeCompare(b.title, 'it'),
     'year': (a, b) => (a.year ?? 9999) - (b.year ?? 9999) || a.title.localeCompare(b.title, 'it'),
     'rating': (a, b) => (b.rating ?? -1) - (a.rating ?? -1) || a.title.localeCompare(b.title, 'it'),
+    'priority': (a, b) => (a.priority ?? 9) - (b.priority ?? 9) || a.title.localeCompare(b.title, 'it'),
   };
 
   function filtered() {
@@ -45,6 +64,7 @@
       if (platform && g.platform !== platform) return false;
       if (genre && !(g.genres ?? []).includes(genre)) return false;
       if (decade != null && (g.year == null || Math.floor(g.year / 10) * 10 !== decade)) return false;
+      if (kindSelect?.value && g.kind !== kindSelect.value) return false;
       return true;
     }).sort(SORTS[els.sort.value] ?? SORTS.title);
   }
@@ -88,6 +108,13 @@
     title.textContent = game.title;
     title.title = game.title;
 
+    if (game.kind) {
+      const kind = document.createElement('span');
+      kind.className = `kind kind-${game.kind}`;
+      kind.textContent = { saga: 'saga', edizione: 'edizione', genere: 'affine' }[game.kind] ?? game.kind;
+      art.append(kind);
+    }
+
     const sub = document.createElement('div');
     sub.className = 'card-sub';
     sub.textContent = [game.platform, game.year, game.copies ? `×${game.copies}` : null]
@@ -101,10 +128,11 @@
     const list = filtered();
     els.grid.replaceChildren(...list.map(card));
     els.empty.hidden = list.length > 0;
+    const noun = isRecs ? 'consigli' : 'titoli';
     const cases = META.cases && META.cases !== GAMES.length ? ` · ${META.cases} custodie` : '';
     els.count.textContent = list.length === GAMES.length
-      ? `${GAMES.length} titoli${cases}`
-      : `${list.length} di ${GAMES.length} titoli`;
+      ? `${GAMES.length} ${noun}${cases}`
+      : `${list.length} di ${GAMES.length} ${noun}`;
   }
 
   // ---- scheda di dettaglio ----
@@ -128,7 +156,14 @@
     summary.textContent = game.summary ?? '';
     summary.hidden = !game.summary;
 
+    const why = $('d-why');
+    if (why) {
+      why.textContent = game.because ?? '';
+      why.hidden = !game.because;
+    }
+
     const rows = [
+      ['Nasce da', game.source],
       ['Edizione', game.edition],
       ['Generi', (game.genres ?? []).join(', ')],
       ['Sviluppatore', game.developer],
@@ -170,13 +205,13 @@
     if (e.key === 'Escape' && !els.dialog.hidden) closeDialog();
     if (e.key === '/' && document.activeElement !== els.search) { e.preventDefault(); els.search.focus(); }
   });
-  for (const el of [els.search, els.platform, els.genre, els.decade, els.sort]) {
-    el.addEventListener('input', render);
+  for (const el of [els.search, els.platform, els.genre, els.decade, els.sort, kindSelect]) {
+    el?.addEventListener('input', render);
   }
   els.reset.addEventListener('click', () => {
     els.search.value = '';
-    for (const el of [els.platform, els.genre, els.decade]) el.value = '';
-    els.sort.value = 'title';
+    for (const el of [els.platform, els.genre, els.decade, kindSelect]) { if (el) el.value = ''; }
+    els.sort.value = defaultSort;
     render();
   });
 
@@ -197,6 +232,8 @@
   });
 
   // ---- avvio ----
+  els.sort.value = defaultSort;
+
   const years = GAMES.map((g) => g.year).filter(Boolean);
   if (years.length) els.serial.textContent = `${Math.min(...years)}—${Math.max(...years)}`;
   if (META.generated) {
