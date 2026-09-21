@@ -12,7 +12,7 @@ import { openDb, ROOT } from './lib/db.js';
 
 const DIR = join(ROOT, 'data', 'extractions');
 const args = process.argv.slice(2);
-const files = (args.length ? args.map(basename) : readdirSync(DIR)).filter((f) => f.endsWith('.json'));
+const files = (args.length ? args.map((f) => basename(f)) : readdirSync(DIR)).filter((f) => f.endsWith('.json'));
 
 if (!files.length) {
   console.log(`Nessun file in ${DIR}. Aggiungi le foto in photos/ e chiedimi di estrarre i titoli.`);

@@ -28,7 +28,7 @@ const query = await createClient();
 
 const update = db.prepare(`
   UPDATE recommendations SET
-    title = ?, igdb_id = ?, igdb_slug = ?, release_year = ?, genres = ?, developer = ?, publisher = ?,
+    igdb_id = ?, igdb_slug = ?, release_year = ?, genres = ?, developer = ?, publisher = ?,
     summary = ?, rating = ?, cover_url = ?, cover_path = ?, match_status = ?, updated_at = datetime('now')
   WHERE id = ?
 `);
@@ -58,7 +58,7 @@ for (const rec of recs) {
 
   const alreadyOwned = owned.has(c.id);
   const status = alreadyOwned ? 'owned' : (best.score >= 0.8 ? 'matched' : 'weak');
-  update.run(r.name, c.id, r.slug, r.year, r.genres, r.developer, r.publisher, r.summary, r.rating,
+  update.run(c.id, r.slug, r.year, r.genres, r.developer, r.publisher, r.summary, r.rating,
     url, coverPath, status, rec.id);
 
   if (alreadyOwned) counts.owned++;

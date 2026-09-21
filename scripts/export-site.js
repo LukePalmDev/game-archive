@@ -47,7 +47,7 @@ const recRows = db.prepare(`
   SELECT id, title, platform, kind, because, source, priority, igdb_slug, release_year,
          genres, developer, publisher, summary, rating, cover_path, match_status
   FROM recommendations
-  WHERE match_status IN ('matched', 'weak', 'owned')
+  WHERE match_status IN ('matched', 'weak')   -- gli 'owned' sono già in collezione: fuori dai consigli
   ORDER BY priority, title COLLATE NOCASE
 `).all();
 

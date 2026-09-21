@@ -1,12 +1,13 @@
 // Generato da scripts/export-site.js — non modificare a mano.
 window.GAMES_META = {
-  "generated": "2026-09-19T11:46:46.125Z",
-  "total": 195,
-  "cases": 198,
-  "matched": 195,
+  "generated": "2026-09-21T22:14:00.133Z",
+  "total": 213,
+  "cases": 216,
+  "matched": 213,
   "pending": 0,
   "toReview": 0,
   "platforms": [
+    "Nintendo Switch",
     "PlayStation 4",
     "PlayStation Portable",
     "Wii",
@@ -1154,6 +1155,27 @@ window.GAMES = [
     "notes": null
   },
   {
+    "id": 198,
+    "title": "Cyberpunk 2077",
+    "platform": "PlayStation 4",
+    "edition": null,
+    "year": 2020,
+    "genres": [
+      "Shooter",
+      "Role-playing (RPG)",
+      "Adventure"
+    ],
+    "developer": "CD Projekt RED",
+    "publisher": "CD Projekt",
+    "summary": "Cyberpunk 2077 is an open-world action-adventure game set in Night City, a sprawling metropolis driven by power, glamour, and body modification. Players assume the role of V, a mercenary outlaw in pursuit of a unique implant that holds the key to immortality. The game allows extensive customization of cyberware, skills, and playstyle. Choices made throughout the journey influence both the narrative and the world.",
+    "rating": 75,
+    "cover": "covers/cyberpunk-2077.jpg",
+    "igdbUrl": "https://www.igdb.com/games/cyberpunk-2077",
+    "status": "matched",
+    "photo": "foto-19.jpg",
+    "notes": "CUSA-18278"
+  },
+  {
     "id": 109,
     "title": "Dante's Inferno",
     "platform": "Xbox 360",
@@ -1335,6 +1357,28 @@ window.GAMES = [
     "status": "matched",
     "photo": "foto-16.jpg",
     "notes": null
+  },
+  {
+    "id": 207,
+    "title": "Deus Ex: Mankind Divided",
+    "platform": "PlayStation 4",
+    "edition": null,
+    "year": 2016,
+    "genres": [
+      "Shooter",
+      "Puzzle",
+      "Role-playing (RPG)",
+      "Adventure"
+    ],
+    "developer": "Eidos Montréal",
+    "publisher": "Feral Interactive, Eidos Montréal, Square Enix",
+    "summary": "Deus Ex: Mankind Divided directly follows the aftermath of the Aug Incident, a day when mechanically augmented citizens all over the world were stripped of control over their minds and bodies, resulting in the deaths of millions of innocents. The year is now 2029, and the golden era of augmentations is over. Mechanically augmented humans have been deemed outcasts and segregated from the rest of society. Crime and acts of terror serve as a thin veil to cover up an overarching conspiracy aimed at controlling the future of mankind…",
+    "rating": 83,
+    "cover": "covers/deus-ex-mankind-divided.jpg",
+    "igdbUrl": "https://www.igdb.com/games/deus-ex-mankind-divided",
+    "status": "matched",
+    "photo": "foto-19.jpg",
+    "notes": "CUSA-01836"
   },
   {
     "id": 34,
@@ -1770,6 +1814,27 @@ window.GAMES = [
     "notes": null
   },
   {
+    "id": 196,
+    "title": "Forza Motorsport",
+    "platform": "Xbox",
+    "edition": null,
+    "year": 2005,
+    "genres": [
+      "Racing",
+      "Simulator",
+      "Sport"
+    ],
+    "developer": "Turn 10 Studios",
+    "publisher": "Microsoft Game Studios",
+    "summary": "Racing sim from Microsoft, targeted at gamers who are passionate about cars and racing. Own, customize, and race your favorite cars in the most technologically advanced and realistic driving sim yet. Use race earnings to buy upgrades and aftermarket parts, so you can transform real production cars into high-performance racers. On the track, experience an impressively accurate simulation, while putting your performance-tuned creations to the test against the online gaming world on Xbox Live. Features car models from more than 60 top car manufacturers, customization via decals and team paint-schemes, and vehicle tuning that really affects performance.",
+    "rating": 88,
+    "cover": "covers/forza-motorsport.jpg",
+    "igdbUrl": "https://www.igdb.com/games/forza-motorsport",
+    "status": "manual",
+    "photo": "foto-19.jpg",
+    "notes": "primo capitolo, Xbox originale (P74-00024)"
+  },
+  {
     "id": 72,
     "title": "Forza Motorsport 2",
     "platform": "Xbox 360",
@@ -2057,6 +2122,27 @@ window.GAMES = [
     "status": "matched",
     "photo": "foto-17.jpg",
     "notes": null
+  },
+  {
+    "id": 201,
+    "title": "Gran Turismo 7",
+    "platform": "PlayStation 4",
+    "edition": null,
+    "year": 2022,
+    "genres": [
+      "Racing",
+      "Simulator",
+      "Sport"
+    ],
+    "developer": "Polyphony Digital",
+    "publisher": "Sony Interactive Entertainment",
+    "summary": "Gran Turismo 7 brings together the very best features of the Real Driving Simulator. Whether you’re a competitive or casual racer, collector, tuner, livery designer or photographer – find your line with a staggering collection of game modes including fan-favorites like GT Campaign, Arcade and Driving School. With the reintroduction of the legendary GT Simulation Mode, buy, tune, race and sell your way through a rewarding solo campaign as you unlock new cars and challenges. And if you love going head-to-head with others, hone your skills and compete in the GT Sport Mode.",
+    "rating": 87,
+    "cover": "covers/gran-turismo-7.jpg",
+    "igdbUrl": "https://www.igdb.com/games/gran-turismo-7",
+    "status": "matched",
+    "photo": "foto-19.jpg",
+    "notes": "CUSA-24767"
   },
   {
     "id": 104,
@@ -2360,6 +2446,26 @@ window.GAMES = [
     "status": "matched",
     "photo": "foto-01.jpg",
     "notes": "custodia con dorso XBOX (Series X|S)"
+  },
+  {
+    "id": 210,
+    "title": "Hogwarts Legacy",
+    "platform": "PlayStation 4",
+    "edition": null,
+    "year": 2023,
+    "genres": [
+      "Role-playing (RPG)",
+      "Adventure"
+    ],
+    "developer": "Avalanche Software",
+    "publisher": "Warner Bros. Games",
+    "summary": "Hogwarts Legacy is an immersive, open-world action RPG set in the world first introduced in the Harry Potter books. Now you can take control of the action and be at the center of your own adventure in the wizarding world. Embark on a journey through familiar and new locations as you explore and discover fantastic beasts, customize your character and craft potions, master spell casting, upgrade talents, and become the wizard you want to be. Discover the feeling of living at Hogwarts as you make allies, battle Dark wizards, and ultimately decide the fate of the wizarding world. Your legacy is what you make of it.",
+    "rating": 85,
+    "cover": "covers/hogwarts-legacy.jpg",
+    "igdbUrl": "https://www.igdb.com/games/hogwarts-legacy",
+    "status": "matched",
+    "photo": "foto-19.jpg",
+    "notes": null
   },
   {
     "id": 194,
@@ -2668,6 +2774,26 @@ window.GAMES = [
     "notes": null
   },
   {
+    "id": 212,
+    "title": "Mario Kart 8 Deluxe",
+    "platform": "Nintendo Switch",
+    "edition": null,
+    "year": 2017,
+    "genres": [
+      "Racing",
+      "Arcade"
+    ],
+    "developer": "Nintendo EPD Production Group No. 9, Nintendo Entertainment Planning & Development",
+    "publisher": "Nintendo",
+    "summary": "Hit the road with the definitive version of Mario Kart 8 and play anytime, anywhere! Race your friends or battle them in a revised battle mode on new and returning battle courses. Play locally in up to 4-player multiplayer in 1080p while playing in TV Mode. Every track from the Wii U version, including DLC, makes a glorious return. Plus, the Inklings appear as all-new guest characters, along with returning favorites, such as King Boo, Dry Bones, and Bowser Jr.!",
+    "rating": 93,
+    "cover": "covers/mario-kart-8-deluxe.jpg",
+    "igdbUrl": "https://www.igdb.com/games/mario-kart-8-deluxe",
+    "status": "matched",
+    "photo": "foto-19.jpg",
+    "notes": null
+  },
+  {
     "id": 138,
     "title": "Mario Kart Wii",
     "platform": "Wii",
@@ -2684,6 +2810,25 @@ window.GAMES = [
     "igdbUrl": "https://www.igdb.com/games/mario-kart-wii",
     "status": "matched",
     "photo": "foto-13.jpg",
+    "notes": null
+  },
+  {
+    "id": 213,
+    "title": "Mario Party Superstars",
+    "platform": "Nintendo Switch",
+    "edition": null,
+    "year": 2021,
+    "genres": [
+      "Card & Board Game"
+    ],
+    "developer": "NDCube",
+    "publisher": "Nintendo",
+    "summary": "Calling all Superstars! Mario Party is back with 5 classic boards from the Nintendo 64 Mario Party games. Frosting meets flowers as you race to get the most stars (and sabotage your opponents) on the Peach’s Birthday Cake board from the original Mario Party game. Or watch the countdown that unleashes Bowser Coin Beam and hold onto those coins on the Space Land board. The tides can turn quickly in Mario Party, so stay vigilant, partygoers. This and all other modes can be played online, too!",
+    "rating": 79,
+    "cover": "covers/mario-party-superstars.jpg",
+    "igdbUrl": "https://www.igdb.com/games/mario-party-superstars",
+    "status": "matched",
+    "photo": "foto-19.jpg",
     "notes": null
   },
   {
@@ -2725,6 +2870,28 @@ window.GAMES = [
     "status": "matched",
     "photo": "foto-09.jpg",
     "notes": null
+  },
+  {
+    "id": 204,
+    "title": "Mass Effect Legendary Edition",
+    "platform": "PlayStation 4",
+    "edition": null,
+    "year": 2021,
+    "genres": [
+      "Shooter",
+      "Role-playing (RPG)",
+      "Strategy",
+      "Adventure"
+    ],
+    "developer": "BioWare",
+    "publisher": "Electronic Arts",
+    "summary": "One person is all that stands between humanity and the greatest threat it’s ever faced. Relive the legend of Commander Shepard in the highly acclaimed Mass Effect trilogy with the Mass Effect Legendary Edition. Includes single-player base content and over 40 DLCs from Mass Effect, Mass Effect 2, and Mass Effect 3 games, including promo weapons, armors and packs. Experience an amazingly rich and detailed universe where your decisions have profound consequences on the action and the outcome.",
+    "rating": 87,
+    "cover": "covers/mass-effect-legendary-edition.jpg",
+    "igdbUrl": "https://www.igdb.com/games/mass-effect-legendary-edition",
+    "status": "matched",
+    "photo": "foto-19.jpg",
+    "notes": "CUSA-19515"
   },
   {
     "id": 129,
@@ -3014,6 +3181,27 @@ window.GAMES = [
     "notes": null
   },
   {
+    "id": 199,
+    "title": "Observer: System Redux",
+    "platform": "PlayStation 4",
+    "edition": "Day One Edition",
+    "year": 2020,
+    "genres": [
+      "Puzzle",
+      "Adventure",
+      "Indie"
+    ],
+    "developer": "Bloober Team",
+    "publisher": "Bloober Team",
+    "summary": "The year is 2084.\nIn a dark cyberpunk world shattered by plagues and wars, become a neural detective and hack into the minds of others.\n\nRebuilt and augmented for the next-generation, Observer: System Redux is the definitive vision of one of the most acclaimed cyberpunk stories in games.",
+    "rating": 86,
+    "cover": "covers/observer-system-redux.jpg",
+    "igdbUrl": "https://www.igdb.com/games/observer-system-redux",
+    "status": "matched",
+    "photo": "foto-19.jpg",
+    "notes": "CUSA-27091"
+  },
+  {
     "id": 178,
     "title": "Pirates of the Caribbean: Dead Man's Chest",
     "titleRaw": "Pirati dei Caraibi: La Maledizione del Forziere Fantasma",
@@ -3240,6 +3428,27 @@ window.GAMES = [
     "notes": null
   },
   {
+    "id": 203,
+    "title": "Ratchet & Clank",
+    "platform": "PlayStation 4",
+    "edition": null,
+    "year": 2016,
+    "genres": [
+      "Shooter",
+      "Platform",
+      "Adventure"
+    ],
+    "developer": "Insomniac Games",
+    "publisher": "Sony Interactive Entertainment",
+    "summary": "Ratchet & Clank is a single-player third-person shooter with platforming elements, and a reimagining of the series' first game. Players mainly control Ratchet, traveling from planet to planet to battle enemies with a wide range of inventive weapons and gadgets while crossing gaps with a grappling hook, riding grind rails, and solving occasional puzzles. Segments controlling the robot Clank focus on environmental puzzle solving, and the game also includes hoverboard races and spaceship combat. Weapons and gadgets are unlocked through progress or bought using bolts collected during play.",
+    "rating": 84,
+    "cover": "covers/ratchet-and-clank.jpg",
+    "igdbUrl": "https://www.igdb.com/games/ratchet-and-clank",
+    "status": "matched",
+    "photo": "foto-19.jpg",
+    "notes": "CUSA-01073/H"
+  },
+  {
     "id": 51,
     "title": "ReCore",
     "platform": "Xbox One",
@@ -3279,6 +3488,26 @@ window.GAMES = [
     "status": "matched",
     "photo": "foto-16.jpg",
     "notes": null
+  },
+  {
+    "id": 202,
+    "title": "Resident Evil 2",
+    "platform": "PlayStation 4",
+    "edition": null,
+    "year": 2019,
+    "genres": [
+      "Shooter",
+      "Adventure"
+    ],
+    "developer": "Capcom Development Division 1",
+    "publisher": "Capcom",
+    "summary": "Resident Evil 2 is a remake of 1998's Resident Evil 2. The game was not developed with the intent of improving the original, but rather a reimagining of the original story with redesigned maps, characters and story elements. Gameplay mechanics are more similar to Resident Evil 7: Biohazard though with the use of an over-the-shoulder camera.",
+    "rating": 93,
+    "cover": "covers/resident-evil-2--1.jpg",
+    "igdbUrl": "https://www.igdb.com/games/resident-evil-2--1",
+    "status": "matched",
+    "photo": "foto-19.jpg",
+    "notes": "CUSA-09171"
   },
   {
     "id": 36,
@@ -3338,6 +3567,27 @@ window.GAMES = [
     "status": "matched",
     "photo": "foto-07.jpg",
     "notes": null
+  },
+  {
+    "id": 200,
+    "title": "Shadow of the Colossus",
+    "platform": "PlayStation 4",
+    "edition": null,
+    "year": 2018,
+    "genres": [
+      "Platform",
+      "Puzzle",
+      "Adventure"
+    ],
+    "developer": "Bluepoint Games",
+    "publisher": "Sony Interactive Entertainment",
+    "summary": "Tales speak of an ancient land where creatures the size of mountains, roam the majestic landscape. Bound to the land, these creatures hold a key to a mystical power of revival - a power you must obtain to waken a loved one.\n\nShadow of the Colossus is a majestic journey through ancient lands to seek out and destroy gigantic mythical beasts. With your trusty horse at your side, explore the spacious lands and unearth each Colossi. Armed with your wits, a sword and a bow, use cunning and strategy to topple each behemoth.\n\nA remake of the critically-claimed game of the same title. Also from the minds that brought you The Last Guardian & ICO",
+    "rating": 93,
+    "cover": "covers/shadow-of-the-colossus--1.jpg",
+    "igdbUrl": "https://www.igdb.com/games/shadow-of-the-colossus--1",
+    "status": "matched",
+    "photo": "foto-19.jpg",
+    "notes": "CUSA-08809"
   },
   {
     "id": 35,
@@ -3401,6 +3651,27 @@ window.GAMES = [
     "notes": null
   },
   {
+    "id": 206,
+    "title": "Stray",
+    "platform": "PlayStation 4",
+    "edition": null,
+    "year": 2022,
+    "genres": [
+      "Platform",
+      "Adventure",
+      "Indie"
+    ],
+    "developer": "BlueTwelve Studio",
+    "publisher": "Annapurna Interactive",
+    "summary": "Stray is a third-person cat adventure game set amidst the detailed neon-lit alleys of a decaying cybercity and the murky environments of its seedy underbelly. Roam surroundings high and low, defend against unforeseen threats and solve the mysteries of this unwelcoming place inhabited by nothing but unassuming droids and dangerous creatures.\n\nSee the world through the eyes of a stray and interact with the environment in playful ways. Be stealthy, nimble, silly, and sometimes as annoying as possible with the strange inhabitants of this foreign world.",
+    "rating": 85,
+    "cover": "covers/stray.jpg",
+    "igdbUrl": "https://www.igdb.com/games/stray",
+    "status": "matched",
+    "photo": "foto-19.jpg",
+    "notes": "CUSA-24899"
+  },
+  {
     "id": 123,
     "title": "Street Fighter IV",
     "platform": "Xbox 360",
@@ -3459,6 +3730,26 @@ window.GAMES = [
     "notes": null
   },
   {
+    "id": 208,
+    "title": "The Callisto Protocol",
+    "platform": "PlayStation 4",
+    "edition": null,
+    "year": 2022,
+    "genres": [
+      "Shooter",
+      "Adventure"
+    ],
+    "developer": "Striking Distance Studios",
+    "publisher": "Krafton, Skybound Games",
+    "summary": "In this narrative-driven, third-person survival horror game set 300 years in the future, the player will take on the role of Jacob Lee – a victim of fate thrown into Black Iron Prison, a maximum-security penitentiary located on Jupiter's moon, Callisto. When inmates begin to transform into monstrous creatures, the prison is thrown into chaos.",
+    "rating": 65,
+    "cover": "covers/the-callisto-protocol.jpg",
+    "igdbUrl": "https://www.igdb.com/games/the-callisto-protocol",
+    "status": "matched",
+    "photo": "foto-19.jpg",
+    "notes": "CUSA-27373"
+  },
+  {
     "id": 71,
     "title": "The Crew",
     "platform": "Xbox One",
@@ -3500,6 +3791,27 @@ window.GAMES = [
     "notes": null
   },
   {
+    "id": 205,
+    "title": "The Last of Us Part II",
+    "titleRaw": "The Last of Us Parte II",
+    "platform": "PlayStation 4",
+    "edition": null,
+    "year": 2020,
+    "genres": [
+      "Shooter",
+      "Adventure"
+    ],
+    "developer": "Naughty Dog",
+    "publisher": "Sony Interactive Entertainment",
+    "summary": "The Last of Us Part II is an action-adventure game set five years after the events of The Last of Us. The player traverses post-apocalyptic environments such as buildings and forests to advance the story. They can use firearms, improvised weapons, and stealth to defend against hostile humans and cannibalistic creatures infected by a mutated strain of the Cordyceps fungus. The game intermittently switches control between Ellie and Abby, and also briefly Joel in the opening sequence. The nimble nature of the player character introduces platforming elements, allowing the player to jump and climb to traverse environments and gain advantages during combat.",
+    "rating": 95,
+    "cover": "covers/the-last-of-us-part-ii.jpg",
+    "igdbUrl": "https://www.igdb.com/games/the-last-of-us-part-ii",
+    "status": "matched",
+    "photo": "foto-19.jpg",
+    "notes": "CUSA-10249, edizione italiana"
+  },
+  {
     "id": 190,
     "title": "The Last of Us Remastered",
     "platform": "PlayStation 4",
@@ -3517,6 +3829,26 @@ window.GAMES = [
     "igdbUrl": "https://www.igdb.com/games/the-last-of-us-remastered",
     "status": "matched",
     "photo": "foto-18.jpg",
+    "notes": null
+  },
+  {
+    "id": 209,
+    "title": "The Order: 1886",
+    "platform": "PlayStation 4",
+    "edition": null,
+    "year": 2015,
+    "genres": [
+      "Shooter",
+      "Adventure"
+    ],
+    "developer": "Ready At Dawn, SCE Santa Monica Studio",
+    "publisher": "Sony Computer Entertainment",
+    "summary": "The Order: 1886 introduces players to a unique vision of Victorian-Era London where Man uses advanced technology to battle a powerful and ancient foe. As a member of an elite order of knights, join a centuries-old war that will determine the course of history forever.",
+    "rating": 63,
+    "cover": "covers/the-order-1886.jpg",
+    "igdbUrl": "https://www.igdb.com/games/the-order-1886",
+    "status": "matched",
+    "photo": "foto-19.jpg",
     "notes": null
   },
   {
@@ -3750,6 +4082,28 @@ window.GAMES = [
     "notes": null
   },
   {
+    "id": 211,
+    "title": "Uncharted: The Nathan Drake Collection",
+    "platform": "PlayStation 4",
+    "edition": null,
+    "year": 2015,
+    "genres": [
+      "Shooter",
+      "Platform",
+      "Puzzle",
+      "Adventure"
+    ],
+    "developer": "Naughty Dog",
+    "publisher": "Sony Computer Entertainment",
+    "summary": "Uncharted: The Nathan Drake Collection is a remastered compilation of the action-adventure shooter platform video games Drake's Fortune, Among Thieves, and Drake's Deception. Ported by Bluepoint Games, the collection was released exclusively for the PlayStation 4 on October 7, 2015 in Europe and October 9th, 2015 in North America.\n\nThe Nathan Drake Collection features the original three games in the Uncharted series with 1080p resolution, 60 frames per second, better lighting, textures and models. The collection also implements a \"Photo Mode\", a mode where the player can freeze the game at any moment to take personalized screenshots, derived from Naughty Dog's other remastered entry, The Last of Us Remastered, as well as new trophies. The ported games only include their respective single-player modes.\n\nThe pre-ordered version of The Nathan Drake Collection includes the \"Nathan Drake Pack\", which consists of single-player skins of iconic Nathan Drake outfits, as well as two weapons: the Golden AK-47 and Golden 92FS - 9mm. Pre-ordering the collection as a digital download through the PlayStation Store would also give an exclusive Uncharted: The Nathan Drake Collection PlayStation 4 dynamic theme.\n\nPurchasing The Nathan Drake Collection, and owning a valid subscription to PlayStation Plus, before the expiry date of December 13, 2015 would grant the player exclusive access to the multiplayer beta of A Thief's End.",
+    "rating": 85,
+    "cover": "covers/uncharted-the-nathan-drake-collection.jpg",
+    "igdbUrl": "https://www.igdb.com/games/uncharted-the-nathan-drake-collection",
+    "status": "matched",
+    "photo": "foto-19.jpg",
+    "notes": null
+  },
+  {
     "id": 38,
     "title": "Watch Dogs",
     "platform": "Xbox One",
@@ -3928,6 +4282,26 @@ window.GAMES = [
     "igdbUrl": "https://www.igdb.com/games/wolfenstein-ii-the-new-colossus",
     "status": "matched",
     "photo": "foto-05.jpg",
+    "notes": null
+  },
+  {
+    "id": 197,
+    "title": "Wolfenstein: The New Order",
+    "platform": "Xbox One",
+    "edition": null,
+    "year": 2014,
+    "genres": [
+      "Shooter",
+      "Adventure"
+    ],
+    "developer": "MachineGames",
+    "publisher": "Bethesda Softworks",
+    "summary": "Wolfenstein: The New Order is an action-adventure shooter game played from a first-person perspective. It is the semi-sequel to 2009's Wolfenstein, however utilizes very little from the game and drops any direct references to veil or supernatural.\n\nTo progress through the story, the player battle enemies throughout levels. The game utilizes a health system in which players' health is divided into separate sections that regenerate; if an entire section is lost, the player must use a health pack to replenish the missing health. In combat, a cover system can be used as assistance against enemies. The player have the ability to lean around, over, and under cover, which can be used as a tactical advantage during shootouts and stealth levels. The game gives the player a wide variety of weapon options—they can be found on the ground, retrieved from dead enemies, or removed from their stationary position and carried around.",
+    "rating": 77,
+    "cover": "covers/wolfenstein-the-new-order.jpg",
+    "igdbUrl": "https://www.igdb.com/games/wolfenstein-the-new-order",
+    "status": "matched",
+    "photo": "foto-19.jpg",
     "notes": null
   },
   {

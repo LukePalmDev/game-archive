@@ -1,0 +1,109 @@
+{
+  "photo": "foto-19.jpg",
+  "items": [
+    {
+      "title_raw": "Forza Motorsport",
+      "platform": "Xbox",
+      "confidence": "high",
+      "note": "primo capitolo, Xbox originale (P74-00024)"
+    },
+    {
+      "title_raw": "Wolfenstein: The New Order",
+      "platform": "Xbox One",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Cyberpunk 2077",
+      "platform": "PS4",
+      "confidence": "high",
+      "note": "CUSA-18278"
+    },
+    {
+      "title_raw": "Observer: System Redux",
+      "platform": "PS4",
+      "confidence": "high",
+      "edition": "Day One Edition",
+      "note": "CUSA-27091"
+    },
+    {
+      "title_raw": "Shadow of the Colossus",
+      "platform": "PS4",
+      "confidence": "high",
+      "note": "CUSA-08809"
+    },
+    {
+      "title_raw": "Gran Turismo 7",
+      "platform": "PS4",
+      "confidence": "high",
+      "note": "CUSA-24767"
+    },
+    {
+      "title_raw": "Resident Evil 2",
+      "platform": "PS4",
+      "confidence": "high",
+      "note": "CUSA-09171"
+    },
+    {
+      "title_raw": "Ratchet & Clank",
+      "platform": "PS4",
+      "confidence": "high",
+      "note": "CUSA-01073/H"
+    },
+    {
+      "title_raw": "Mass Effect Legendary Edition",
+      "platform": "PS4",
+      "confidence": "high",
+      "note": "CUSA-19515"
+    },
+    {
+      "title_raw": "The Last of Us Parte II",
+      "platform": "PS4",
+      "confidence": "high",
+      "note": "CUSA-10249, edizione italiana"
+    },
+    {
+      "title_raw": "Stray",
+      "platform": "PS4",
+      "confidence": "high",
+      "note": "CUSA-24899"
+    },
+    {
+      "title_raw": "Deus Ex: Mankind Divided",
+      "platform": "PS4",
+      "confidence": "high",
+      "note": "CUSA-01836"
+    },
+    {
+      "title_raw": "The Callisto Protocol",
+      "platform": "PS4",
+      "confidence": "high",
+      "note": "CUSA-27373"
+    },
+    {
+      "title_raw": "The Order: 1886",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Hogwarts Legacy",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Uncharted: The Nathan Drake Collection",
+      "platform": "PS4",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Mario Kart 8 Deluxe",
+      "platform": "Switch",
+      "confidence": "high"
+    },
+    {
+      "title_raw": "Mario Party Superstars",
+      "platform": "Switch",
+      "confidence": "high"
+    }
+  ],
+  "notes": "Sul ripiano anche due volumi della collana RBA Videogiochi Leggendari (Street Fighter II, GTA V): libri, non giochi."
+}

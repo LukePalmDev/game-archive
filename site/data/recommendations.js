@@ -1,9 +1,10 @@
 // Generato da scripts/export-site.js — non modificare a mano.
 window.GAMES_META = {
-  "generated": "2026-09-19T11:46:46.127Z",
+  "generated": "2026-09-21T22:14:00.135Z",
   "page": "consigliati",
-  "total": 74,
+  "total": 78,
   "platforms": [
+    "Nintendo Switch",
     "PlayStation 4",
     "PlayStation Portable",
     "Wii",
@@ -85,27 +86,6 @@ window.GAMES = [
     "igdbUrl": "https://www.igdb.com/games/control"
   },
   {
-    "id": 53,
-    "title": "Cyberpunk 2077",
-    "platform": "Xbox One",
-    "kind": "genere",
-    "because": "Stesso studio di The Witcher 3, stessa densità di scrittura e missioni secondarie.",
-    "source": "The Witcher 3: Wild Hunt",
-    "priority": 1,
-    "year": 2020,
-    "genres": [
-      "Shooter",
-      "Role-playing (RPG)",
-      "Adventure"
-    ],
-    "developer": "CD Projekt RED",
-    "publisher": "CD Projekt",
-    "summary": "Cyberpunk 2077 is an open-world action-adventure game set in Night City, a sprawling metropolis driven by power, glamour, and body modification. Players assume the role of V, a mercenary outlaw in pursuit of a unique implant that holds the key to immortality. The game allows extensive customization of cyberware, skills, and playstyle. Choices made throughout the journey influence both the narrative and the world.",
-    "rating": 75,
-    "cover": "covers/cyberpunk-2077.jpg",
-    "igdbUrl": "https://www.igdb.com/games/cyberpunk-2077"
-  },
-  {
     "id": 45,
     "title": "Dead Space",
     "platform": "Xbox Series X|S",
@@ -125,6 +105,27 @@ window.GAMES = [
     "rating": 91,
     "cover": "covers/dead-space--1.jpg",
     "igdbUrl": "https://www.igdb.com/games/dead-space--1"
+  },
+  {
+    "id": 59,
+    "title": "Deus Ex: Human Revolution",
+    "platform": "Xbox 360",
+    "kind": "genere",
+    "because": "Hai appena preso Mankind Divided su PS4: Human Revolution è il capitolo che lo precede direttamente, e resta un immersive sim nella famiglia di Dishonored e Prey.",
+    "source": "Deus Ex: Mankind Divided, Dishonored: Definitive Edition, Prey",
+    "priority": 1,
+    "year": 2011,
+    "genres": [
+      "Shooter",
+      "Puzzle",
+      "Role-playing (RPG)"
+    ],
+    "developer": "Eidos Montréal",
+    "publisher": "Feral Interactive, Square Enix",
+    "summary": "In Deus Ex: Human Revolution you play Adam Jensen, a security specialist, handpicked to oversee the defense of one of America's most experimental biotechnology firms. But when a black ops team breaks in and kills the scientists you were hired to protect, everything you thought you knew about your job changes. At a time when scientific advancements are routinely turning athletes, soldiers and spies into super-enhanced beings, someone is working very hard to ensure mankind's evolution follows a particular path. You need to discover why - because the decisions you take and the choices you make will be the only things that can determine mankind's future.",
+    "rating": 92,
+    "cover": "covers/deus-ex-human-revolution.jpg",
+    "igdbUrl": "https://www.igdb.com/games/deus-ex-human-revolution"
   },
   {
     "id": 6,
@@ -287,28 +288,6 @@ window.GAMES = [
     "igdbUrl": "https://www.igdb.com/games/mafia-ii-definitive-edition"
   },
   {
-    "id": 1,
-    "title": "Mass Effect Legendary Edition",
-    "platform": "Xbox One",
-    "kind": "saga",
-    "because": "Hai il primo Mass Effect su 360 ma non il seguito: la Legendary Edition rimasterizza tutti e tre i capitoli con i DLC, chiudendo la trilogia in un colpo solo.",
-    "source": "Mass Effect",
-    "priority": 1,
-    "year": 2021,
-    "genres": [
-      "Shooter",
-      "Role-playing (RPG)",
-      "Strategy",
-      "Adventure"
-    ],
-    "developer": "BioWare",
-    "publisher": "Electronic Arts",
-    "summary": "One person is all that stands between humanity and the greatest threat it’s ever faced. Relive the legend of Commander Shepard in the highly acclaimed Mass Effect trilogy with the Mass Effect Legendary Edition. Includes single-player base content and over 40 DLCs from Mass Effect, Mass Effect 2, and Mass Effect 3 games, including promo weapons, armors and packs. Experience an amazingly rich and detailed universe where your decisions have profound consequences on the action and the outcome.",
-    "rating": 87,
-    "cover": "covers/mass-effect-legendary-edition.jpg",
-    "igdbUrl": "https://www.igdb.com/games/mass-effect-legendary-edition"
-  },
-  {
     "id": 43,
     "title": "Metro Redux",
     "platform": "Xbox One",
@@ -409,8 +388,28 @@ window.GAMES = [
     "igdbUrl": "https://www.igdb.com/games/super-mario-galaxy"
   },
   {
-    "id": 54,
-    "title": "The Elder Scrolls V: Skyrim - Special Edition",
+    "id": 79,
+    "title": "Super Mario Odyssey",
+    "platform": "Nintendo Switch",
+    "kind": "genere",
+    "because": "Il platform 3D della Switch, erede diretto dei Mario che hai su Wii.",
+    "source": "New Super Mario Bros. Wii, Mario Kart 8 Deluxe",
+    "priority": 1,
+    "year": 2017,
+    "genres": [
+      "Platform",
+      "Adventure"
+    ],
+    "developer": "Nintendo EPD Production Group No. 8",
+    "publisher": "Nintendo",
+    "summary": "Explore incredible places far from the Mushroom Kingdom as you join Mario and his new ally Cappy on a massive, globe-trotting 3D adventure. Use amazing new abilities, like the power to capture and control objects, animals, and enemies to collect Power Moons so you can power up the Odyssey airship and save Princess Peach from Bowser’s wedding plans!",
+    "rating": 97,
+    "cover": "covers/super-mario-odyssey.jpg",
+    "igdbUrl": "https://www.igdb.com/games/super-mario-odyssey"
+  },
+  {
+    "id": 77,
+    "title": "The Elder Scrolls V: Skyrim Special Edition",
     "platform": "Xbox One",
     "kind": "genere",
     "because": "Il grande assente della tua collezione RPG, tra Fallout, Dragon Age e Witcher.",
@@ -429,24 +428,24 @@ window.GAMES = [
     "igdbUrl": "https://www.igdb.com/games/the-elder-scrolls-v-skyrim-special-edition"
   },
   {
-    "id": 33,
-    "title": "The Last of Us Part II",
-    "platform": "PlayStation 4",
-    "kind": "saga",
-    "because": "Seguito diretto del primo, che hai in versione Remastered.",
-    "source": "The Last of Us Remastered",
+    "id": 78,
+    "title": "The Legend of Zelda: Breath of the Wild",
+    "platform": "Nintendo Switch",
+    "kind": "genere",
+    "because": "Hai appena iniziato la libreria Switch con Mario Kart e Mario Party: Breath of the Wild è il motivo principale per cui si compra questa console.",
+    "source": "Mario Kart 8 Deluxe, Mario Party Superstars",
     "priority": 1,
-    "year": 2020,
+    "year": 2017,
     "genres": [
-      "Shooter",
+      "Puzzle",
       "Adventure"
     ],
-    "developer": "Naughty Dog",
-    "publisher": "Sony Interactive Entertainment",
-    "summary": "The Last of Us Part II is an action-adventure game set five years after the events of The Last of Us. The player traverses post-apocalyptic environments such as buildings and forests to advance the story. They can use firearms, improvised weapons, and stealth to defend against hostile humans and cannibalistic creatures infected by a mutated strain of the Cordyceps fungus. The game intermittently switches control between Ellie and Abby, and also briefly Joel in the opening sequence. The nimble nature of the player character introduces platforming elements, allowing the player to jump and climb to traverse environments and gain advantages during combat.",
-    "rating": 95,
-    "cover": "covers/the-last-of-us-part-ii.jpg",
-    "igdbUrl": "https://www.igdb.com/games/the-last-of-us-part-ii"
+    "developer": "Nintendo EPD Production Group No. 3",
+    "publisher": "Nintendo",
+    "summary": "The Legend of Zelda: Breath of the Wild is the first 3D open-world game in the Zelda series. Link can travel anywhere and be equipped with weapons and armor found throughout the world to grant him various bonuses. Unlike many games in the series, Breath of the Wild does not impose a specific order in which quests or dungeons must be completed. While the game still has environmental obstacles such as weather effects, inhospitable lands, or powerful enemies, many of them can be overcome using the right method. A lot of critics ranked Breath of the Wild as one of the best video games of all time.",
+    "rating": 98,
+    "cover": "covers/the-legend-of-zelda-breath-of-the-wild.jpg",
+    "igdbUrl": "https://www.igdb.com/games/the-legend-of-zelda-breath-of-the-wild"
   },
   {
     "id": 68,
@@ -531,24 +530,24 @@ window.GAMES = [
     "igdbUrl": "https://www.igdb.com/games/tomb-raider-definitive-edition"
   },
   {
-    "id": 8,
-    "title": "Wolfenstein: The New Order",
-    "platform": "Xbox One",
+    "id": 83,
+    "title": "Uncharted 4: A Thief's End",
+    "platform": "PlayStation 4",
     "kind": "saga",
-    "because": "The New Colossus è il seguito diretto di questo: senza il primo ti perdi metà della storia.",
-    "source": "Wolfenstein II: The New Colossus",
+    "because": "Hai preso la Nathan Drake Collection con i primi tre: il quarto chiude la storia di Drake.",
+    "source": "Uncharted: The Nathan Drake Collection",
     "priority": 1,
-    "year": 2014,
+    "year": 2016,
     "genres": [
       "Shooter",
       "Adventure"
     ],
-    "developer": "MachineGames",
-    "publisher": "Bethesda Softworks",
-    "summary": "Wolfenstein: The New Order is an action-adventure shooter game played from a first-person perspective. It is the semi-sequel to 2009's Wolfenstein, however utilizes very little from the game and drops any direct references to veil or supernatural.\n\nTo progress through the story, the player battle enemies throughout levels. The game utilizes a health system in which players' health is divided into separate sections that regenerate; if an entire section is lost, the player must use a health pack to replenish the missing health. In combat, a cover system can be used as assistance against enemies. The player have the ability to lean around, over, and under cover, which can be used as a tactical advantage during shootouts and stealth levels. The game gives the player a wide variety of weapon options—they can be found on the ground, retrieved from dead enemies, or removed from their stationary position and carried around.",
-    "rating": 77,
-    "cover": "covers/wolfenstein-the-new-order.jpg",
-    "igdbUrl": "https://www.igdb.com/games/wolfenstein-the-new-order"
+    "developer": "Naughty Dog",
+    "publisher": "Sony Interactive Entertainment",
+    "summary": "Several years after his last adventure, retired fortune hunter, Nathan Drake, is forced back into the world of thieves. With the stakes much more personal, Drake embarks on a globe-trotting journey in pursuit of a historical conspiracy behind a fabled pirate treasure. His greatest adventure will test his physical limits, his resolve, and ultimately what he's willing to sacrifice to save the ones he loves.",
+    "rating": 93,
+    "cover": "covers/uncharted-4-a-thief-s-end.jpg",
+    "igdbUrl": "https://www.igdb.com/games/uncharted-4-a-thief-s-end"
   },
   {
     "id": 61,
@@ -687,27 +686,6 @@ window.GAMES = [
     "rating": 75,
     "cover": "covers/days-gone.jpg",
     "igdbUrl": "https://www.igdb.com/games/days-gone"
-  },
-  {
-    "id": 59,
-    "title": "Deus Ex: Human Revolution",
-    "platform": "Xbox 360",
-    "kind": "genere",
-    "because": "Immersive sim nella stessa famiglia di Dishonored e Prey, che hai entrambi.",
-    "source": "Dishonored: Definitive Edition, Prey",
-    "priority": 2,
-    "year": 2011,
-    "genres": [
-      "Shooter",
-      "Puzzle",
-      "Role-playing (RPG)"
-    ],
-    "developer": "Eidos Montréal",
-    "publisher": "Feral Interactive, Square Enix",
-    "summary": "In Deus Ex: Human Revolution you play Adam Jensen, a security specialist, handpicked to oversee the defense of one of America's most experimental biotechnology firms. But when a black ops team breaks in and kills the scientists you were hired to protect, everything you thought you knew about your job changes. At a time when scientific advancements are routinely turning athletes, soldiers and spies into super-enhanced beings, someone is working very hard to ensure mankind's evolution follows a particular path. You need to discover why - because the decisions you take and the choices you make will be the only things that can determine mankind's future.",
-    "rating": 92,
-    "cover": "covers/deus-ex-human-revolution.jpg",
-    "igdbUrl": "https://www.igdb.com/games/deus-ex-human-revolution"
   },
   {
     "id": 19,
@@ -954,8 +932,8 @@ window.GAMES = [
     "igdbUrl": "https://www.igdb.com/games/marvels-spider-man-miles-morales"
   },
   {
-    "id": 48,
-    "title": "Metal Gear Solid Master Collection: Volume 1",
+    "id": 76,
+    "title": "Metal Gear Solid: Master Collection Vol. 1",
     "platform": "PlayStation 4",
     "kind": "edizione",
     "because": "Hai MGS V Definitive Experience: questa raccolta copre MGS 1, 2 e 3, cioè tutto quello che viene prima.",
@@ -1038,24 +1016,45 @@ window.GAMES = [
     "igdbUrl": "https://www.igdb.com/games/prince-of-persia-warrior-within"
   },
   {
-    "id": 58,
-    "title": "Resident Evil 2",
-    "platform": "Xbox One",
-    "kind": "genere",
-    "because": "Il remake del 2019: horror in terza persona come The Evil Within, di cui condivide il creatore della serie.",
-    "source": "The Evil Within",
+    "id": 84,
+    "title": "Resident Evil 3",
+    "platform": "PlayStation 4",
+    "kind": "saga",
+    "because": "Il remake successivo a quello di Resident Evil 2 che hai appena aggiunto.",
+    "source": "Resident Evil 2",
     "priority": 2,
-    "year": 2019,
+    "year": 2020,
     "genres": [
       "Shooter",
       "Adventure"
     ],
     "developer": "Capcom Development Division 1",
     "publisher": "Capcom",
-    "summary": "Resident Evil 2 is a remake of 1998's Resident Evil 2. The game was not developed with the intent of improving the original, but rather a reimagining of the original story with redesigned maps, characters and story elements. Gameplay mechanics are more similar to Resident Evil 7: Biohazard though with the use of an over-the-shoulder camera.",
-    "rating": 93,
-    "cover": "covers/resident-evil-2--1.jpg",
-    "igdbUrl": "https://www.igdb.com/games/resident-evil-2--1"
+    "summary": "Resident Evil 3 is a remake of the original Resident Evil 3: Nemesis released in 1999. It updates the story and gameplay for a modern audience. Like the Resident Evil 2 remake, the game uses over-the-shoulder third person point of view similar to Resident Evil 4 and later installments. Players will spend most of their time playing as Jill Valentine, although on some occasions they will assume the role of Carlos Oliveira, giving him more screen time as a deuteragonist.",
+    "rating": 81,
+    "cover": "covers/resident-evil-3.jpg",
+    "igdbUrl": "https://www.igdb.com/games/resident-evil-3"
+  },
+  {
+    "id": 85,
+    "title": "Resident Evil 7: Biohazard",
+    "platform": "PlayStation 4",
+    "kind": "saga",
+    "because": "Il capitolo in prima persona che ha rilanciato la serie, complementare al remake del 2.",
+    "source": "Resident Evil 2, The Evil Within",
+    "priority": 2,
+    "year": 2017,
+    "genres": [
+      "Shooter",
+      "Puzzle",
+      "Adventure"
+    ],
+    "developer": "Capcom Development Division 1",
+    "publisher": "Capcom",
+    "summary": "Resident Evil 7: Biohazard is the first game of the Resident Evil series to switch from 3rd-person to fully 1st-person perspective. A complete refresh of gameplay systems simultaneously propels the survival horror experience to another level. It is as much horror as it is survival, boosting up scare elements and minimizing downright shooting action. The game allows use of Sony's PSVR Headset to play in VR mode.",
+    "rating": 85,
+    "cover": "covers/resident-evil-7-biohazard.jpg",
+    "igdbUrl": "https://www.igdb.com/games/resident-evil-7-biohazard"
   },
   {
     "id": 52,
@@ -1117,6 +1116,26 @@ window.GAMES = [
     "igdbUrl": "https://www.igdb.com/games/super-smash-bros-brawl"
   },
   {
+    "id": 81,
+    "title": "Super Smash Bros. Ultimate",
+    "platform": "Nintendo Switch",
+    "kind": "genere",
+    "because": "Il party-fighting da divano, nella stessa logica di Mario Party Superstars e dei tuoi Wii Party.",
+    "source": "Mario Party Superstars, Wii Party",
+    "priority": 2,
+    "year": 2018,
+    "genres": [
+      "Fighting",
+      "Platform"
+    ],
+    "developer": "Sora, Bandai Namco Studios",
+    "publisher": "Nintendo",
+    "summary": "Super Smash Bros. Ultimate is a crossover fighting game for the Nintendo Switch and the fifth main entry in the series. It features every playable fighter from previous installments alongside new additions such as Inkling and Ridley. The game includes faster combat, new items, and expanded defensive mechanics. Modes include local and online multiplayer, a single-player adventure mode called World of Light, and various casual and competitive rulesets.",
+    "rating": 87,
+    "cover": "covers/super-smash-bros-ultimate.jpg",
+    "igdbUrl": "https://www.igdb.com/games/super-smash-bros-ultimate"
+  },
+  {
     "id": 10,
     "title": "The Evil Within 2",
     "platform": "Xbox One",
@@ -1136,6 +1155,27 @@ window.GAMES = [
     "rating": 81,
     "cover": "covers/the-evil-within-2.jpg",
     "igdbUrl": "https://www.igdb.com/games/the-evil-within-2"
+  },
+  {
+    "id": 86,
+    "title": "The Last Guardian",
+    "platform": "PlayStation 4",
+    "kind": "genere",
+    "because": "Stesso autore di Shadow of the Colossus, che hai appena preso: stesso senso di solitudine e scala.",
+    "source": "Shadow of the Colossus",
+    "priority": 2,
+    "year": 2016,
+    "genres": [
+      "Platform",
+      "Puzzle",
+      "Adventure"
+    ],
+    "developer": "Team Ico, SIE Japan Studio, genDESIGN",
+    "publisher": "Sony Interactive Entertainment",
+    "summary": "In a strange and mystical land, a young boy discovers a mysterious creature with which he forms a deep, unbreakable bond. The unlikely pair must rely on each other to journey through towering, treacherous ruins filled with unknown dangers. Experience the journey of a lifetime in this touching, emotional story of friendship and trust.",
+    "rating": 80,
+    "cover": "covers/the-last-guardian.jpg",
+    "igdbUrl": "https://www.igdb.com/games/the-last-guardian"
   },
   {
     "id": 21,
@@ -1178,28 +1218,6 @@ window.GAMES = [
     "rating": 85,
     "cover": "covers/tom-clancys-the-division-2.jpg",
     "igdbUrl": "https://www.igdb.com/games/tom-clancys-the-division-2"
-  },
-  {
-    "id": 50,
-    "title": "Uncharted: The Nathan Drake Collection",
-    "platform": "PlayStation 4",
-    "kind": "edizione",
-    "because": "I primi tre Uncharted rimasterizzati: l'equivalente PlayStation dei tuoi Tomb Raider.",
-    "source": "Rise of the Tomb Raider, Shadow of the Tomb Raider",
-    "priority": 2,
-    "year": 2015,
-    "genres": [
-      "Shooter",
-      "Platform",
-      "Puzzle",
-      "Adventure"
-    ],
-    "developer": "Naughty Dog",
-    "publisher": "Sony Computer Entertainment",
-    "summary": "Uncharted: The Nathan Drake Collection is a remastered compilation of the action-adventure shooter platform video games Drake's Fortune, Among Thieves, and Drake's Deception. Ported by Bluepoint Games, the collection was released exclusively for the PlayStation 4 on October 7, 2015 in Europe and October 9th, 2015 in North America.\n\nThe Nathan Drake Collection features the original three games in the Uncharted series with 1080p resolution, 60 frames per second, better lighting, textures and models. The collection also implements a \"Photo Mode\", a mode where the player can freeze the game at any moment to take personalized screenshots, derived from Naughty Dog's other remastered entry, The Last of Us Remastered, as well as new trophies. The ported games only include their respective single-player modes.\n\nThe pre-ordered version of The Nathan Drake Collection includes the \"Nathan Drake Pack\", which consists of single-player skins of iconic Nathan Drake outfits, as well as two weapons: the Golden AK-47 and Golden 92FS - 9mm. Pre-ordering the collection as a digital download through the PlayStation Store would also give an exclusive Uncharted: The Nathan Drake Collection PlayStation 4 dynamic theme.\n\nPurchasing The Nathan Drake Collection, and owning a valid subscription to PlayStation Plus, before the expiry date of December 13, 2015 would grant the player exclusive access to the multiplayer beta of A Thief's End.",
-    "rating": 85,
-    "cover": "covers/uncharted-the-nathan-drake-collection.jpg",
-    "igdbUrl": "https://www.igdb.com/games/uncharted-the-nathan-drake-collection"
   },
   {
     "id": 64,
@@ -1319,6 +1337,27 @@ window.GAMES = [
     "rating": 70,
     "cover": "covers/lightning-returns-final-fantasy-xiii.jpg",
     "igdbUrl": "https://www.igdb.com/games/lightning-returns-final-fantasy-xiii"
+  },
+  {
+    "id": 82,
+    "title": "Metroid Dread",
+    "platform": "Nintendo Switch",
+    "kind": "genere",
+    "because": "Azione 2D in stile metroidvania: bilancia una libreria Switch finora tutta multiplayer.",
+    "source": "Mario Kart 8 Deluxe, Mario Party Superstars",
+    "priority": 3,
+    "year": 2021,
+    "genres": [
+      "Shooter",
+      "Platform",
+      "Adventure"
+    ],
+    "developer": "Nintendo Entertainment Planning & Development, MercurySteam, Nintendo EPD Production Group No. 7",
+    "publisher": "Nintendo",
+    "summary": "Join intergalactic bounty hunter Samus Aran in her first new 2D Metroid story in 19 years. Samus’ story continues after the events of the Metroid Fusion game when she descends upon planet ZDR to investigate a mysterious transmission sent to the Galactic Federation. The remote planet has become overrun by vicious alien lifeforms and chilling mechanical menaces. Samus is more agile and capable than ever, but can she overcome the inhuman threat stalking the depths of ZDR?",
+    "rating": 84,
+    "cover": "covers/metroid-dread.jpg",
+    "igdbUrl": "https://www.igdb.com/games/metroid-dread"
   },
   {
     "id": 46,
@@ -1441,8 +1480,28 @@ window.GAMES = [
     "igdbUrl": "https://www.igdb.com/games/the-crew-2"
   },
   {
-    "id": 15,
-    "title": "Tom Clancy's Ghost Recon: Breakpoint",
+    "id": 80,
+    "title": "The Legend of Zelda: Tears of the Kingdom",
+    "platform": "Nintendo Switch",
+    "kind": "saga",
+    "because": "Seguito di Breath of the Wild, se la formula ti prende.",
+    "source": "Mario Kart 8 Deluxe",
+    "priority": 3,
+    "year": 2023,
+    "genres": [
+      "Puzzle",
+      "Adventure"
+    ],
+    "developer": "Nintendo EPD Production Group No. 3",
+    "publisher": "Nintendo",
+    "summary": "An epic adventure across the land and skies of Hyrule awaits in The Legend of Zelda: Tears of the Kingdom for Nintendo Switch. The adventure is yours to create in a world fueled by your imagination.\n\nIn this sequel to The Legend of Zelda: Breath of the Wild, you'll decide your own path through the sprawling landscapes of Hyrule and the mysterious islands floating in the vast skies above. Can you harness the power of Link's new abilities to fight back against the malevolent forces that threaten the kingdom?",
+    "rating": 95,
+    "cover": "covers/the-legend-of-zelda-tears-of-the-kingdom.jpg",
+    "igdbUrl": "https://www.igdb.com/games/the-legend-of-zelda-tears-of-the-kingdom"
+  },
+  {
+    "id": 75,
+    "title": "Tom Clancy's Ghost Recon Breakpoint",
     "platform": "Xbox One",
     "kind": "saga",
     "because": "Prosegue Wildlands con la stessa formula open world.",
@@ -1521,6 +1580,26 @@ window.GAMES = [
     "rating": 90,
     "cover": "covers/wipeout-pure.jpg",
     "igdbUrl": "https://www.igdb.com/games/wipeout-pure"
+  },
+  {
+    "id": 87,
+    "title": "Wolfenstein: The Old Blood",
+    "platform": "Xbox One",
+    "kind": "saga",
+    "because": "Prequel standalone di The New Order, che ora hai su Xbox One.",
+    "source": "Wolfenstein: The New Order",
+    "priority": 3,
+    "year": 2015,
+    "genres": [
+      "Shooter",
+      "Adventure"
+    ],
+    "developer": "MachineGames",
+    "publisher": "Bethesda Softworks",
+    "summary": "Wolfenstein: The Old Blood is a prequel to the critically acclaimed first-person action-adventure shooter, Wolfenstein: The New Order. The adventure, which spans eight chapters and two interconnected stories, features the hallmarks of MachineGames – thrilling action, immersive story and intense first-person combat. As war hero B.J. Blazkowicz, arm yourself with new weapons such as the bolt-action rifle and grenade-launching Kampfpistole as you attempt to thwart the advancing Nazi war machine, and take advantage of duel-wielding pipes that can be used for wall climbing – or for vicious take-downs of never-before-seen Nazi adversaries.",
+    "rating": 76,
+    "cover": "covers/wolfenstein-the-old-blood.jpg",
+    "igdbUrl": "https://www.igdb.com/games/wolfenstein-the-old-blood"
   },
   {
     "id": 9,

@@ -468,9 +468,9 @@
       "title": "Deus Ex: Human Revolution",
       "platform": "Xbox 360",
       "kind": "genere",
-      "because": "Immersive sim nella stessa famiglia di Dishonored e Prey, che hai entrambi.",
-      "source": "Dishonored: Definitive Edition, Prey",
-      "priority": 2
+      "because": "Hai appena preso Mankind Divided su PS4: Human Revolution è il capitolo che lo precede direttamente, e resta un immersive sim nella famiglia di Dishonored e Prey.",
+      "source": "Deus Ex: Mankind Divided, Dishonored: Definitive Edition, Prey",
+      "priority": 1
     },
     {
       "title": "Titanfall 2",
@@ -590,6 +590,86 @@
       "kind": "saga",
       "because": "Il capitolo PSP che precede il tuo WipEout Pulse.",
       "source": "Wipeout Pulse",
+      "priority": 3
+    },
+    {
+      "title": "The Legend of Zelda: Breath of the Wild",
+      "platform": "Nintendo Switch",
+      "kind": "genere",
+      "because": "Hai appena iniziato la libreria Switch con Mario Kart e Mario Party: Breath of the Wild è il motivo principale per cui si compra questa console.",
+      "source": "Mario Kart 8 Deluxe, Mario Party Superstars",
+      "priority": 1
+    },
+    {
+      "title": "Super Mario Odyssey",
+      "platform": "Nintendo Switch",
+      "kind": "genere",
+      "because": "Il platform 3D della Switch, erede diretto dei Mario che hai su Wii.",
+      "source": "New Super Mario Bros. Wii, Mario Kart 8 Deluxe",
+      "priority": 1
+    },
+    {
+      "title": "The Legend of Zelda: Tears of the Kingdom",
+      "platform": "Nintendo Switch",
+      "kind": "saga",
+      "because": "Seguito di Breath of the Wild, se la formula ti prende.",
+      "source": "Mario Kart 8 Deluxe",
+      "priority": 3
+    },
+    {
+      "title": "Super Smash Bros. Ultimate",
+      "platform": "Nintendo Switch",
+      "kind": "genere",
+      "because": "Il party-fighting da divano, nella stessa logica di Mario Party Superstars e dei tuoi Wii Party.",
+      "source": "Mario Party Superstars, Wii Party",
+      "priority": 2
+    },
+    {
+      "title": "Metroid Dread",
+      "platform": "Nintendo Switch",
+      "kind": "genere",
+      "because": "Azione 2D in stile metroidvania: bilancia una libreria Switch finora tutta multiplayer.",
+      "source": "Mario Kart 8 Deluxe, Mario Party Superstars",
+      "priority": 3
+    },
+    {
+      "title": "Uncharted 4: A Thief's End",
+      "platform": "PlayStation 4",
+      "kind": "saga",
+      "because": "Hai preso la Nathan Drake Collection con i primi tre: il quarto chiude la storia di Drake.",
+      "source": "Uncharted: The Nathan Drake Collection",
+      "priority": 1
+    },
+    {
+      "title": "Resident Evil 3",
+      "platform": "PlayStation 4",
+      "kind": "saga",
+      "because": "Il remake successivo a quello di Resident Evil 2 che hai appena aggiunto.",
+      "source": "Resident Evil 2",
+      "priority": 2
+    },
+    {
+      "title": "Resident Evil 7: Biohazard",
+      "platform": "PlayStation 4",
+      "kind": "saga",
+      "because": "Il capitolo in prima persona che ha rilanciato la serie, complementare al remake del 2.",
+      "source": "Resident Evil 2, The Evil Within",
+      "priority": 2
+    },
+    {
+      "title": "The Last Guardian",
+      "platform": "PlayStation 4",
+      "kind": "genere",
+      "because": "Stesso autore di Shadow of the Colossus, che hai appena preso: stesso senso di solitudine e scala.",
+      "source": "Shadow of the Colossus",
+      "priority": 2
+    },
+    {
+      "title": "Wolfenstein: The Old Blood",
+      "platform": "Xbox One",
+      "kind": "saga",
+      "because": "Prequel standalone di The New Order, che ora hai su Xbox One.",
+      "source": "Wolfenstein: The New Order",
       "priority": 3
     }
   ]
