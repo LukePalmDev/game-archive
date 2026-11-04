@@ -19,7 +19,7 @@ const igdbId = opt('igdb') ? Number(opt('igdb')) : null;
 const newTitle = opt('title');
 const newPlatform = opt('platform');
 
-if (!gameId) {
+if (!gameId || (!igdbId && !newTitle && !newPlatform)) {
   console.error('Uso: node scripts/set-match.js --id <id-gioco> [--igdb <id-igdb>] [--title "..."] [--platform PS2]');
   process.exit(1);
 }
@@ -32,11 +32,21 @@ if (newTitle || newPlatform) {
   db.prepare("UPDATE games SET title = coalesce(?, title), platform = coalesce(?, platform), match_status = 'pending', updated_at = datetime('now') WHERE id = ?")
     .run(newTitle ?? null, newPlatform ? canonicalPlatform(newPlatform) : null, gameId);
   console.log(`Aggiornato: ${newTitle ?? game.title}${newPlatform ? ` [${canonicalPlatform(newPlatform)}]` : ''}`);
-  if (!igdbId) {
-    console.log('Ora rilancia: node scripts/enrich-igdb.js --id ' + gameId);
+  if (!Number.isFinite(igdbId)) {
     db.close();
+    if (opt('igdb')) {
+      console.error(`Id IGDB non valido: ${opt('igdb')}`);
+      process.exit(1);
+    }
+    console.log('Ora rilancia: node scripts/enrich-igdb.js --id ' + gameId);
     process.exit(0);
   }
+}
+
+if (!Number.isFinite(igdbId)) {
+  console.error('Manca un id IGDB valido (--igdb).');
+  db.close();
+  process.exit(1);
 }
 
 const query = await createClient();
