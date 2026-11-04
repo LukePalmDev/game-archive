@@ -9,6 +9,7 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { join, basename } from 'node:path';
 import { openDb, ROOT } from './lib/db.js';
+import { canonicalPlatform } from './lib/platforms.js';
 
 const DIR = join(ROOT, 'data', 'extractions');
 const args = process.argv.slice(2);
@@ -23,7 +24,18 @@ const db = openDb();
 const insert = db.prepare(`
   INSERT INTO games (title_raw, title, platform, edition, copies, source_photo, notes, match_status)
   VALUES (?, ?, ?, ?, ?, ?, ?, 'pending')
-  ON CONFLICT DO UPDATE SET copies = max(games.copies, excluded.copies), updated_at = datetime('now')
+`);
+// L'identità è il titolo letto dalla foto, non quello corretto da IGDB: un re-import
+// non deve creare un duplicato se l'arricchimento ha rinominato `title`.
+const findExisting = db.prepare(`
+  SELECT id FROM games
+  WHERE lower(edition) = lower(?)
+    AND lower(platform) IN (lower(?), lower(?))
+    AND (lower(title_raw) = lower(?) OR lower(title) = lower(?))
+  LIMIT 1
+`);
+const touchExisting = db.prepare(`
+  UPDATE games SET copies = max(copies, ?), updated_at = datetime('now') WHERE id = ?
 `);
 const upsertPhoto = db.prepare(`
   INSERT INTO photos (filename, item_count, notes) VALUES (?, ?, ?)
@@ -41,15 +53,22 @@ for (const file of files) {
     const titleRaw = (item.title_raw ?? item.title ?? '').trim();
     if (!titleRaw) continue;
     const title = (item.title ?? titleRaw).trim();
-    const platform = (item.platform ?? '').trim();
+    const platformRaw = (item.platform ?? '').trim();
+    const platform = canonicalPlatform(platformRaw);
     const edition = (item.edition ?? '').trim();
     const copies = Number(item.copies ?? 1) || 1;
     const notes = [item.note, item.confidence && item.confidence !== 'high' ? `confidence: ${item.confidence}` : null]
       .filter(Boolean).join(' | ') || null;
     if (item.confidence === 'low') lowConfidence++;
 
-    const res = insert.run(titleRaw, title, platform, edition, copies, photo, notes);
-    if (res.changes) added++; else skipped++;
+    const existing = findExisting.get(edition, platform, platformRaw, titleRaw, titleRaw);
+    if (existing) {
+      touchExisting.run(copies, existing.id);
+      skipped++;
+    } else {
+      insert.run(titleRaw, title, platform, edition, copies, photo, notes);
+      added++;
+    }
   }
   upsertPhoto.run(photo, items.length, payload.notes ?? null);
   console.log(`  ${photo}: ${items.length} titoli`);

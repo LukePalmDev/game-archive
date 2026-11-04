@@ -4,7 +4,7 @@
   --paper-card:  #f7f4ec;
   --ink:         #16130f;
   --ink-soft:    #6f665a;
-  --vermilion:   #e3431f;
+  --vermilion:   #c4311f;
   --rule:        #16130f;
   --rule-soft:   #cfc6b4;
   --shadow:      6px 6px 0 var(--ink);
@@ -93,7 +93,7 @@ a { color: var(--vermilion); }
   line-height: 1;
   align-self: center;
 }
-.nav-btn:hover { background: var(--vermilion); border-color: var(--vermilion); color: #fff; }
+.nav-btn:hover { background: var(--vermilion); border-color: var(--vermilion); color: var(--paper); }
 .nav-btn:focus-visible { outline: 2px solid var(--vermilion); outline-offset: 2px; }
 
 .mark {
@@ -143,7 +143,7 @@ a { color: var(--vermilion); }
 .search::placeholder { color: var(--ink-soft); }
 .select { appearance: none; padding-right: 30px; cursor: pointer;
   background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
-  background-position: calc(100% - 15px) 16px, calc(100% - 10px) 16px;
+  background-position: calc(100% - 15px) center, calc(100% - 10px) center;
   background-size: 5px 5px, 5px 5px;
   background-repeat: no-repeat;
 }
@@ -171,7 +171,11 @@ a { color: var(--vermilion); }
   border: 1.5px solid var(--ink);
   cursor: pointer;
 }
-.theme-toggle:hover { background: var(--vermilion); color: #fff; }
+.theme-toggle:hover { background: var(--vermilion); color: var(--paper); }
+.theme-toggle:focus-visible, .dialog-close:focus-visible {
+  outline: 2px solid var(--vermilion);
+  outline-offset: 2px;
+}
 
 /* ---------- griglia ---------- */
 
@@ -237,7 +241,7 @@ main { padding: 28px 28px 70px; }
   background: var(--ink);
   color: var(--paper);
 }
-.badge.high { background: var(--vermilion); color: #fff; }
+.badge.high { background: var(--vermilion); color: var(--paper); }
 
 /* etichetta del motivo, solo nella pagina dei consigli */
 .kind {
@@ -252,7 +256,7 @@ main { padding: 28px 28px 70px; }
   background: var(--ink);
   color: var(--paper);
 }
-.kind-saga { background: var(--vermilion); color: #fff; }
+.kind-saga { background: var(--vermilion); color: var(--paper); }
 .kind-edizione { background: var(--ink); }
 .kind-genere { background: var(--paper); color: var(--ink); border-top: 1.5px solid var(--ink); border-right: 1.5px solid var(--ink); }
 
@@ -385,7 +389,20 @@ main { padding: 28px 28px 70px; }
   background: var(--vermilion);
   padding: 9px 14px;
 }
-.dialog-link:hover { background: var(--ink); }
+.dialog-link:hover { background: var(--ink); color: var(--paper); }
+.dialog-link:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 .dialog-link[hidden] { display: none; }
 
 /* ---------- piede ---------- */
@@ -409,11 +426,15 @@ main { padding: 28px 28px 70px; }
   .count { flex-basis: 100%; }
   /* su schermo stretto i controlli stanno in una griglia 2 colonne: niente overflow */
   .controls { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-  .search { grid-column: 1 / -1; width: 100%; }
+  .search, #platform, #genre, #kind { grid-column: 1 / -1; width: 100%; }
   .select { width: 100%; }
   .ghost { grid-column: 1; }
   .theme-toggle { grid-column: 2; width: 100%; }
+  .ghost, .theme-toggle { min-height: 44px; }
   .dialog-card { padding: 20px; }
-  .dialog-cover { width: 150px; }
+  .dialog-cover { width: min(150px, 46vw); }
+  .dialog-info { min-width: min(250px, 100%); }
   .dialog { padding: 14px; }
+  /* 16px evita lo zoom automatico di iOS al focus sui campi */
+  .search, .select { font-size: 16px; }
 }

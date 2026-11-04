@@ -1,6 +1,6 @@
 # Game Archive
 
-**Sito online: <https://lukepalmdev.github.io/game-archive/>**
+**Sito online: <https://games.byluke.org>**
 
 Archivio personale della collezione di videogiochi: i titoli vengono letti dalle foto degli scaffali,
 arricchiti con metadati e copertine ufficiali da [IGDB](https://www.igdb.com) e consultati in un sito statico.
@@ -65,8 +65,10 @@ open site/index.html                     # oppure: node scripts/serve.js
 `edition` distingue le edizioni speciali dello stesso gioco (righe separate), `copies` conta le copie
 fisiche identiche (una riga sola). Un gioco è unico per titolo + piattaforma + edizione.
 
-`platform` accetta le abbreviazioni comuni (`PS2`, `X360`, `Switch`, `GBA`…): vengono tradotte nei nomi
-IGDB da `scripts/lib/platforms.js`. L'import è idempotente: rilanciarlo non crea doppioni.
+`platform` accetta le abbreviazioni comuni (`PS2`, `X360`, `Switch`, `GBA`…): `import-extraction.js`
+le traduce nei nomi IGDB con `scripts/lib/platforms.js`. L'import è idempotente: riconosce un gioco
+già presente dal titolo letto sulla foto (anche se IGDB lo ha poi rinominato), più piattaforma ed
+edizione, e non crea doppioni.
 
 ## Giochi consigliati
 
@@ -94,7 +96,19 @@ confrontando gli id IGDB.
 ## Pubblicazione
 
 Ogni push su `main` aggiorna il sito: il workflow `.github/workflows/pages.yml` pubblica la cartella
-`site/` su GitHub Pages. Dopo aver modificato l'archivio basta:
+`site/` su GitHub Pages, servita su <https://games.byluke.org>.
+
+Il dominio sta in `site/CNAME` (`games.byluke.org`). Il file deve restare in quella cartella: è la
+directory che il workflow carica, e un deploy senza CNAME toglie il dominio dalle impostazioni di
+Pages. Link, script, copertine e favicon sono percorsi relativi, quindi il sito sta alla radice del
+dominio (non sotto `/game-archive/`) e si apre anche in locale con `site/index.html` o
+`node scripts/serve.js`.
+
+Dopo il merge che introduce il CNAME, controlla **Settings → Pages → Custom domain**: deve comparire
+`games.byluke.org`, con Enforce HTTPS attivo. Con la pubblicazione via Actions quel campo non si
+compila da solo finché il deploy non è passato, e a volte va salvato a mano.
+
+Dopo aver modificato l'archivio basta:
 
 ```bash
 node scripts/export-site.js

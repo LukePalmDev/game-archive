@@ -33,6 +33,7 @@
   let kindSelect = null;
   if (META.kinds?.length) {
     kindSelect = document.createElement('select');
+    kindSelect.id = 'kind';
     kindSelect.className = 'select';
     kindSelect.setAttribute('aria-label', 'Motivo del consiglio');
     kindSelect.innerHTML = '<option value="">Tutti i motivi</option>';
@@ -136,6 +137,12 @@
   }
 
   // ---- scheda di dettaglio ----
+  const background = () => document.querySelectorAll('header, main, footer');
+  let lastFocus = null;
+  function setBackgroundInert(inert) {
+    for (const el of background()) el.inert = inert;
+  }
+
   function openDialog(game) {
     if (!game) return;
 
@@ -184,15 +191,21 @@
     link.hidden = !game.igdbUrl;
     if (game.igdbUrl) link.href = game.igdbUrl;
 
+    lastFocus = document.activeElement;
     els.dialog.hidden = false;
     document.body.style.overflow = 'hidden';
+    setBackgroundInert(true);
     history.replaceState(null, '', `#g=${game.id}`);
+    els.dialog.querySelector('.dialog-card').focus();
   }
 
   function closeDialog() {
+    if (els.dialog.hidden) return;
     els.dialog.hidden = true;
     document.body.style.overflow = '';
+    setBackgroundInert(false);
     if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    if (lastFocus instanceof HTMLElement) lastFocus.focus();
   }
 
   // ---- eventi ----
@@ -203,7 +216,12 @@
   els.dialog.addEventListener('click', (e) => { if (e.target.hasAttribute('data-close')) closeDialog(); });
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !els.dialog.hidden) closeDialog();
-    if (e.key === '/' && document.activeElement !== els.search) { e.preventDefault(); els.search.focus(); }
+    if (e.key === '/' && !e.metaKey && !e.ctrlKey && !e.altKey && els.dialog.hidden) {
+      const tag = document.activeElement?.tagName;
+      if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return;
+      e.preventDefault();
+      els.search.focus();
+    }
   });
   for (const el of [els.search, els.platform, els.genre, els.decade, els.sort, kindSelect]) {
     el?.addEventListener('input', render);
@@ -217,18 +235,27 @@
 
   // ---- tema: chiaro di giorno, scuro di sera, con preferenza ricordata ----
   const prefersDark = () => window.matchMedia?.('(prefers-color-scheme: dark)').matches ?? false;
+  const currentTheme = () => document.documentElement.dataset.theme || (prefersDark() ? 'dark' : 'light');
   let theme = null;
   try { theme = localStorage.getItem('ga-theme'); } catch { /* storage non disponibile */ }
+  if (theme !== 'light' && theme !== 'dark') theme = null;
   const applyTheme = (t) => {
-    if (t) document.documentElement.dataset.theme = t;
+    if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
     else delete document.documentElement.dataset.theme;
+    const mode = currentTheme();
+    els.theme.setAttribute('aria-pressed', String(mode === 'dark'));
+    els.theme.setAttribute('aria-label', mode === 'dark'
+      ? 'Tema scuro attivo, passa al chiaro'
+      : 'Tema chiaro attivo, passa allo scuro');
   };
   applyTheme(theme);
   els.theme.addEventListener('click', () => {
-    const current = document.documentElement.dataset.theme || (prefersDark() ? 'dark' : 'light');
-    theme = current === 'dark' ? 'light' : 'dark';
+    theme = currentTheme() === 'dark' ? 'light' : 'dark';
     applyTheme(theme);
     try { localStorage.setItem('ga-theme', theme); } catch { /* ignora */ }
+  });
+  window.matchMedia?.('(prefers-color-scheme: dark)')?.addEventListener?.('change', () => {
+    if (!document.documentElement.dataset.theme) applyTheme(null);
   });
 
   // ---- avvio ----
@@ -246,7 +273,8 @@
   render();
 
   const params = new URLSearchParams(location.search);
-  if (params.get('theme')) applyTheme(params.get('theme'));
+  const requestedTheme = params.get('theme');
+  if (requestedTheme === 'light' || requestedTheme === 'dark') applyTheme(requestedTheme);
 
   const fromHash = location.hash.match(/^#g=(\d+)$/);
   if (fromHash) openDialog(GAMES.find((g) => String(g.id) === fromHash[1]));
