@@ -23,7 +23,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
       # site/CNAME (games.byluke.org) deve restare nell'artifact: un deploy senza
       # quel file cancella il dominio personalizzato dalle impostazioni di Pages.
       - uses: actions/upload-pages-artifact@v3
