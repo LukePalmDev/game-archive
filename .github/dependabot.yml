@@ -1,0 +1,7 @@
+version: 2
+updates:
+  # Gli script usano solo moduli di Node, senza package.json né requirements.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
