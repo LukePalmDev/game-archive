@@ -7,14 +7,16 @@
     grid: $('grid'), count: $('count'), serial: $('serial'), empty: $('empty'), search: $('search'),
     platform: $('platform'), genre: $('genre'), decade: $('decade'), sort: $('sort'),
     reset: $('reset'), theme: $('theme'), dialog: $('dialog'), generated: $('generated'),
+    controls: $('controls'), filtersToggle: $('filters-toggle'),
   };
 
   const isRecs = META.page === 'consigliati';
   const defaultSort = isRecs ? 'priority' : 'title';
 
-  const norm = (s) => String(s ?? '').toLowerCase()
-    .normalize('NFD').replace(/[̀-ͯ]/g, '')
-    .replace(/[^a-z0-9]+/g, ' ').trim();
+  const Search = window.GASearch;
+  const indexed = new Map(GAMES.map((g) => [g, Search.index(g)]));
+  // titoli trovati solo dentro una raccolta, per mostrarlo sulla scheda in griglia
+  let foundInside = new Map();
 
   // ---- filtri ----
   const fillSelect = (el, values) => {
@@ -54,18 +56,24 @@
     'priority': (a, b) => (a.priority ?? 9) - (b.priority ?? 9) || a.title.localeCompare(b.title, 'it'),
   };
 
+  const filterSelects = () => [els.platform, els.genre, els.decade, kindSelect].filter(Boolean);
+  const activeFilters = () => filterSelects().filter((el) => el.value).length;
+
   function filtered() {
-    const q = norm(els.search.value);
+    const q = els.search.value;
     const platform = els.platform.value;
     const genre = els.genre.value;
     const decade = els.decade.value ? parseInt(els.decade.value) : null;
+    foundInside = new Map();
 
     return GAMES.filter((g) => {
-      if (q && !norm(`${g.title} ${g.titleRaw ?? ''} ${g.edition ?? ''} ${g.developer ?? ''} ${g.publisher ?? ''}`).includes(q)) return false;
       if (platform && g.platform !== platform) return false;
       if (genre && !(g.genres ?? []).includes(genre)) return false;
       if (decade != null && (g.year == null || Math.floor(g.year / 10) * 10 !== decade)) return false;
       if (kindSelect?.value && g.kind !== kindSelect.value) return false;
+      const hit = Search.match(indexed.get(g), q);
+      if (!hit) return false;
+      if (hit.inside.length) foundInside.set(g, hit.inside);
       return true;
     }).sort(SORTS[els.sort.value] ?? SORTS.title);
   }
@@ -121,19 +129,61 @@
     sub.textContent = [game.platform, game.year, game.copies ? `×${game.copies}` : null]
       .filter(Boolean).join(' · ');
 
+    // in cima alla copertina: è la risposta, e deve vedersi anche con la tastiera aperta
+    if (foundInside.has(game)) {
+      const inside = document.createElement('span');
+      inside.className = 'card-inside';
+      inside.textContent = `Contiene ${foundInside.get(game).join(', ')}`;
+      art.append(inside);
+    }
+
     el.append(art, title, sub);
     return el;
+  }
+
+  /** Quando non c'è niente, dire cosa significa e dove guardare. */
+  function renderEmpty() {
+    const q = els.search.value.trim();
+    const parts = [];
+    const line = (text) => { const p = document.createElement('span'); p.textContent = text; parts.push(p); };
+
+    if (activeFilters()) {
+      line('Nessun risultato con i filtri attivi.');
+      const clear = document.createElement('button');
+      clear.type = 'button';
+      clear.className = 'empty-action';
+      clear.textContent = 'Togli i filtri';
+      clear.addEventListener('click', () => {
+        for (const el of filterSelects()) el.value = '';
+        render();
+      });
+      parts.push(clear);
+    } else if (q) {
+      line(isRecs ? `«${q}» non è tra i consigli.` : `«${q}» non risulta in collezione.`);
+      line('Controlla come è scritto o prova una parola sola.');
+      const other = document.createElement('a');
+      other.className = 'empty-action';
+      other.href = `${isRecs ? 'index.html' : 'consigliati.html'}?q=${encodeURIComponent(q)}`;
+      other.textContent = isRecs ? 'Guarda se ce l’hai già →' : 'Cercalo tra i consigli →';
+      parts.push(other);
+    } else {
+      line('Nessun gioco corrisponde ai filtri.');
+    }
+    els.empty.replaceChildren(...parts);
   }
 
   function render() {
     const list = filtered();
     els.grid.replaceChildren(...list.map(card));
     els.empty.hidden = list.length > 0;
+    if (!list.length && GAMES.length) renderEmpty();
     const noun = isRecs ? 'consigli' : 'titoli';
     const cases = META.cases && META.cases !== GAMES.length ? ` · ${META.cases} custodie` : '';
     els.count.textContent = list.length === GAMES.length
       ? `${GAMES.length} ${noun}${cases}`
       : `${list.length} di ${GAMES.length} ${noun}`;
+    const n = activeFilters();
+    els.filtersToggle.textContent = n ? `Filtri · ${n}` : 'Filtri';
   }
 
   // ---- scheda di dettaglio ----
@@ -172,6 +222,7 @@
     const rows = [
       ['Nasce da', game.source],
       ['Edizione', game.edition],
+      ['Contiene', (game.contains ?? []).join(', ')],
       ['Generi', (game.genres ?? []).join(', ')],
       ['Sviluppatore', game.developer],
       ['Publisher', game.publisher],
@@ -224,11 +275,20 @@
     }
   });
   for (const el of [els.search, els.platform, els.genre, els.decade, els.sort, kindSelect]) {
-    el?.addEventListener('input', render);
+    el?.addEventListener('input', () => {
+      render();
+      window.scrollTo(0, 0);   // i risultati ripartono dall'alto
+    });
   }
+  // Invio chiude la tastiera del telefono e lascia vedere i risultati
+  els.search.addEventListener('keydown', (e) => { if (e.key === 'Enter') els.search.blur(); });
+  els.filtersToggle.addEventListener('click', () => {
+    const open = els.controls.classList.toggle('open');
+    els.filtersToggle.setAttribute('aria-expanded', String(open));
+  });
   els.reset.addEventListener('click', () => {
     els.search.value = '';
-    for (const el of [els.platform, els.genre, els.decade, kindSelect]) { if (el) el.value = ''; }
+    for (const el of filterSelects()) el.value = '';
     els.sort.value = defaultSort;
     render();
   });
@@ -259,7 +319,9 @@
   });
 
   // ---- avvio ----
+  const params = new URLSearchParams(location.search);
   els.sort.value = defaultSort;
+  els.search.value = params.get('q') ?? '';
 
   const years = GAMES.map((g) => g.year).filter(Boolean);
   if (years.length) els.serial.textContent = `${Math.min(...years)}—${Math.max(...years)}`;
@@ -272,7 +334,6 @@
   }
   render();
 
-  const params = new URLSearchParams(location.search);
   const requestedTheme = params.get('theme');
   if (requestedTheme === 'light' || requestedTheme === 'dark') applyTheme(requestedTheme);
 

@@ -70,6 +70,15 @@ CREATE TABLE IF NOT EXISTS recommendations (
 CREATE UNIQUE INDEX IF NOT EXISTS recommendations_title_platform
   ON recommendations (lower(title), lower(platform));
 
+-- cosa c'è dentro le custodie che possiedi (raccolte, edizioni speciali), secondo IGDB
+CREATE TABLE IF NOT EXISTS bundle_contents (
+  owned_id   INTEGER NOT NULL,   -- id IGDB di un gioco in collezione
+  content_id INTEGER NOT NULL,   -- id IGDB di un gioco incluso in quella custodia
+  name       TEXT NOT NULL,
+  game_type  INTEGER,
+  PRIMARY KEY (owned_id, content_id)
+);
+
 CREATE TABLE IF NOT EXISTS match_candidates (
   id        INTEGER PRIMARY KEY,
   game_id   INTEGER NOT NULL REFERENCES games(id) ON DELETE CASCADE,
@@ -96,10 +105,12 @@ export function normalizeTitle(s) {
   return String(s ?? '')
     .toLowerCase()
     .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/['’‘]/g, '')
     .replace(/&/g, ' and ')
     .replace(/[^a-z0-9]+/g, ' ')
-    .replace(/\b(viii|vii|vi|iv|ix|xii|xi|x|v|iii|ii|i)\b/g, (m) => String(
-      { i: 1, ii: 2, iii: 3, iv: 4, v: 5, vi: 6, vii: 7, viii: 8, ix: 9, x: 10, xi: 11, xii: 12 }[m]
+    .replace(/\b(xvi|xv|xiv|xiii|xii|xi|x|ix|viii|vii|vi|iv|v|iiii|iii|ii|i)\b/g, (m) => String(
+      { i: 1, ii: 2, iii: 3, iiii: 4, iv: 4, v: 5, vi: 6, vii: 7, viii: 8, ix: 9, x: 10, xi: 11, xii: 12,
+        xiii: 13, xiv: 14, xv: 15, xvi: 16 }[m]
     ))
     .trim()
     .replace(/\s+/g, ' ');

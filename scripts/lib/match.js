@@ -10,7 +10,7 @@ export const FIELDS = [
 ].join(',');
 
 // game_type: 1 dlc, 2 expansion, 5 mod, 6 episode, 7 season, 13 pack, 14 update — non sono giochi a sé
-const DLC_TYPES = new Set([1, 2, 5, 6, 7, 13, 14]);
+export const DLC_TYPES = new Set([1, 2, 5, 6, 7, 13, 14]);
 
 export function scoreCandidate({ title, platform }, candidate) {
   const sim = titleSimilarity(title, candidate.name);
@@ -28,6 +28,19 @@ export function rank(game, results) {
   return results
     .map((c) => ({ candidate: c, ...scoreCandidate(game, c) }))
     .sort((a, b) => b.score - a.score);
+}
+
+/**
+ * Il primo candidato si può accettare senza conferma? Un titolo identico non basta:
+ * se la piattaforma non torna o è un DLC, va controllato a mano.
+ */
+export function isConfident(game, ranked) {
+  const [best, second] = ranked;
+  if (!best) return false;
+  if (platformMatches(game.platform, best.candidate.platforms ?? []) === false) return false;
+  if (DLC_TYPES.has(best.candidate.game_type)) return false;
+  const gap = second ? best.score - second.score : 1;
+  return best.score >= 0.8 && (gap >= 0.12 || best.sim === 1);
 }
 
 export function companies(candidate, kind) {

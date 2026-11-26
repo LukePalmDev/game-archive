@@ -10,6 +10,8 @@ import { join } from 'node:path';
 import { openDb, ROOT } from './lib/db.js';
 import { createClient, coverUrl, downloadCover } from './lib/igdb.js';
 import { canonicalPlatform } from './lib/platforms.js';
+import { FIELDS, toRecord } from './lib/match.js';
+import { syncContents } from './lib/contents.js';
 
 const argv = process.argv.slice(2);
 const opt = (n) => { const i = argv.indexOf(`--${n}`); return i === -1 ? null : argv[i + 1]; };
@@ -50,42 +52,28 @@ if (!Number.isFinite(igdbId)) {
 }
 
 const query = await createClient();
-const FIELDS = [
-  'name', 'slug', 'url', 'summary', 'first_release_date',
-  'genres.name', 'platforms.name', 'cover.image_id',
-  'aggregated_rating', 'rating', 'total_rating',
-  'involved_companies.developer', 'involved_companies.publisher', 'involved_companies.company.name',
-].join(',');
-
 const [c] = await query('games', `fields ${FIELDS}; where id = ${igdbId};`);
 if (!c) { console.error(`Nessun gioco IGDB con id ${igdbId}`); process.exit(1); }
 
-const date = c.first_release_date ? new Date(c.first_release_date * 1000) : null;
-const imageId = c.cover?.image_id ?? null;
-const url = imageId ? coverUrl(imageId) : null;
-const coverPath = imageId ? `covers/${c.slug}.jpg` : null;
+const r = toRecord(c);
+const url = r.imageId ? coverUrl(r.imageId) : null;
+const coverPath = r.imageId ? `covers/${c.slug}.jpg` : null;
 if (url) {
   const dest = join(ROOT, 'site', 'covers', `${c.slug}.jpg`);
   if (!existsSync(dest)) await downloadCover(url, dest);
 }
-const comp = (kind) => (c.involved_companies ?? []).filter((x) => x[kind]).map((x) => x.company?.name).filter(Boolean).join(', ') || null;
-
 db.prepare(`
   UPDATE games SET title = ?, platform = ?, igdb_id = ?, igdb_slug = ?, release_year = ?, release_date = ?,
     genres = ?, developer = ?, publisher = ?, summary = ?, rating = ?, cover_url = ?, cover_path = ?,
     match_status = 'manual', match_confidence = 1, updated_at = datetime('now')
   WHERE id = ?
 `).run(
-  c.name,
-  canonicalPlatform(newPlatform ?? game.platform) || ((c.platforms ?? []).map((p) => p.name)[0] ?? ''),
-  c.id, c.slug ?? null,
-  date ? date.getUTCFullYear() : null,
-  date ? date.toISOString().slice(0, 10) : null,
-  JSON.stringify((c.genres ?? []).map((g) => g.name)),
-  comp('developer'), comp('publisher'), c.summary ?? null,
-  c.aggregated_rating ?? c.total_rating ?? c.rating ?? null,
+  r.name,
+  canonicalPlatform(newPlatform ?? game.platform) || (r.platforms[0] ?? ''),
+  c.id, r.slug, r.year, r.date, r.genres, r.developer, r.publisher, r.summary, r.rating,
   url, coverPath, gameId,
 );
 db.prepare('DELETE FROM match_candidates WHERE game_id = ?').run(gameId);
-console.log(`✓ #${gameId} → ${c.name} (${date ? date.getUTCFullYear() : 's.d.'})`);
+console.log(`✓ #${gameId} → ${r.name} (${r.year ?? 's.d.'})`);
+await syncContents(db, query);
 db.close();

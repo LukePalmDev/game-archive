@@ -15,7 +15,7 @@ arricchiti con metadati e copertine ufficiali da [IGDB](https://www.igdb.com) e 
 | Script | `scripts/` | import, arricchimento IGDB, export |
 | Sito | `site/` | HTML/CSS/JS vanilla, apribile anche con doppio clic (`file://`) |
 | Consigli | `data/recommendations.json` | titoli suggeriti, con motivo e giochi di riferimento |
-| Copertine | `site/covers/` | scaricate in locale, il sito funziona offline |
+| Copertine | `site/covers/` | scaricate in locale: nessuna richiesta a servizi esterni |
 
 ## Prima configurazione (una volta sola)
 
@@ -41,7 +41,7 @@ node scripts/review-report.js            # scrive data/review.md
 node scripts/set-match.js --id 42 --igdb 1020
 node scripts/set-match.js --id 42 --title "Gran Turismo 4" --platform PS2   # titolo letto male
 
-# 4. pubblica sul sito
+# 4. rigenera il sito
 node scripts/export-site.js
 open site/index.html                     # oppure: node scripts/serve.js
 ```
@@ -68,7 +68,11 @@ fisiche identiche (una riga sola). Un gioco è unico per titolo + piattaforma + 
 `platform` accetta le abbreviazioni comuni (`PS2`, `X360`, `Switch`, `GBA`…): `import-extraction.js`
 le traduce nei nomi IGDB con `scripts/lib/platforms.js`. L'import è idempotente: riconosce un gioco
 già presente dal titolo letto sulla foto (anche se IGDB lo ha poi rinominato), più piattaforma ed
-edizione, e non crea doppioni.
+edizione, ignorando maiuscole, punteggiatura e numeri romani, e non crea doppioni.
+
+`enrich-igdb.js` accetta da solo un abbinamento solo se la piattaforma coincide esattamente e non è un
+DLC: negli altri casi il gioco finisce in `data/review.md`. `--status all --force` rielabora tutto
+tranne le conferme manuali.
 
 ## Giochi consigliati
 
@@ -90,8 +94,23 @@ node scripts/enrich-recommendations.js
 node scripts/export-site.js
 ```
 
-`enrich-recommendations.js` segnala anche i consigli che risultano già presenti in collezione,
-confrontando gli id IGDB.
+Il file è la fonte di verità: una voce tolta dal JSON viene tolta anche dal database al successivo
+import.
+
+**Un consiglio che possiedi non compare sul sito.** `export-site.js` lo ricalcola ogni volta
+confrontando gli id IGDB con la collezione, compreso ciò che sta dentro le raccolte e le edizioni
+speciali (possiedi *Mafia: Trilogy* → *Mafia II: Definitive Edition* sparisce). L'elenco di cosa
+contiene ogni custodia viene da IGDB e si aggiorna da solo con `enrich-igdb.js`,
+`enrich-recommendations.js` e `set-match.js`; a mano: `node scripts/sync-contents.js`.
+
+### Dopo un acquisto
+
+```bash
+# aggiungi i titoli in un nuovo file di data/extractions/, poi:
+node scripts/import-extraction.js
+node scripts/enrich-igdb.js
+node scripts/export-site.js      # elenca i consigli nascosti perché ora sono tuoi
+```
 
 ## Pubblicazione
 
@@ -104,9 +123,8 @@ Pages. Link, script, copertine e favicon sono percorsi relativi, quindi il sito 
 dominio (non sotto `/game-archive/`) e si apre anche in locale con `site/index.html` o
 `node scripts/serve.js`.
 
-Dopo il merge che introduce il CNAME, controlla **Settings → Pages → Custom domain**: deve comparire
-`games.byluke.org`, con Enforce HTTPS attivo. Con la pubblicazione via Actions quel campo non si
-compila da solo finché il deploy non è passato, e a volte va salvato a mano.
+In **Settings → Pages → Custom domain** deve comparire `games.byluke.org`, e l'indirizzo `http://`
+deve rimandare a `https://`: senza HTTPS l'uso offline non si attiva.
 
 Dopo aver modificato l'archivio basta:
 
@@ -122,6 +140,24 @@ Il pulsante ◐ in alto a destra alterna chiaro/scuro (la scelta viene ricordata
 senza scelta esplicita segue il tema di sistema. `?theme=light` / `?theme=dark` forzano un tema
 via URL, `#g=<id>` apre direttamente la scheda di un gioco.
 
+### Ricerca
+
+La ricerca (`site/search.js`) serve a capire in fretta se un gioco c'è già: ignora apostrofi e
+punteggiatura, equipara numeri arabi e romani (`forza 4`, `mafia 2`), capisce le sigle (`gta`, `cod4`,
+`tlou`, `pes`) e le parole attaccate (`spiderman`), e cerca anche **dentro le raccolte**:
+`bioshock infinite` mostra *BioShock: The Collection* con la fascia «Contiene BioShock Infinite».
+`?q=halo` apre una pagina con la ricerca già compilata.
+
+### Uso senza rete
+
+Alla prima visita il sito salva pagine, dati e copertine (circa 20 MB). Quando in testata compare
+**Pronto offline ✓** si apre anche in modalità aereo. Con la rete, pagine e dati arrivano sempre
+aggiornati; se non risponde entro 3 secondi si usa la copia salvata (`site/sw.js`). Le copertine
+vengono lette dalla copia salvata: se ne sostituisci una mantenendo il nome, cambia `ga-covers-v1` in
+`site/sw.js` e `site/offline.js`.
+
+Sul telefono i filtri si aprono con il pulsante **Filtri**.
+
 ## Stati di un gioco
 
 - `pending` — importato, non ancora cercato su IGDB
@@ -134,4 +170,4 @@ via URL, `#g=<id>` apre direttamente la scheda di un gioco.
 
 - IGDB è gratuito per uso non commerciale (Twitch Developer Services Agreement); il client rispetta il
   limite di 4 richieste al secondo.
-- `.env`, il token cache e `data/games.db` sono esclusi da git.
+- `.env`, il token cache, `data/games.db` e `data/backups/` sono esclusi da git.

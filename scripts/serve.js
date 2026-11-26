@@ -10,7 +10,13 @@ const SITE = join(ROOT, 'site');
 const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.json': 'application/json', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.webp': 'image/webp', '.svg': 'image/svg+xml' };
 
 createServer((req, res) => {
-  const urlPath = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+  let urlPath;
+  try {
+    urlPath = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+  } catch {
+    res.writeHead(400).end('Bad request');
+    return;
+  }
   let file = join(SITE, normalize(urlPath).replace(/^(\.\.[/\\])+/, ''));
   if (!file.startsWith(SITE)) { res.writeHead(403).end('Forbidden'); return; }
   if (existsSync(file) && statSync(file).isDirectory()) file = join(file, 'index.html');

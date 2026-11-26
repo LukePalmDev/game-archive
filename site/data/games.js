@@ -1,6 +1,6 @@
 // Generato da scripts/export-site.js — non modificare a mano.
 window.GAMES_META = {
-  "generated": "2026-09-21T22:14:00.133Z",
+  "generated": "2026-11-26T17:37:21.133Z",
   "total": 213,
   "cases": 216,
   "matched": 213,
@@ -130,6 +130,11 @@ window.GAMES = [
     "titleRaw": "Assassin's Creed Chronicles",
     "platform": "Xbox One",
     "edition": null,
+    "contains": [
+      "Assassin's Creed Chronicles: China",
+      "Assassin's Creed Chronicles: India",
+      "Assassin's Creed Chronicles: Russia"
+    ],
     "year": 2016,
     "genres": [
       "Adventure"
@@ -346,6 +351,11 @@ window.GAMES = [
     "title": "Assassin's Creed: The Ezio Collection",
     "platform": "Xbox One",
     "edition": null,
+    "contains": [
+      "Assassin's Creed Brotherhood",
+      "Assassin's Creed II",
+      "Assassin's Creed Revelations"
+    ],
     "year": 2016,
     "genres": [
       "Puzzle",
@@ -407,6 +417,9 @@ window.GAMES = [
     "titleRaw": "Battlefield 1 Revolution",
     "platform": "Xbox One",
     "edition": null,
+    "contains": [
+      "Battlefield 1"
+    ],
     "year": 2017,
     "genres": [
       "Shooter"
@@ -586,6 +599,11 @@ window.GAMES = [
     "platform": "PlayStation 4",
     "edition": null,
     "copies": 2,
+    "contains": [
+      "BioShock 2 Remastered",
+      "BioShock Infinite",
+      "BioShock Remastered"
+    ],
     "year": 2016,
     "genres": [
       "Shooter",
@@ -667,6 +685,10 @@ window.GAMES = [
     "title": "Borderlands: The Handsome Collection",
     "platform": "PlayStation 4",
     "edition": null,
+    "contains": [
+      "Borderlands 2",
+      "Borderlands: The Pre-Sequel"
+    ],
     "year": 2015,
     "genres": [
       "Shooter",
@@ -1079,6 +1101,11 @@ window.GAMES = [
     "title": "Crash Bandicoot N. Sane Trilogy",
     "platform": "Xbox One",
     "edition": null,
+    "contains": [
+      "Crash Bandicoot",
+      "Crash Bandicoot 2: Cortex Strikes Back",
+      "Crash Bandicoot: Warped"
+    ],
     "year": 2017,
     "genres": [
       "Platform",
@@ -1139,6 +1166,11 @@ window.GAMES = [
     "title": "Crysis Remastered Trilogy",
     "platform": "Xbox One",
     "edition": null,
+    "contains": [
+      "Crysis 2 Remastered",
+      "Crysis 3 Remastered",
+      "Crysis Remastered"
+    ],
     "year": 2021,
     "genres": [
       "Shooter",
@@ -1220,6 +1252,11 @@ window.GAMES = [
     "title": "Dark Souls Trilogy",
     "platform": "PlayStation 4",
     "edition": null,
+    "contains": [
+      "Dark Souls II: Scholar of the First Sin",
+      "Dark Souls III: The Fire Fades Edition",
+      "Dark Souls: Remastered"
+    ],
     "year": 2018,
     "genres": [
       "Role-playing (RPG)",
@@ -1601,45 +1638,6 @@ window.GAMES = [
     "notes": null
   },
   {
-    "id": 117,
-    "title": "FIFA 10: Ultimate Team",
-    "titleRaw": "FIFA 10",
-    "platform": "Xbox 360",
-    "edition": null,
-    "year": 2010,
-    "genres": [
-      "Sport"
-    ],
-    "developer": "Electronic Arts",
-    "publisher": "Electronic Arts",
-    "summary": "This expansion enables you build teams using any players from all the leagues to play offline and online to win coins to buy better players or packs which contain random players.",
-    "rating": null,
-    "cover": "covers/fifa-10-ultimate-team.jpg",
-    "igdbUrl": "https://www.igdb.com/games/fifa-10-ultimate-team",
-    "status": "matched",
-    "photo": "foto-11.jpg",
-    "notes": null
-  },
-  {
-    "id": 118,
-    "title": "FIFA 13",
-    "platform": "Xbox 360",
-    "edition": null,
-    "year": 2012,
-    "genres": [
-      "Sport"
-    ],
-    "developer": null,
-    "publisher": "EA Sports",
-    "summary": "Mobile (Java ME) port of FIFA 13.",
-    "rating": null,
-    "cover": "covers/fifa-13--4.jpg",
-    "igdbUrl": "https://www.igdb.com/games/fifa-13--4",
-    "status": "matched",
-    "photo": "foto-11.jpg",
-    "notes": null
-  },
-  {
     "id": 119,
     "title": "FIFA 14",
     "platform": "Xbox 360",
@@ -1771,6 +1769,47 @@ window.GAMES = [
     "igdbUrl": "https://www.igdb.com/games/fifa-soccer-06--4",
     "status": "manual",
     "photo": "foto-17.jpg",
+    "notes": null
+  },
+  {
+    "id": 117,
+    "title": "FIFA Soccer 10",
+    "titleRaw": "FIFA 10",
+    "platform": "Xbox 360",
+    "edition": null,
+    "year": 2009,
+    "genres": [
+      "Sport"
+    ],
+    "developer": "EA Canada",
+    "publisher": "EA Sports",
+    "summary": "Last year's game topped the league and now the all-new FIFA 10 is looking to defend its title as the number one football action game. More realistic than ever, this latest sequel has greatly improved artificial intelligence, ball physics and graphics.\n\nBrand new this year is the 360 degree dribbling system, giving you the most precise control ever. There are also changes to how the defensive line is formed, as well as improvements to crosses, freekicks and goalkeepers (who can now receive red cards).\n\nNaturally the game retains its hugely successful on and offline multiplayer modes, with new options and better stability for online play. The manager mode has also seen a massive update to make it just as deep and complex as the main game. With all these new features and more EA Sports are betting on FIFA remaining the champions for a long time to come.",
+    "rating": 86,
+    "cover": "covers/fifa-soccer-10.jpg",
+    "igdbUrl": "https://www.igdb.com/games/fifa-soccer-10",
+    "status": "manual",
+    "photo": "foto-11.jpg",
+    "notes": null
+  },
+  {
+    "id": 118,
+    "title": "FIFA Soccer 13",
+    "titleRaw": "FIFA 13",
+    "platform": "Xbox 360",
+    "edition": null,
+    "year": 2012,
+    "genres": [
+      "Simulator",
+      "Sport"
+    ],
+    "developer": "EA Canada",
+    "publisher": "Electronic Arts",
+    "summary": "FIFA 13 captures the drama and unpredictability of real-world football. The game creates a true battle for possession across the entire pitch, delivers freedom and creativity in attack, and connects fans to the heartbeat of the sport - and to each other - through EA SPORTS Football Club. FIFA 13 features five breakthrough gameplay innovations which revolutionize artificial intelligence, dribbling, ball control and physical play, as well as engaging online features and live services.\n\nFIFA 13 with Kinect enables you to use voice commands to manage your club’s line-up and tactics without pausing the game, shout directions on the pitch in Be A Pro, and forces you to temper the way you talk to officials.",
+    "rating": 85,
+    "cover": "covers/fifa-soccer-13.jpg",
+    "igdbUrl": "https://www.igdb.com/games/fifa-soccer-13",
+    "status": "manual",
+    "photo": "foto-11.jpg",
     "notes": null
   },
   {
@@ -2233,6 +2272,11 @@ window.GAMES = [
     "title": "Grand Theft Auto: The Trilogy - The Definitive Edition",
     "platform": "Xbox One",
     "edition": null,
+    "contains": [
+      "Grand Theft Auto III: The Definitive Edition",
+      "Grand Theft Auto: San Andreas - The Definitive Edition",
+      "Grand Theft Auto: Vice City - The Definitive Edition"
+    ],
     "year": 2021,
     "genres": [
       "Shooter",
@@ -2334,6 +2378,14 @@ window.GAMES = [
     "title": "Halo: The Master Chief Collection",
     "platform": "Xbox One",
     "edition": null,
+    "contains": [
+      "Halo 2: Anniversary",
+      "Halo 3",
+      "Halo 3: ODST",
+      "Halo 4",
+      "Halo: Combat Evolved Anniversary",
+      "Halo: Reach"
+    ],
     "year": 2014,
     "genres": [
       "Shooter"
@@ -2392,6 +2444,11 @@ window.GAMES = [
     "title": "Hitman HD Trilogy",
     "platform": "Xbox 360",
     "edition": null,
+    "contains": [
+      "Hitman 2: Silent Assassin HD",
+      "Hitman: Blood Money HD",
+      "Hitman: Contracts HD"
+    ],
     "year": 2013,
     "genres": [
       "Adventure"
@@ -2655,6 +2712,10 @@ window.GAMES = [
     "title": "LEGO Harry Potter Collection",
     "platform": "PlayStation 4",
     "edition": null,
+    "contains": [
+      "LEGO Harry Potter Collection: Years 1-4",
+      "LEGO Harry Potter Collection: Years 5-7"
+    ],
     "year": 2016,
     "genres": [
       "Puzzle",
@@ -2738,6 +2799,11 @@ window.GAMES = [
     "titleRaw": "Mafia Trilogy",
     "platform": "PlayStation 4",
     "edition": null,
+    "contains": [
+      "Mafia II: Definitive Edition",
+      "Mafia III: Definitive Edition",
+      "Mafia: Definitive Edition"
+    ],
     "year": 2020,
     "genres": [
       "Shooter",
@@ -2876,6 +2942,11 @@ window.GAMES = [
     "title": "Mass Effect Legendary Edition",
     "platform": "PlayStation 4",
     "edition": null,
+    "contains": [
+      "Mass Effect",
+      "Mass Effect 2",
+      "Mass Effect 3"
+    ],
     "year": 2021,
     "genres": [
       "Shooter",
@@ -2917,6 +2988,10 @@ window.GAMES = [
     "title": "Metal Gear Solid V: The Definitive Experience",
     "platform": "PlayStation 4",
     "edition": null,
+    "contains": [
+      "Metal Gear Solid V: Ground Zeroes",
+      "Metal Gear Solid V: The Phantom Pain"
+    ],
     "year": 2016,
     "genres": [
       "Shooter",
@@ -3089,12 +3164,12 @@ window.GAMES = [
     "genres": [
       "Racing"
     ],
-    "developer": "EA Black Box, EA Redwood Shores",
+    "developer": "EA Redwood Shores, EA Black Box",
     "publisher": "Electronic Arts",
-    "summary": "Need for Speed: Most Wanted is a single-player racing video game and the ninth installment in the Need for Speed series, following Underground 2. The game centers on street-racing gameplay, featuring a variety of events and racing circuits set within the fictional city of Rockport.",
-    "rating": 85,
-    "cover": "covers/need-for-speed-most-wanted.jpg",
-    "igdbUrl": "https://www.igdb.com/games/need-for-speed-most-wanted",
+    "summary": "The player arrives in Rockport City, driving a racing version of the BMW M3 GTR (E46). Following Mia Townsend (played by Josie Maran), the player proves his driving prowess as he is pursued by a veteran police officer named Sergeant Cross (played by Dean McKenzie), who vows to take down the player and end street racing in Rockport.\nRaces seem to be in the player's favor until a particular group of racers, led by the game's antagonist, Clarence \"Razor\" Callahan (played by Derek Hamilton), sabotages and win the player's car in a race.",
+    "rating": 88,
+    "cover": "covers/need-for-speed-most-wanted--4.jpg",
+    "igdbUrl": "https://www.igdb.com/games/need-for-speed-most-wanted--4",
     "status": "manual",
     "photo": "foto-14.jpg",
     "notes": null
@@ -3715,17 +3790,19 @@ window.GAMES = [
     "title": "Tekken 6",
     "platform": "Xbox 360",
     "edition": null,
-    "year": 2007,
+    "year": 2009,
     "genres": [
-      "Fighting"
+      "Fighting",
+      "Hack and slash/Beat 'em up",
+      "Arcade"
     ],
-    "developer": "Namco Bandai Games",
-    "publisher": "Namco Bandai Games, Namco",
-    "summary": "Tekken 6 is a fighting game developed and published by Bandai Namco Games. It is the seventh main installment in the Tekken franchise. It was released in Japanese arcades on November 26, 2007 as the first game running on the PlayStation 3-based System 357 arcade board. The game received an update, subtitled Bloodline Rebellion, a year later.",
-    "rating": 78,
-    "cover": "covers/tekken-6.jpg",
-    "igdbUrl": "https://www.igdb.com/games/tekken-6",
-    "status": "matched",
+    "developer": "NAMCO BANDAI Games Inc.",
+    "publisher": "NAMCO BANDAI Games Inc., NAMCO BANDAI Games America Inc., Namco Bandai Games Europe S.A.S.",
+    "summary": "Tekken 6 is the home console port of Tekken 6: Bloodline Rebellion. It expands on the Arcade game with a single player \"Scenario Campaign\" mode along with other changes and additions typical of fighting games ported to consoles.",
+    "rating": 60,
+    "cover": "covers/tekken-6--3.jpg",
+    "igdbUrl": "https://www.igdb.com/games/tekken-6--3",
+    "status": "manual",
     "photo": "foto-11.jpg",
     "notes": null
   },
@@ -4086,6 +4163,11 @@ window.GAMES = [
     "title": "Uncharted: The Nathan Drake Collection",
     "platform": "PlayStation 4",
     "edition": null,
+    "contains": [
+      "Uncharted 2: Among Thieves Remastered",
+      "Uncharted 3: Drake's Deception Remastered",
+      "Uncharted: Drake's Fortune Remastered"
+    ],
     "year": 2015,
     "genres": [
       "Shooter",

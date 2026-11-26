@@ -2,10 +2,12 @@
 .env
 .igdb-token.json
 
-# database: rigenerabile da data/extractions/ + IGDB
+# database: si ricostruisce da data/extractions/ + IGDB, tranne le conferme fatte
+# con set-match.js, che esistono solo qui: tenerne una copia
 data/games.db
 data/games.db-wal
 data/games.db-shm
+data/backups/
 
 # foto originali degli scaffali: restano solo in locale
 photos/

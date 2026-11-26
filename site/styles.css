@@ -108,6 +108,18 @@ a { color: var(--vermilion); }
   z-index: -1;
 }
 
+.status { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 14px; }
+
+.offline {
+  margin: 0 0 4px;
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.offline:empty { display: none; }
+.offline[data-state="ready"] { color: var(--vermilion); font-weight: 700; }
+
 .count {
   margin: 0 0 4px;
   font-size: 12px;
@@ -127,7 +139,10 @@ a { color: var(--vermilion); }
 /* ---------- controlli ---------- */
 
 .controls { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-.controls > * { min-width: 0; max-width: 100%; }
+.controls > *, .filters > * { min-width: 0; max-width: 100%; }
+/* su schermo largo i filtri stanno in riga con la ricerca, senza contenitore proprio */
+.filters { display: contents; }
+.filters-toggle { display: none; }
 
 .search, .select, .ghost {
   background: var(--paper-card);
@@ -278,6 +293,39 @@ main { padding: 28px 28px 70px; }
   color: var(--ink-soft);
 }
 
+/* raccolte trovate per ciò che contengono: la fascia copre il voto, che qui conta meno */
+.card-inside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 6px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.3;
+  background: var(--vermilion);
+  color: var(--paper);
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.empty:not([hidden]) { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.empty-action {
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--paper);
+  background: var(--ink);
+  border: 0;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
 .empty {
   color: var(--ink-soft);
   text-align: center;
@@ -423,18 +471,31 @@ main { padding: 28px 28px 70px; }
   .grid { grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 22px 14px; }
   main, .topbar, .footer { padding-left: 16px; padding-right: 16px; }
   .serial { display: none; }
-  .count { flex-basis: 100%; }
-  /* su schermo stretto i controlli stanno in una griglia 2 colonne: niente overflow */
-  .controls { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-  .search, #platform, #genre, #kind { grid-column: 1 / -1; width: 100%; }
+  .status { flex-basis: 100%; }
+  /* l'intestazione resta fissa: deve essere bassa, per vedere i risultati con la tastiera aperta */
+  .topbar { padding-top: 14px; padding-bottom: 10px; }
+  .topbar-row { row-gap: 8px; }
+  .count, .offline { margin-bottom: 0; }
+  .controls { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; margin-top: 10px; }
+  .search { width: 100%; min-width: 0; }
+  .filters-toggle { display: block; }
+  .filters { display: none; grid-column: 1 / -1; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .controls.open .filters { display: grid; }
+  #platform, #genre, #kind { grid-column: 1 / -1; width: 100%; }
   .select { width: 100%; }
-  .ghost { grid-column: 1; }
+  .filters .ghost { grid-column: 1; }
   .theme-toggle { grid-column: 2; width: 100%; }
   .ghost, .theme-toggle { min-height: 44px; }
+  main { padding-top: 20px; }
   .dialog-card { padding: 20px; }
   .dialog-cover { width: min(150px, 46vw); }
   .dialog-info { min-width: min(250px, 100%); }
   .dialog { padding: 14px; }
   /* 16px evita lo zoom automatico di iOS al focus sui campi */
   .search, .select { font-size: 16px; }
+}
+
+/* telefono in orizzontale: l'intestazione scorre via insieme alla pagina */
+@media (max-height: 500px) {
+  .topbar { position: static; }
 }
