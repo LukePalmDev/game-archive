@@ -30,23 +30,29 @@
     <a class="nav-btn" href="consigliati.html" title="Giochi consigliati per te" aria-label="Giochi consigliati per te">?</a>
     <span class="mark" aria-hidden="true"></span>
     <h1>Game Archive<span class="dot">.</span></h1>
-    <p class="count" id="count">—</p>
+    <div class="status">
+      <p class="count" id="count">—</p>
+      <p class="offline" id="offline-status" role="status"></p>
+    </div>
     <p class="serial" id="serial">A—01</p>
   </div>
-  <div class="controls">
-    <input id="search" class="search" type="search" placeholder="Cerca un titolo…" aria-label="Cerca un titolo" autocomplete="off" spellcheck="false">
-    <select id="platform" class="select" aria-label="Piattaforma"><option value="">Tutte le piattaforme</option></select>
-    <select id="genre" class="select" aria-label="Genere"><option value="">Tutti i generi</option></select>
-    <select id="decade" class="select" aria-label="Decennio"><option value="">Tutti gli anni</option></select>
-    <select id="sort" class="select" aria-label="Ordinamento">
-      <option value="title">Titolo A→Z</option>
-      <option value="title-desc">Titolo Z→A</option>
-      <option value="year-desc">Più recenti</option>
-      <option value="year">Più vecchi</option>
-      <option value="rating">Voto più alto</option>
-    </select>
-    <button id="reset" class="ghost" type="button">Azzera</button>
-    <button id="theme" class="theme-toggle" type="button" aria-label="Cambia tema" title="Cambia tema">◐</button>
+  <div class="controls" id="controls">
+    <input id="search" class="search" type="search" placeholder="Cerca un titolo…" aria-label="Cerca un titolo" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="search">
+    <button id="filters-toggle" class="ghost filters-toggle" type="button" aria-expanded="false" aria-controls="filters">Filtri</button>
+    <div id="filters" class="filters">
+      <select id="platform" class="select" aria-label="Piattaforma"><option value="">Tutte le piattaforme</option></select>
+      <select id="genre" class="select" aria-label="Genere"><option value="">Tutti i generi</option></select>
+      <select id="decade" class="select" aria-label="Decennio"><option value="">Tutti gli anni</option></select>
+      <select id="sort" class="select" aria-label="Ordinamento">
+        <option value="title">Titolo A→Z</option>
+        <option value="title-desc">Titolo Z→A</option>
+        <option value="year-desc">Più recenti</option>
+        <option value="year">Più vecchi</option>
+        <option value="rating">Voto più alto</option>
+      </select>
+      <button id="reset" class="ghost" type="button">Azzera</button>
+      <button id="theme" class="theme-toggle" type="button" aria-label="Cambia tema" title="Cambia tema">◐</button>
+    </div>
   </div>
 </header>
 
@@ -80,6 +86,8 @@
 </footer>
 
 <script src="data/games.js"></script>
+<script src="search.js"></script>
 <script src="app.js"></script>
+<script src="offline.js"></script>
 </body>
 </html>

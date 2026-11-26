@@ -1,6 +1,6 @@
 // Generato da scripts/export-site.js — non modificare a mano.
 window.GAMES_META = {
-  "generated": "2026-09-21T22:14:00.135Z",
+  "generated": "2026-11-26T17:37:21.135Z",
   "page": "consigliati",
   "total": 78,
   "platforms": [
@@ -90,7 +90,7 @@ window.GAMES = [
     "title": "Dead Space",
     "platform": "Xbox Series X|S",
     "kind": "edizione",
-    "because": "Il remake del 2023 del primo Dead Space, di cui hai l'intera trilogia su 360.",
+    "because": "Il remake del 2023 del primo Dead Space, di cui hai l'intera trilogia su 360. Attenzione: serve una Xbox Series X|S, non gira su Xbox One.",
     "source": "Dead Space, Dead Space 2, Dead Space 3",
     "priority": 1,
     "year": 2023,
@@ -229,11 +229,30 @@ window.GAMES = [
     "igdbUrl": "https://www.igdb.com/games/forza-horizon-4"
   },
   {
+    "id": 88,
+    "title": "Gears of War 2",
+    "platform": "Xbox 360",
+    "kind": "saga",
+    "because": "Seguito diretto del primo Gears of War, che hai su 360 e in Ultimate Edition su Xbox One.",
+    "source": "Gears of War, Gears of War: Ultimate Edition",
+    "priority": 1,
+    "year": 2008,
+    "genres": [
+      "Shooter"
+    ],
+    "developer": "Epic Games",
+    "publisher": "Microsoft Game Studios",
+    "summary": "Gears of War 2 is a third-person shooter built around tactical use of cover. Players fight through a campaign as a soldier of the Coalition of Ordered Governments, carrying a limited loadout of weapons and using cover, melee attacks, and the series' chainsaw bayonet against enemy forces. It supports cooperative campaign play and a range of competitive multiplayer modes, and introduces Horde mode, in which up to five players survive escalating waves of enemies together.",
+    "rating": 90,
+    "cover": "covers/gears-of-war-2.jpg",
+    "igdbUrl": "https://www.igdb.com/games/gears-of-war-2"
+  },
+  {
     "id": 2,
     "title": "Gears of War 4",
     "platform": "Xbox One",
     "kind": "saga",
-    "because": "Hai Gears of War e la Ultimate Edition: il 4 riprende la storia una generazione dopo la trilogia originale.",
+    "because": "Hai Gears of War e la Ultimate Edition, cioè il primo capitolo. Il 4 riprende la storia dopo la trilogia originale: per seguirla in ordine recupera prima il 2 e il 3.",
     "source": "Gears of War, Gears of War: Ultimate Edition",
     "priority": 1,
     "year": 2016,
@@ -248,11 +267,11 @@ window.GAMES = [
     "igdbUrl": "https://www.igdb.com/games/gears-of-war-4"
   },
   {
-    "id": 4,
+    "id": 90,
     "title": "Halo Infinite",
-    "platform": "Xbox Series X|S",
+    "platform": "Xbox One",
     "kind": "saga",
-    "because": "Hai Master Chief Collection, Halo 5 e i due Halo Wars: Infinite è l'unico capitolo principale che ti manca.",
+    "because": "Hai Master Chief Collection, Halo 5 e i due Halo Wars: Infinite è l'unico capitolo principale che ti manca. Esiste anche per Xbox One.",
     "source": "Halo: The Master Chief Collection, Halo 5: Guardians",
     "priority": 1,
     "year": 2021,
@@ -266,26 +285,6 @@ window.GAMES = [
     "rating": 88,
     "cover": "covers/halo-infinite.jpg",
     "igdbUrl": "https://www.igdb.com/games/halo-infinite"
-  },
-  {
-    "id": 44,
-    "title": "Mafia II: Definitive Edition",
-    "platform": "Xbox One",
-    "kind": "edizione",
-    "because": "Hai Mafia II su 360 e le Definitive di Mafia I e III: questa completa la trilogia rimasterizzata.",
-    "source": "Mafia II, Mafia: Definitive Edition, Mafia III",
-    "priority": 1,
-    "year": 2020,
-    "genres": [
-      "Shooter",
-      "Adventure"
-    ],
-    "developer": "D3T Limited",
-    "publisher": "2K",
-    "summary": "Remastered in stunning HD detail, live the life of a gangster during the Golden-era of organized crime. War hero Vito Scaletta becomes entangled with the mob in hopes of paying his father’s debts. Alongside his buddy Joe, Vito works to prove himself, climbing the family ladder with crimes of larger reward, status and consequence.\n\nIt includes the DLCs released for the original game (\"The Betrayal of Jimmy\", \"Jimmy's Vendetta\", and \"Joe's Adventures\").",
-    "rating": 61,
-    "cover": "covers/mafia-ii-definitive-edition.jpg",
-    "igdbUrl": "https://www.igdb.com/games/mafia-ii-definitive-edition"
   },
   {
     "id": 43,
@@ -372,7 +371,7 @@ window.GAMES = [
     "title": "Super Mario Galaxy",
     "platform": "Wii",
     "kind": "genere",
-    "because": "Il platform simbolo della Wii: con New Super Mario Bros. e Mario Kart ti manca solo questo.",
+    "because": "Il platform simbolo della Wii: si affianca a New Super Mario Bros. e Mario Kart, che hai già.",
     "source": "New Super Mario Bros. Wii, Mario Kart Wii",
     "priority": 1,
     "year": 2007,
@@ -573,7 +572,7 @@ window.GAMES = [
     "title": "Batman: Arkham Knight",
     "platform": "Xbox One",
     "kind": "genere",
-    "because": "Action-adventure open world nello stile di Shadow of Mordor e degli Assassin's Creed che colleziona.",
+    "because": "Action-adventure open world nello stile di Shadow of Mordor e degli Assassin's Creed che collezioni.",
     "source": "Middle-earth: Shadow of Mordor",
     "priority": 2,
     "year": 2015,
@@ -627,26 +626,6 @@ window.GAMES = [
     "rating": 87,
     "cover": "covers/battlefield-bad-company-2.jpg",
     "igdbUrl": "https://www.igdb.com/games/battlefield-bad-company-2"
-  },
-  {
-    "id": 40,
-    "title": "BioShock Infinite",
-    "platform": "Xbox 360",
-    "kind": "saga",
-    "because": "Hai il primo BioShock su 360: Infinite chiude il cerchio della serie.",
-    "source": "BioShock",
-    "priority": 2,
-    "year": 2013,
-    "genres": [
-      "Shooter",
-      "Adventure"
-    ],
-    "developer": "Irrational Games",
-    "publisher": "2K Games",
-    "summary": "BioShock Infinite is the third game in the BioShock series. It is not a direct sequel/prequel to any of the previous BioShock games but takes place in an entirely different setting, although it shares similar features, gameplay and concepts with the previous games. BioShock Infinite features a range of environments that force the player to adapt, with different weapons and strategies for each situation. Interior spaces feature close combat with enemies, but unlike previous games set in Rapture, the setting of Infinite contains open spaces with emphasis on sniping and ranged combat against as many as fifteen enemies at once.",
-    "rating": 93,
-    "cover": "covers/bioshock-infinite.jpg",
-    "igdbUrl": "https://www.igdb.com/games/bioshock-infinite"
   },
   {
     "id": 31,
@@ -791,11 +770,11 @@ window.GAMES = [
     "igdbUrl": "https://www.igdb.com/games/final-fantasy-xiii-2"
   },
   {
-    "id": 38,
+    "id": 91,
     "title": "Forza Horizon 5",
-    "platform": "Xbox Series X|S",
+    "platform": "Xbox One",
     "kind": "saga",
-    "because": "Il capitolo più recente della serie Horizon, ambientato in Messico.",
+    "because": "Il capitolo della serie Horizon ambientato in Messico, disponibile anche per Xbox One. Il successivo, Horizon 6, non esce su Xbox One.",
     "source": "Forza Motorsport 7",
     "priority": 2,
     "year": 2021,
@@ -830,6 +809,25 @@ window.GAMES = [
     "igdbUrl": "https://www.igdb.com/games/gears-5"
   },
   {
+    "id": 89,
+    "title": "Gears of War 3",
+    "platform": "Xbox 360",
+    "kind": "saga",
+    "because": "Chiude la trilogia originale: va giocato dopo il 2 e prima di Gears of War 4.",
+    "source": "Gears of War, Gears of War: Ultimate Edition",
+    "priority": 2,
+    "year": 2011,
+    "genres": [
+      "Shooter"
+    ],
+    "developer": "Epic Games",
+    "publisher": "Microsoft Studios",
+    "summary": "Gears of War 3 is the spectacular conclusion to one of the most memorable and celebrated sagas in videogames. Gears of War 3 plunges players into a harrowing tale of hope, survival and brotherhood. In Gears of War 3, players fight on as Marcus Fenix, the grizzled war hero and leader of Delta Squad. Eighteen months after the fall of the last human city, the war against the Locust rages on. Meanwhile, deep beneath the surface, a fearsome new threat is infecting the planet from within. With survivors scattered and civilization in ruins, time is running out for Marcus and his comrades as they fight to save the human race.",
+    "rating": 97,
+    "cover": "covers/gears-of-war-3.jpg",
+    "igdbUrl": "https://www.igdb.com/games/gears-of-war-3"
+  },
+  {
     "id": 71,
     "title": "God of War: Chains of Olympus",
     "platform": "PlayStation Portable",
@@ -854,7 +852,7 @@ window.GAMES = [
     "title": "Grand Theft Auto: Liberty City Stories",
     "platform": "PlayStation Portable",
     "kind": "saga",
-    "because": "Hai GTA IV, V e la Trilogy: i capitoli PSP sono gli unici che ti mancano.",
+    "because": "Hai GTA IV, V e la Trilogy: Liberty City Stories è una storia nata su PSP che ti manca, come anche Vice City Stories.",
     "source": "Grand Theft Auto V, Grand Theft Auto: The Trilogy - The Definitive Edition",
     "priority": 2,
     "year": 2005,
@@ -936,7 +934,7 @@ window.GAMES = [
     "title": "Metal Gear Solid: Master Collection Vol. 1",
     "platform": "PlayStation 4",
     "kind": "edizione",
-    "because": "Hai MGS V Definitive Experience: questa raccolta copre MGS 1, 2 e 3, cioè tutto quello che viene prima.",
+    "because": "Hai MGS V Definitive Experience: questa raccolta copre MGS 1, 2 e 3, i capitoli storici della serie.",
     "source": "Metal Gear Solid V: The Definitive Experience",
     "priority": 2,
     "year": 2023,
@@ -1446,7 +1444,7 @@ window.GAMES = [
     "title": "Tekken 7",
     "platform": "Xbox One",
     "kind": "saga",
-    "because": "Hai Tekken 6 su 360: il 7 è il capitolo current-gen della serie.",
+    "because": "Hai Tekken 6 su 360: il 7 è il capitolo successivo ed esiste per Xbox One. Il più recente, Tekken 8, non esce su Xbox One.",
     "source": "Tekken 6",
     "priority": 3,
     "year": 2017,
@@ -1483,9 +1481,9 @@ window.GAMES = [
     "id": 80,
     "title": "The Legend of Zelda: Tears of the Kingdom",
     "platform": "Nintendo Switch",
-    "kind": "saga",
-    "because": "Seguito di Breath of the Wild, se la formula ti prende.",
-    "source": "Mario Kart 8 Deluxe",
+    "kind": "genere",
+    "because": "Il seguito di Breath of the Wild, che non hai ancora: prendilo dopo il primo, se la formula ti prende.",
+    "source": "Mario Kart 8 Deluxe, Mario Party Superstars",
     "priority": 3,
     "year": 2023,
     "genres": [
@@ -1546,7 +1544,7 @@ window.GAMES = [
     "title": "Wii Sports Resort",
     "platform": "Wii",
     "kind": "genere",
-    "because": "Completa il trittico Wii Play / Wii Fit Plus con il MotionPlus.",
+    "because": "Completa il trittico Wii Play / Wii Fit Plus. Attenzione: richiede il Wii MotionPlus (accessorio, oppure un telecomando Wii Remote Plus).",
     "source": "Wii Play, Wii Fit Plus",
     "priority": 3,
     "year": 2009,

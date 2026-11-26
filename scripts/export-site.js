@@ -3,6 +3,7 @@
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { openDb, ROOT } from './lib/db.js';
+import { ownedIgdbIds, contentNames } from './lib/contents.js';
 
 const db = openDb();
 const rows = db.prepare(`
@@ -11,6 +12,15 @@ const rows = db.prepare(`
   FROM games ORDER BY title COLLATE NOCASE
 `).all();
 
+const contents = contentNames(db);
+if (rows.length && !contents.size) {
+  console.warn('⚠ Nessun contenuto di raccolte nel database: se ne possiedi, lancia node scripts/sync-contents.js e ripeti l\'export.');
+}
+const pendingCount = rows.filter((r) => r.igdb_id == null).length;
+if (pendingCount) {
+  console.warn(`⚠ ${pendingCount} giochi senza abbinamento IGDB: i consigli corrispondenti non vengono nascosti.`);
+}
+
 const games = rows.map((r) => ({
   id: r.id,
   title: r.title,
@@ -18,6 +28,7 @@ const games = rows.map((r) => ({
   platform: r.platform || null,
   edition: r.edition || null,
   copies: r.copies > 1 ? r.copies : undefined,
+  contains: contents.get(r.igdb_id)?.filter((name) => name !== r.title),
   year: r.release_year ?? null,
   genres: r.genres ? JSON.parse(r.genres) : [],
   developer: r.developer ?? null,
@@ -43,13 +54,18 @@ const meta = {
 };
 
 // ---- consigli ----
-const recRows = db.prepare(`
-  SELECT id, title, platform, kind, because, source, priority, igdb_slug, release_year,
-         genres, developer, publisher, summary, rating, cover_path, match_status
+const candidates = db.prepare(`
+  SELECT id, title, platform, kind, because, source, priority, igdb_id, igdb_slug, release_year,
+         genres, developer, publisher, summary, rating, cover_path
   FROM recommendations
-  WHERE match_status IN ('matched', 'weak')   -- gli 'owned' sono già in collezione: fuori dai consigli
+  WHERE match_status IN ('matched', 'weak', 'owned')
   ORDER BY priority, title COLLATE NOCASE
 `).all();
+
+// "Ce l'ho già" si ricalcola qui, a ogni export: così un acquisto fa sparire il consiglio.
+const owned = ownedIgdbIds(db);
+const recRows = candidates.filter((r) => !owned.has(r.igdb_id));
+const hidden = candidates.filter((r) => owned.has(r.igdb_id));
 
 const recs = recRows.map((r) => ({
   id: r.id,
@@ -59,7 +75,6 @@ const recs = recRows.map((r) => ({
   because: r.because,
   source: r.source,
   priority: r.priority,
-  owned: r.match_status === 'owned' || undefined,
   year: r.release_year ?? null,
   genres: r.genres ? JSON.parse(r.genres) : [],
   developer: r.developer ?? null,
@@ -95,4 +110,5 @@ writeFileSync(join(outDir, 'recommendations.json'), JSON.stringify({ meta: recMe
 
 console.log(`Esportati ${games.length} giochi (${meta.cases} custodie): ${meta.matched} con metadati, ${meta.toReview} da rivedere → site/data/games.js`);
 console.log(`Esportati ${recs.length} consigli → site/data/recommendations.js`);
+for (const r of hidden) console.log(`  nascosto, è già tuo: ${r.title} → ${owned.get(r.igdb_id)}`);
 db.close();

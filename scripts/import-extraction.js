@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 /**
  * Importa i titoli estratti dalle foto (data/extractions/*.json) nella tabella games.
- * Idempotente: rilanciarlo non crea doppioni (indice unico su titolo+piattaforma).
+ * Idempotente: rilanciarlo non crea doppioni (titolo normalizzato + piattaforma + edizione).
  *
  *   node scripts/import-extraction.js                    # tutti i file
  *   node scripts/import-extraction.js scaffale-01.json   # solo alcuni
  */
 import { readdirSync, readFileSync } from 'node:fs';
 import { join, basename } from 'node:path';
-import { openDb, ROOT } from './lib/db.js';
+import { openDb, ROOT, normalizeTitle } from './lib/db.js';
 import { canonicalPlatform } from './lib/platforms.js';
 
 const DIR = join(ROOT, 'data', 'extractions');
@@ -25,15 +25,17 @@ const insert = db.prepare(`
   INSERT INTO games (title_raw, title, platform, edition, copies, source_photo, notes, match_status)
   VALUES (?, ?, ?, ?, ?, ?, ?, 'pending')
 `);
-// L'identità è il titolo letto dalla foto, non quello corretto da IGDB: un re-import
-// non deve creare un duplicato se l'arricchimento ha rinominato `title`.
-const findExisting = db.prepare(`
-  SELECT id FROM games
-  WHERE lower(edition) = lower(?)
-    AND lower(platform) IN (lower(?), lower(?))
-    AND (lower(title_raw) = lower(?) OR lower(title) = lower(?))
-  LIMIT 1
-`);
+// L'identità è il titolo letto dalla foto, non solo quello corretto da IGDB: un re-import
+// non deve creare un duplicato se l'arricchimento ha rinominato `title`. Il confronto ignora
+// maiuscole, punteggiatura e numeri romani ("Mafia II" = "mafia 2").
+const keyOf = (title, platform, edition) =>
+  [normalizeTitle(title) || title.toLowerCase(), canonicalPlatform(platform).toLowerCase(), edition.toLowerCase()].join('|');
+const known = new Map();
+const remember = (id, g) => {
+  for (const t of [g.title_raw, g.title]) known.set(keyOf(t, g.platform, g.edition), id);
+};
+for (const g of db.prepare('SELECT id, title_raw, title, platform, edition FROM games').all()) remember(g.id, g);
+
 const touchExisting = db.prepare(`
   UPDATE games SET copies = max(copies, ?), updated_at = datetime('now') WHERE id = ?
 `);
@@ -61,12 +63,13 @@ for (const file of files) {
       .filter(Boolean).join(' | ') || null;
     if (item.confidence === 'low') lowConfidence++;
 
-    const existing = findExisting.get(edition, platform, platformRaw, titleRaw, titleRaw);
-    if (existing) {
-      touchExisting.run(copies, existing.id);
+    const existing = known.get(keyOf(titleRaw, platform, edition));
+    if (existing != null) {
+      touchExisting.run(copies, existing);
       skipped++;
     } else {
-      insert.run(titleRaw, title, platform, edition, copies, photo, notes);
+      const { lastInsertRowid } = insert.run(titleRaw, title, platform, edition, copies, photo, notes);
+      remember(Number(lastInsertRowid), { title_raw: titleRaw, title, platform, edition });
       added++;
     }
   }

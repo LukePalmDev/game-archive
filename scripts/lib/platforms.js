@@ -24,13 +24,13 @@ export function canonicalPlatform(input) {
   return ALIASES[raw.toLowerCase()] ?? raw;
 }
 
-/** true se una delle piattaforme IGDB del gioco corrisponde a quella indicata. */
+/**
+ * true se una delle piattaforme IGDB del gioco è esattamente quella indicata (nome o sigla).
+ * Niente sottostringhe: "Xbox" non è "Xbox 360" e "Wii" non è "Wii U".
+ */
 export function platformMatches(wanted, igdbPlatforms = []) {
   const target = canonicalPlatform(wanted).toLowerCase();
   if (!target) return null;
-  return igdbPlatforms.some((p) => {
-    const name = String(p.name ?? '').toLowerCase();
-    const abbr = String(p.abbreviation ?? '').toLowerCase();
-    return name === target || abbr === target || name.includes(target) || (abbr && target.includes(abbr));
-  });
+  return igdbPlatforms.some((p) =>
+    [p.name, p.abbreviation].some((v) => String(v ?? '').toLowerCase() === target));
 }

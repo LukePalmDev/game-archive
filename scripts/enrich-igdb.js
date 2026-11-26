@@ -11,8 +11,9 @@ import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { openDb, ROOT } from './lib/db.js';
 import { createClient, coverUrl, downloadCover } from './lib/igdb.js';
-import { canonicalPlatform, platformMatches } from './lib/platforms.js';
-import { titleSimilarity } from './lib/similarity.js';
+import { canonicalPlatform } from './lib/platforms.js';
+import { FIELDS, rank, isConfident, toRecord } from './lib/match.js';
+import { syncContents } from './lib/contents.js';
 
 const argv = process.argv.slice(2);
 const opt = (name, fallback = null) => {
@@ -28,38 +29,10 @@ const force = flag('force');
 const dryRun = flag('dry-run');
 
 const COVERS_DIR = join(ROOT, 'site', 'covers');
-const FIELDS = [
-  'name', 'slug', 'url', 'summary', 'first_release_date', 'game_type', 'version_parent',
-  'genres.name', 'platforms.name', 'platforms.abbreviation', 'cover.image_id',
-  'aggregated_rating', 'rating', 'total_rating', 'total_rating_count',
-  'involved_companies.developer', 'involved_companies.publisher', 'involved_companies.company.name',
-].join(',');
-
-// game_type: 1 dlc, 2 expansion, 5 mod, 6 episode, 7 season, 13 pack, 14 update — non sono giochi a sé
-const DLC_TYPES = new Set([1, 2, 5, 6, 7, 13, 14]);
-
-function scoreCandidate(game, candidate) {
-  const sim = titleSimilarity(game.title, candidate.name);
-  let score = sim;
-  const platformOk = platformMatches(game.platform, candidate.platforms ?? []);
-  if (platformOk === true) score += 0.12;
-  else if (platformOk === false) score -= 0.18;
-  if (DLC_TYPES.has(candidate.game_type)) score -= 0.25;
-  if (candidate.version_parent) score -= 0.1;
-  if ((candidate.total_rating_count ?? 0) > 50) score += 0.03;
-  return { sim, score: Math.max(0, Math.min(1.2, score)) };
-}
-
-function companies(candidate, kind) {
-  return (candidate.involved_companies ?? [])
-    .filter((c) => c[kind])
-    .map((c) => c.company?.name)
-    .filter(Boolean)
-    .join(', ') || null;
-}
 
 const db = openDb();
-const where = onlyId ? 'id = ?' : (status === 'all' && force ? '1=1' : 'match_status IN (SELECT value FROM json_each(?))');
+// le conferme fatte a mano con set-match non si toccano, a meno di chiederle con --id
+const where = onlyId ? 'id = ?' : (status === 'all' && force ? "match_status != 'manual'" : 'match_status IN (SELECT value FROM json_each(?))');
 const params = onlyId ? [onlyId] : (status === 'all' && force ? [] : [JSON.stringify(status === 'all' ? ['pending', 'ambiguous', 'not_found'] : [status])]);
 let games = db.prepare(`SELECT * FROM games WHERE ${where} ORDER BY id`).all(...params);
 if (limit) games = games.slice(0, limit);
@@ -102,13 +75,9 @@ for (const game of games) {
       continue;
     }
 
-    const ranked = results
-      .map((c) => ({ candidate: c, ...scoreCandidate(game, c) }))
-      .sort((a, b) => b.score - a.score);
-
+    const ranked = rank(game, results);
     const [best, second] = ranked;
-    const gap = second ? best.score - second.score : 1;
-    const confident = best.score >= 0.8 && (gap >= 0.12 || best.sim === 1);
+    const confident = isConfident(game, ranked);
 
     if (!dryRun) {
       clearCandidates.run(game.id);
@@ -130,12 +99,10 @@ for (const game of games) {
     }
 
     const c = best.candidate;
-    const date = c.first_release_date ? new Date(c.first_release_date * 1000) : null;
-    const platform = canonicalPlatform(game.platform) ||
-      ((c.platforms ?? []).map((p) => p.name)[0] ?? '');
-    const imageId = c.cover?.image_id ?? null;
-    const url = imageId ? coverUrl(imageId) : null;
-    const coverPath = imageId ? `covers/${c.slug}.jpg` : null;
+    const r = toRecord(c);
+    const platform = canonicalPlatform(game.platform) || (r.platforms[0] ?? '');
+    const url = r.imageId ? coverUrl(r.imageId) : null;
+    const coverPath = r.imageId ? `covers/${c.slug}.jpg` : null;
 
     if (url && !dryRun) {
       const dest = join(COVERS_DIR, `${c.slug}.jpg`);
@@ -144,25 +111,23 @@ for (const game of games) {
 
     if (!dryRun) {
       update.run(
-        c.name, platform, c.id, c.slug ?? null,
-        date ? date.getUTCFullYear() : null,
-        date ? date.toISOString().slice(0, 10) : null,
-        JSON.stringify((c.genres ?? []).map((g) => g.name)),
-        companies(c, 'developer'), companies(c, 'publisher'),
-        c.summary ?? null,
-        c.aggregated_rating ?? c.total_rating ?? c.rating ?? null,
-        url, coverPath,
+        r.name, platform, c.id, r.slug, r.year, r.date, r.genres, r.developer, r.publisher,
+        r.summary, r.rating, url, coverPath,
         game.match_status === 'manual' ? 'manual' : 'matched',
         Number(best.score.toFixed(3)),
         game.id,
       );
     }
     counts.matched++;
-    console.log(`✓ ${label} → ${c.name} (${date ? date.getUTCFullYear() : 's.d.'}) ${imageId ? '' : '— senza copertina'}`);
+    console.log(`✓ ${label} → ${r.name} (${r.year ?? 's.d.'}) ${r.imageId ? '' : '— senza copertina'}`);
   } catch (err) {
     counts.errors++;
     console.log(`! ${label} → errore: ${err.message}`);
   }
+}
+
+if (!dryRun && counts.matched) {
+  console.log(`\nContenuto delle raccolte aggiornato: ${await syncContents(db, query)} voci.`);
 }
 
 console.log(`\nMatch: ${counts.matched} | incerti: ${counts.ambiguous} | non trovati: ${counts.not_found} | errori: ${counts.errors}`);
