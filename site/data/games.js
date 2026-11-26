@@ -1,6 +1,6 @@
 // Generato da scripts/export-site.js — non modificare a mano.
 window.GAMES_META = {
-  "generated": "2026-11-26T17:37:21.133Z",
+  "generated": "2026-11-26T17:50:34.631Z",
   "total": 213,
   "cases": 216,
   "matched": 213,
@@ -154,6 +154,9 @@ window.GAMES = [
     "title": "Assassin's Creed III Remastered",
     "platform": "Xbox One",
     "edition": null,
+    "contains": [
+      "Assassin's Creed: Liberation Remastered"
+    ],
     "year": 2019,
     "genres": [
       "Role-playing (RPG)",
@@ -941,6 +944,9 @@ window.GAMES = [
     "title": "Call of Duty: Infinite Warfare",
     "platform": "Xbox One",
     "edition": "Legacy Edition",
+    "contains": [
+      "Call of Duty: Modern Warfare Remastered"
+    ],
     "year": 2016,
     "genres": [
       "Shooter",
@@ -2209,6 +2215,9 @@ window.GAMES = [
     "title": "Grand Theft Auto V",
     "platform": "Xbox One",
     "edition": null,
+    "contains": [
+      "Grand Theft Auto Online"
+    ],
     "year": 2013,
     "genres": [
       "Shooter",
@@ -2230,6 +2239,9 @@ window.GAMES = [
     "title": "Grand Theft Auto V",
     "platform": "Xbox 360",
     "edition": null,
+    "contains": [
+      "Grand Theft Auto Online"
+    ],
     "year": 2013,
     "genres": [
       "Shooter",
@@ -2251,6 +2263,9 @@ window.GAMES = [
     "title": "Grand Theft Auto V",
     "platform": "PlayStation 4",
     "edition": null,
+    "contains": [
+      "Grand Theft Auto Online"
+    ],
     "year": 2013,
     "genres": [
       "Shooter",
@@ -3548,6 +3563,9 @@ window.GAMES = [
     "title": "Red Dead Redemption",
     "platform": "PlayStation 4",
     "edition": null,
+    "contains": [
+      "Red Dead Redemption: Undead Nightmare"
+    ],
     "year": 2023,
     "genres": [
       "Shooter",

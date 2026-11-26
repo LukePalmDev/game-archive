@@ -16,11 +16,17 @@ if (!payload.items?.length) {
 const db = openDb();
 
 const upsert = db.prepare(`
-  INSERT INTO recommendations (title, platform, kind, because, source, priority)
-  VALUES (?, ?, ?, ?, ?, ?)
+  INSERT INTO recommendations (title, platform, kind, because, source, priority, igdb_hint, cex_price, cex_sold_out)
+  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
   ON CONFLICT DO UPDATE SET
     kind = excluded.kind, because = excluded.because, source = excluded.source,
-    priority = excluded.priority, updated_at = datetime('now')
+    priority = excluded.priority, igdb_hint = excluded.igdb_hint,
+    cex_price = excluded.cex_price, cex_sold_out = excluded.cex_sold_out,
+    -- se cambia la scheda IGDB indicata, i metadati vanno riscaricati
+    match_status = CASE
+      WHEN excluded.igdb_hint IS NOT NULL AND excluded.igdb_hint IS NOT recommendations.igdb_id THEN 'pending'
+      ELSE recommendations.match_status END,
+    updated_at = datetime('now')
 `);
 
 const keyOf = (title, platform) => `${title.toLowerCase()}|${platform.toLowerCase()}`;
@@ -43,6 +49,9 @@ for (const item of payload.items) {
     item.because ?? '',
     item.source ?? '',
     Number(item.priority ?? 2),
+    item.igdb ?? null,
+    item.cex?.price ?? null,
+    item.cex ? Number(Boolean(item.cex.soldOut)) : null,
   );
   n++;
 }

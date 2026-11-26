@@ -1,6 +1,305 @@
 {
   "items": [
     {
+      "title": "Call of Duty: Modern Warfare Remastered",
+      "platform": "Xbox One",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 24920,
+      "cex": {
+        "price": 12,
+        "soldOut": true
+      },
+      "because": "",
+      "source": ""
+    },
+    {
+      "title": "Call of Duty: Vanguard",
+      "platform": "Xbox One",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 165067,
+      "cex": {
+        "price": 15,
+        "soldOut": false
+      },
+      "because": "La voce della tua lista è la versione senza DLC.",
+      "source": ""
+    },
+    {
+      "title": "Call of Duty: Modern Warfare II (2022)",
+      "platform": "Xbox One",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 200165,
+      "cex": {
+        "price": 15,
+        "soldOut": false
+      },
+      "because": "È il capitolo del 2022, non il Modern Warfare 2 del 2009 che hai su 360. Il disco da solo non basta: il gioco va scaricato, quindi servono rete e molto spazio libero.",
+      "source": ""
+    },
+    {
+      "title": "Call of Duty: Modern Warfare III (2023)",
+      "platform": "Xbox One",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 260780,
+      "cex": {
+        "price": 18,
+        "soldOut": false
+      },
+      "because": "È il capitolo del 2023, non il Modern Warfare 3 del 2011 che hai su 360. Per giocare serve un aggiornamento da scaricare.",
+      "source": ""
+    },
+    {
+      "title": "Call of Duty: Roads to Victory",
+      "platform": "PlayStation Portable",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 3120,
+      "cex": {
+        "price": 5,
+        "soldOut": false
+      },
+      "because": "In italiano: La Strada della Vittoria.",
+      "source": ""
+    },
+    {
+      "title": "The Fast and the Furious: Tokyo Drift",
+      "platform": "PlayStation Portable",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 21383,
+      "cex": {
+        "price": 2,
+        "soldOut": true
+      },
+      "because": "",
+      "source": ""
+    },
+    {
+      "title": "Journey: Collector's Edition",
+      "platform": "PlayStation 4",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 23411,
+      "cex": {
+        "price": 28,
+        "soldOut": true
+      },
+      "because": "Raccolta su disco con Journey, flOw e Flower.",
+      "source": ""
+    },
+    {
+      "title": "L.A. Noire",
+      "platform": "Xbox One",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 59849,
+      "cex": {
+        "price": 15,
+        "soldOut": true
+      },
+      "because": "",
+      "source": ""
+    },
+    {
+      "title": "Metroid Prime 3: Corruption",
+      "platform": "Wii",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 1111,
+      "cex": {
+        "price": 18,
+        "soldOut": false
+      },
+      "because": "",
+      "source": ""
+    },
+    {
+      "title": "Lords of the Fallen (2014)",
+      "platform": "Xbox One",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 4847,
+      "cex": {
+        "price": 3,
+        "soldOut": true
+      },
+      "because": "È il gioco del 2014 (nella tua lista in Limited Edition). Il reboot del 2023 non esce su Xbox One.",
+      "source": ""
+    },
+    {
+      "title": "Portal 2",
+      "platform": "Xbox 360",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 72,
+      "cex": {
+        "price": 22,
+        "soldOut": false
+      },
+      "because": "",
+      "source": ""
+    },
+    {
+      "title": "Metal Gear Solid HD Collection",
+      "platform": "Xbox 360",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 20741,
+      "cex": {
+        "price": 30,
+        "soldOut": false
+      },
+      "because": "Dentro ci sono anche MGS 2, MGS 3 e Peace Walker: se la prendi, Peace Walker per PSP non ti serve.",
+      "source": ""
+    },
+    {
+      "title": "Condemned: Criminal Origins",
+      "platform": "Xbox 360",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 6942,
+      "cex": {
+        "price": 12,
+        "soldOut": true
+      },
+      "because": "",
+      "source": ""
+    },
+    {
+      "title": "Borderlands",
+      "platform": "Xbox 360",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 498,
+      "cex": {
+        "price": 5,
+        "soldOut": false
+      },
+      "because": "È il primo capitolo, che ti manca: la tua Handsome Collection ha solo il 2 e il Pre-Sequel.",
+      "source": ""
+    },
+    {
+      "title": "Bayonetta",
+      "platform": "Xbox 360",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 2136,
+      "cex": {
+        "price": 18,
+        "soldOut": false
+      },
+      "because": "",
+      "source": ""
+    },
+    {
+      "title": "Tom Clancy's Splinter Cell: Double Agent",
+      "platform": "Xbox",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 182225,
+      "cex": {
+        "price": 1,
+        "soldOut": true
+      },
+      "because": "Hai i primi due su Xbox. Prima di questo c'è Chaos Theory, che trovi tra i consigli.",
+      "source": ""
+    },
+    {
+      "title": "Star Wars: Jedi Knight II - Jedi Outcast",
+      "platform": "Xbox",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 152,
+      "cex": {
+        "price": 8,
+        "soldOut": false
+      },
+      "because": "È il capitolo che precede il tuo Jedi Academy.",
+      "source": ""
+    },
+    {
+      "title": "Red Dead Revolver",
+      "platform": "Xbox",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 1969,
+      "cex": {
+        "price": 10,
+        "soldOut": true
+      },
+      "because": "Il predecessore di Red Dead Redemption, che hai su PS4.",
+      "source": ""
+    },
+    {
+      "title": "The Elder Scrolls III: Morrowind",
+      "platform": "Xbox",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 56,
+      "cex": {
+        "price": 25,
+        "soldOut": false
+      },
+      "because": "",
+      "source": ""
+    },
+    {
+      "title": "Dead to Rights II",
+      "platform": "Xbox",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 5810,
+      "cex": {
+        "price": 1.5,
+        "soldOut": true
+      },
+      "because": "Nella tua lista CeX la voce si chiama «Dead to rights», ma la copertina è quella del II: controlla la custodia.",
+      "source": ""
+    },
+    {
+      "title": "Crimson Skies: High Road to Revenge",
+      "platform": "Xbox",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 5793,
+      "cex": {
+        "price": 1.5,
+        "soldOut": true
+      },
+      "because": "",
+      "source": ""
+    },
+    {
+      "title": "Breakdown",
+      "platform": "Xbox",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 5756,
+      "cex": {
+        "price": 15,
+        "soldOut": true
+      },
+      "because": "",
+      "source": ""
+    },
+    {
+      "title": "Black",
+      "platform": "Xbox",
+      "kind": "wanted",
+      "priority": 0,
+      "igdb": 5749,
+      "cex": {
+        "price": 5,
+        "soldOut": true
+      },
+      "because": "",
+      "source": ""
+    },
+    {
       "title": "Mass Effect Legendary Edition",
       "platform": "Xbox One",
       "kind": "saga",
@@ -596,7 +895,7 @@
       "title": "Metal Gear Solid: Peace Walker",
       "platform": "PlayStation Portable",
       "kind": "saga",
-      "because": "Precede direttamente MGS V, che hai su PS4: stesso Kojima, stessa base madre.",
+      "because": "Precede direttamente MGS V, che hai su PS4: stesso Kojima, stessa base madre. È già dentro la Metal Gear Solid HD Collection per 360, che hai tra i most wanted: ne basta una.",
       "source": "Metal Gear Solid V: The Definitive Experience",
       "priority": 2
     },

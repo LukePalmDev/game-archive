@@ -5,6 +5,8 @@
  */
 (() => {
   const status = document.getElementById('offline-status');
+  // aperto con doppio clic i file sono già tutti in locale: non c'è niente da salvare
+  if (location.protocol === 'file:') return;
   if (!('serviceWorker' in navigator) || !window.isSecureContext || !window.caches) return;
 
   const PARALLEL = 6;

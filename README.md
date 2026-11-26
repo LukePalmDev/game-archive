@@ -84,6 +84,19 @@ popolata da un catalogo di titoli da comprare, costruito analizzando la collezio
 | `SAGA` | capitoli mancanti di serie che possiedi (hai 1 e 2 → ti propone il 3) |
 | `EDIZIONE` | remaster, collection ed edizioni definitive di giochi che hai già |
 | `AFFINE` | titoli vicini per genere, studio o struttura a quelli che collezioni |
+| `★ WANTED` | la lista dei desideri, con il prezzo CeX di riferimento |
+
+I most wanted stanno in cima (`"priority": 0`) e si isolano con il pulsante **★ Wanted** o aprendo
+`consigliati.html?motivo=wanted`. Nel JSON hanno `"kind": "wanted"` più due campi facoltativi:
+
+```json
+{ "title": "Black", "platform": "Xbox", "kind": "wanted", "priority": 0,
+  "igdb": 5749, "cex": { "price": 5, "soldOut": true } }
+```
+
+`igdb` fissa la scheda quando il titolo è troppo generico per la ricerca (vale per qualsiasi voce).
+`cex` è una fotografia presa dalla lista salvata su CeX, non si aggiorna da sola; `soldOut` dice che
+allora risultava esaurito.
 
 I consigli si scrivono a mano in `data/recommendations.json` (titolo, piattaforma, motivo e giochi
 di riferimento) e poi si arricchiscono con IGDB come l'archivio:
@@ -99,7 +112,9 @@ import.
 
 **Un consiglio che possiedi non compare sul sito.** `export-site.js` lo ricalcola ogni volta
 confrontando gli id IGDB con la collezione, compreso ciò che sta dentro le raccolte e le edizioni
-speciali (possiedi *Mafia: Trilogy* → *Mafia II: Definitive Edition* sparisce). L'elenco di cosa
+speciali (possiedi *Mafia: Trilogy* → *Mafia II: Definitive Edition* sparisce). Conta anche
+l'edizione scritta nel campo `edition`: con *Infinite Warfare* in **Legacy Edition** risulta tuo
+*Modern Warfare Remastered*. L'elenco di cosa
 contiene ogni custodia viene da IGDB e si aggiorna da solo con `enrich-igdb.js`,
 `enrich-recommendations.js` e `set-match.js`; a mano: `node scripts/sync-contents.js`.
 
