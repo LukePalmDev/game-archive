@@ -91,12 +91,31 @@ CREATE TABLE IF NOT EXISTS match_candidates (
 );
 `;
 
+// colonne aggiunte dopo la prima versione dello schema: i database esistenti vanno aggiornati
+const ADDED_COLUMNS = {
+  recommendations: {
+    igdb_hint: 'INTEGER',      // voce IGDB scelta a mano, per titoli troppo generici
+    cex_price: 'REAL',         // prezzo di riferimento della lista CeX, in euro
+    cex_sold_out: 'INTEGER',   // era esaurito online quando è stato annotato
+  },
+};
+
+function addMissingColumns(db) {
+  for (const [table, columns] of Object.entries(ADDED_COLUMNS)) {
+    const existing = new Set(db.prepare(`PRAGMA table_info(${table})`).all().map((c) => c.name));
+    for (const [name, type] of Object.entries(columns)) {
+      if (!existing.has(name)) db.exec(`ALTER TABLE ${table} ADD COLUMN ${name} ${type}`);
+    }
+  }
+}
+
 export function openDb() {
   mkdirSync(dirname(DB_PATH), { recursive: true });
   const db = new DatabaseSync(DB_PATH);
   db.exec('PRAGMA journal_mode = WAL');
   db.exec('PRAGMA foreign_keys = ON');
   db.exec(SCHEMA);
+  addMissingColumns(db);
   return db;
 }
 

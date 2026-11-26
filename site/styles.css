@@ -312,6 +312,31 @@ main { padding: 28px 28px 70px; }
   overflow: hidden;
 }
 
+.card-price {
+  margin-top: -6px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+.kind-wanted { background: var(--vermilion); color: var(--paper); }
+
+.wanted-toggle {
+  min-width: 0;
+  padding: 9px 12px;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--ink);
+  background: var(--paper-card);
+  border: 1.5px solid var(--vermilion);
+  cursor: pointer;
+}
+.wanted-toggle[aria-pressed="true"] { background: var(--vermilion); color: var(--paper); }
+.wanted-toggle:focus-visible { outline: 2px solid var(--vermilion); outline-offset: 2px; }
+
 .empty:not([hidden]) { display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .empty-action {
   font: inherit;
@@ -479,6 +504,8 @@ main { padding: 28px 28px 70px; }
   .controls { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; margin-top: 10px; }
   .search { width: 100%; min-width: 0; }
   .filters-toggle { display: block; }
+  .controls.has-wanted { grid-template-columns: minmax(0, 1fr) auto auto; gap: 6px; }
+  .wanted-toggle { padding: 0 9px; }
   .filters { display: none; grid-column: 1 / -1; grid-template-columns: 1fr 1fr; gap: 8px; }
   .controls.open .filters { display: grid; }
   #platform, #genre, #kind { grid-column: 1 / -1; width: 100%; }
@@ -493,6 +520,12 @@ main { padding: 28px 28px 70px; }
   .dialog { padding: 14px; }
   /* 16px evita lo zoom automatico di iOS al focus sui campi */
   .search, .select { font-size: 16px; }
+}
+
+/* schermi molto stretti: del pulsante Wanted resta la stella (il nome rimane per chi usa un lettore) */
+@media (max-width: 360px) {
+  .wanted-toggle { display: block; width: 44px; padding: 0; overflow: hidden; font-size: 0; }
+  .wanted-toggle::first-letter { font-size: 16px; }
 }
 
 /* telefono in orizzontale: l'intestazione scorre via insieme alla pagina */

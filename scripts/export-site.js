@@ -56,7 +56,7 @@ const meta = {
 // ---- consigli ----
 const candidates = db.prepare(`
   SELECT id, title, platform, kind, because, source, priority, igdb_id, igdb_slug, release_year,
-         genres, developer, publisher, summary, rating, cover_path
+         genres, developer, publisher, summary, rating, cover_path, cex_price, cex_sold_out
   FROM recommendations
   WHERE match_status IN ('matched', 'weak', 'owned')
   ORDER BY priority, title COLLATE NOCASE
@@ -75,6 +75,8 @@ const recs = recRows.map((r) => ({
   because: r.because,
   source: r.source,
   priority: r.priority,
+  cexPrice: r.cex_price ?? undefined,
+  cexSoldOut: r.cex_sold_out ? true : undefined,
   year: r.release_year ?? null,
   genres: r.genres ? JSON.parse(r.genres) : [],
   developer: r.developer ?? null,
@@ -85,7 +87,7 @@ const recs = recRows.map((r) => ({
   igdbUrl: r.igdb_slug ? `https://www.igdb.com/games/${r.igdb_slug}` : null,
 }));
 
-const KIND_LABELS = { saga: 'Capitoli mancanti', edizione: 'Remaster ed edizioni', genere: 'Affinità di genere' };
+const KIND_LABELS = { wanted: 'Most wanted', saga: 'Capitoli mancanti', edizione: 'Remaster ed edizioni', genere: 'Affinità di genere' };
 const recMeta = {
   generated: new Date().toISOString(),
   page: 'consigliati',

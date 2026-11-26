@@ -47,6 +47,28 @@
     els.platform.before(kindSelect);
   }
 
+  // la lista dei desideri si apre con un tocco, senza passare dai filtri
+  let wantedToggle = null;
+  if (META.kinds?.some((k) => k.value === 'wanted')) {
+    wantedToggle = document.createElement('button');
+    wantedToggle.type = 'button';
+    wantedToggle.id = 'wanted-toggle';
+    wantedToggle.className = 'wanted-toggle';
+    wantedToggle.textContent = '★ Wanted';
+    wantedToggle.title = 'Mostra solo i most wanted';
+    els.filtersToggle.before(wantedToggle);
+    els.controls.classList.add('has-wanted');
+    wantedToggle.addEventListener('click', () => {
+      kindSelect.value = kindSelect.value === 'wanted' ? '' : 'wanted';
+      render();
+      window.scrollTo(0, 0);
+    });
+  }
+
+  const euro = (n) => new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR' }).format(n);
+  const cexLabel = (game) => (game.cexPrice == null ? null
+    : `CeX ${euro(game.cexPrice)}${game.cexSoldOut ? ' · era esaurito' : ''}`);
+
   const SORTS = {
     'title': (a, b) => a.title.localeCompare(b.title, 'it'),
     'title-desc': (a, b) => b.title.localeCompare(a.title, 'it'),
@@ -58,6 +80,8 @@
 
   const filterSelects = () => [els.platform, els.genre, els.decade, kindSelect].filter(Boolean);
   const activeFilters = () => filterSelects().filter((el) => el.value).length;
+  // il pulsante Wanted si vede già acceso: non va contato anche nel numero accanto a "Filtri"
+  const hiddenFilters = () => activeFilters() - (kindSelect?.value === 'wanted' ? 1 : 0);
 
   function filtered() {
     const q = els.search.value;
@@ -120,7 +144,7 @@
     if (game.kind) {
       const kind = document.createElement('span');
       kind.className = `kind kind-${game.kind}`;
-      kind.textContent = { saga: 'saga', edizione: 'edizione', genere: 'affine' }[game.kind] ?? game.kind;
+      kind.textContent = { wanted: '★ wanted', saga: 'saga', edizione: 'edizione', genere: 'affine' }[game.kind] ?? game.kind;
       art.append(kind);
     }
 
@@ -138,6 +162,12 @@
     }
 
     el.append(art, title, sub);
+    if (game.cexPrice != null) {
+      const price = document.createElement('div');
+      price.className = 'card-price';
+      price.textContent = cexLabel(game);
+      el.append(price);
+    }
     return el;
   }
 
@@ -182,7 +212,8 @@
     els.count.textContent = list.length === GAMES.length
       ? `${GAMES.length} ${noun}${cases}`
       : `${list.length} di ${GAMES.length} ${noun}`;
-    const n = activeFilters();
+    wantedToggle?.setAttribute('aria-pressed', String(kindSelect.value === 'wanted'));
+    const n = hiddenFilters();
     els.filtersToggle.textContent = n ? `Filtri · ${n}` : 'Filtri';
   }
 
@@ -220,6 +251,7 @@
     }
 
     const rows = [
+      ['Prezzo CeX', cexLabel(game)],
       ['Nasce da', game.source],
       ['Edizione', game.edition],
       ['Contiene', (game.contains ?? []).join(', ')],
@@ -322,6 +354,7 @@
   const params = new URLSearchParams(location.search);
   els.sort.value = defaultSort;
   els.search.value = params.get('q') ?? '';
+  if (kindSelect && META.kinds.some((k) => k.value === params.get('motivo'))) kindSelect.value = params.get('motivo');
 
   const years = GAMES.map((g) => g.year).filter(Boolean);
   if (years.length) els.serial.textContent = `${Math.min(...years)}—${Math.max(...years)}`;

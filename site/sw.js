@@ -5,7 +5,7 @@
  *   se non risponde entro 3 secondi, o non c'è, si usa la copia salvata
  * - copertine: prima la copia salvata (per sostituirne una, cambiare il numero di COVERS)
  */
-const SHELL = 'ga-shell-v1';
+const SHELL = 'ga-shell-v2';
 const COVERS = 'ga-covers-v1';
 const TIMEOUT_MS = 3000;
 // dopo un'attesa a vuoto, per questo tempo il resto della pagina arriva subito dalla copia salvata

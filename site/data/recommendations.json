@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated": "2026-11-26T17:37:21.135Z",
+    "generated": "2026-11-26T17:50:34.636Z",
     "page": "consigliati",
-    "total": 78,
+    "total": 100,
     "platforms": [
       "Nintendo Switch",
       "PlayStation 4",
@@ -18,6 +18,7 @@
       "Arcade",
       "Fighting",
       "Hack and slash/Beat 'em up",
+      "Music",
       "Platform",
       "Puzzle",
       "Racing",
@@ -30,6 +31,10 @@
       "Tactical"
     ],
     "kinds": [
+      {
+        "value": "wanted",
+        "label": "Most wanted"
+      },
       {
         "value": "edizione",
         "label": "Remaster ed edizioni"
@@ -45,6 +50,481 @@
     ]
   },
   "games": [
+    {
+      "id": 106,
+      "title": "Bayonetta",
+      "platform": "Xbox 360",
+      "kind": "wanted",
+      "because": "",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 18,
+      "year": 2009,
+      "genres": [
+        "Shooter",
+        "Hack and slash/Beat 'em up",
+        "Adventure"
+      ],
+      "developer": "Nex Entertainment, PlatinumGames",
+      "publisher": "Sega",
+      "summary": "A member of an ancient witch clan and possessing powers beyond the comprehension of mere mortals, Bayonetta faces-off against countless angelic enemies, many reaching epic proportions, in a game of 100% pure, unadulterated all-out action. Outlandish finishing moves are performed with balletic grace as Bayonetta flows from one fight to another. With magnificent over-the-top action taking place in stages that are a veritable theme park of exciting attractions, Bayonetta pushes the limits of the action genre, bringing to life its fast-paced, dynamic climax combat.",
+      "rating": 91,
+      "cover": "covers/bayonetta.jpg",
+      "igdbUrl": "https://www.igdb.com/games/bayonetta"
+    },
+    {
+      "id": 114,
+      "title": "Black",
+      "platform": "Xbox",
+      "kind": "wanted",
+      "because": "",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 5,
+      "cexSoldOut": true,
+      "year": 2006,
+      "genres": [
+        "Shooter"
+      ],
+      "developer": "Criterion Games",
+      "publisher": "Electronic Arts",
+      "summary": "Black takes place in Chechnya (Southern Russia). The protagonist is a black ops soldier named Sergeant First Class Jack Kellar (portrayed by Marty Papazian). Kellar tells most of the story in first-person at an interrogation four days after the events in the story begin.\n\nKellar is an inadequately disciplined member of a CIA black ops group and a veteran of several conflicts including Guatemala, Colombia, Iran and Croatia. The unknown interrogator (portrayed by Paul Pape) questions Kellar about an arms smuggling and terrorist operation called the Seventh Wave. Seventh Wave have been responsible for a number of terrorist attacks. Kellar is told that, unless he co-operates, he and his actions will be declassified, he will be dishonorably discharged and imprisoned for life. Though initially resistant, Kellar at last agrees to tell his story.",
+      "rating": 71,
+      "cover": "covers/black.jpg",
+      "igdbUrl": "https://www.igdb.com/games/black"
+    },
+    {
+      "id": 105,
+      "title": "Borderlands",
+      "platform": "Xbox 360",
+      "kind": "wanted",
+      "because": "È il primo capitolo, che ti manca: la tua Handsome Collection ha solo il 2 e il Pre-Sequel.",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 5,
+      "year": 2009,
+      "genres": [
+        "Shooter",
+        "Role-playing (RPG)"
+      ],
+      "developer": "Gearbox Software",
+      "publisher": "2K Games, CyberFront, Take-Two Interactive, Feral Interactive",
+      "summary": "Borderlands is an action role-playing first-person shooter set on the distant planet of Pandora. Players choose from four characters, each with distinct combat abilities, and explore an open world rendered in a distinctive cartoon-style visual approach. Gameplay revolves around completing missions, defeating enemies, and collecting procedurally generated weapons with varying statistics and elemental effects. The game supports cooperative play for up to four players, with enemy difficulty scaling based on the number of participants.",
+      "rating": 80,
+      "cover": "covers/borderlands.jpg",
+      "igdbUrl": "https://www.igdb.com/games/borderlands"
+    },
+    {
+      "id": 113,
+      "title": "Breakdown",
+      "platform": "Xbox",
+      "kind": "wanted",
+      "because": "",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 15,
+      "cexSoldOut": true,
+      "year": 2004,
+      "genres": [
+        "Shooter",
+        "Adventure"
+      ],
+      "developer": "Namco",
+      "publisher": "Namco, Electronic Arts",
+      "summary": "Trapped inside a mysterious laboratory and unable to remember his past, Derrick Cole discovers his extraordinary powers, as he fights for survival against a determined military faction and a legion of seemingly invincible super-human warriors! Breakdown offers an exciting first-person action-adventure gaming experience by combining hand-to-hand combat and state-of-the-art weapons with an intense story line and incredible graphics. Embark on a thrilling and suspenseful search for the truth!",
+      "rating": 58,
+      "cover": "covers/breakdown.jpg",
+      "igdbUrl": "https://www.igdb.com/games/breakdown"
+    },
+    {
+      "id": 94,
+      "title": "Call of Duty: Modern Warfare II (2022)",
+      "platform": "Xbox One",
+      "kind": "wanted",
+      "because": "È il capitolo del 2022, non il Modern Warfare 2 del 2009 che hai su 360. Il disco da solo non basta: il gioco va scaricato, quindi servono rete e molto spazio libero.",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 15,
+      "year": 2022,
+      "genres": [
+        "Shooter"
+      ],
+      "developer": "Infinity Ward",
+      "publisher": "Activision",
+      "summary": "Call of Duty: Modern Warfare II drops players into an unprecedented global conflict that features the return of the iconic Operators of Task Force 141.",
+      "rating": 80,
+      "cover": "covers/call-of-duty-modern-warfare-ii.jpg",
+      "igdbUrl": "https://www.igdb.com/games/call-of-duty-modern-warfare-ii"
+    },
+    {
+      "id": 95,
+      "title": "Call of Duty: Modern Warfare III (2023)",
+      "platform": "Xbox One",
+      "kind": "wanted",
+      "because": "È il capitolo del 2023, non il Modern Warfare 3 del 2011 che hai su 360. Per giocare serve un aggiornamento da scaricare.",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 18,
+      "year": 2023,
+      "genres": [
+        "Shooter"
+      ],
+      "developer": "Sledgehammer Games",
+      "publisher": "Activision",
+      "summary": "The game brings \"open combat, \" offering players more choices in approaching the single-player missions. Makarov returns as the chief villain of the new campaign.\n\nThe newly introduced Carry Forward system will let players keep their progression and inventory from Modern Warfare II. Multiplayer fans can expect 16 maps at the launch and at least 12 coming later. Zombies mode will also return and should offer the largest zombie map to date.",
+      "rating": 62,
+      "cover": "covers/call-of-duty-modern-warfare-iii.jpg",
+      "igdbUrl": "https://www.igdb.com/games/call-of-duty-modern-warfare-iii"
+    },
+    {
+      "id": 96,
+      "title": "Call of Duty: Roads to Victory",
+      "platform": "PlayStation Portable",
+      "kind": "wanted",
+      "because": "In italiano: La Strada della Vittoria.",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 5,
+      "year": 2007,
+      "genres": [
+        "Shooter"
+      ],
+      "developer": "Amaze Entertainment",
+      "publisher": "Activision",
+      "summary": "\"Call of Duty: Roads to Victory\" is a first-person shooter developed by Amaze Entertainment and published by Activision, specifically designed for the PlayStation Portable (PSP). Released in 2007, the game brings the intense and immersive World War II combat experience of the Call of Duty series to handheld gaming.\n\nThe game features three interconnected campaigns, allowing players to fight as American, Canadian, and British soldiers. Each campaign offers a variety of missions that take place across iconic battlefields in Western Europe, including the Italian campaign, the Normandy breakout, and the airborne operations in the Netherlands.\n\n\"Call of Duty: Roads to Victory\" is praised for its engaging gameplay, detailed graphics, and authentic sound design, all optimized for the PSP platform. The game includes a range of weapons and vehicles, along with multiple multiplayer modes that support up to six players via ad-hoc wireless play.\n\nWith its compelling narrative, challenging missions, and robust multiplayer options, \"Call of Duty: Roads to Victory\" delivers a comprehensive and thrilling wartime experience on the go, making it a notable addition to the Call of Duty franchise.",
+      "rating": 59,
+      "cover": "covers/call-of-duty-roads-to-victory.jpg",
+      "igdbUrl": "https://www.igdb.com/games/call-of-duty-roads-to-victory"
+    },
+    {
+      "id": 93,
+      "title": "Call of Duty: Vanguard",
+      "platform": "Xbox One",
+      "kind": "wanted",
+      "because": "La voce della tua lista è la versione senza DLC.",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 15,
+      "year": 2021,
+      "genres": [
+        "Shooter"
+      ],
+      "developer": "Sledgehammer Games",
+      "publisher": "Activision",
+      "summary": "This is WWII combat like never before. Witness the origins of Special Forces as you play a pivotal role and change the face of history, forming Task Force One in a gripping Campaign across four major theaters of war. Become an original Special Forces Operator in an online Multiplayer rich in innovation with 20 maps available at launch. Prepare for a franchise-first, universe-expanding Zombies crossover. Immerse yourself in a fully integrated Call of Duty: Warzone experience featuring a new and massive map. This is the most connected Call of Duty ever, all powered by the next generation Call of Duty engine introduced in Modern Warfare.\n\nThis is Call of Duty: Vanguard.",
+      "rating": 75,
+      "cover": "covers/call-of-duty-vanguard.jpg",
+      "igdbUrl": "https://www.igdb.com/games/call-of-duty-vanguard"
+    },
+    {
+      "id": 104,
+      "title": "Condemned: Criminal Origins",
+      "platform": "Xbox 360",
+      "kind": "wanted",
+      "because": "",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 12,
+      "cexSoldOut": true,
+      "year": 2005,
+      "genres": [
+        "Shooter",
+        "Puzzle",
+        "Adventure"
+      ],
+      "developer": "Monolith Productions",
+      "publisher": "WB Games, Sega",
+      "summary": "Investigate crime scenes, collect evidence, and bring to light the murderers terrorizing the city as Detective Ethan Thomas. With danger lurking around every corner, you’ll need whatever weapons you can find to stay alive.\n\nWhat twists the mind of an ordinary human into a serial killer? Assigned to the Serial Crimes Unit, Agent Ethan Thomas must answer this question, and bring the worst of society to justice. His solve rate is the best in the bureau....perhaps too good.",
+      "rating": 74,
+      "cover": "covers/condemned-criminal-origins.jpg",
+      "igdbUrl": "https://www.igdb.com/games/condemned-criminal-origins"
+    },
+    {
+      "id": 112,
+      "title": "Crimson Skies: High Road to Revenge",
+      "platform": "Xbox",
+      "kind": "wanted",
+      "because": "",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 1.5,
+      "cexSoldOut": true,
+      "year": 2003,
+      "genres": [
+        "Simulator",
+        "Arcade"
+      ],
+      "developer": "FASA Studio",
+      "publisher": "Microsoft Game Studios",
+      "summary": "Crimson Skies: High Road to Revenge combines thrilling aerial combat with the swashbuckling style of a Hollywood action-adventure movie. Set in an alternate 1930s world of gunship diplomacy and sinister intrigue, Crimson Skies: High Road to Revenge lets gamers pilot powerful aircraft against nefarious air pirates and behemoth war zeppelins. As the daring air pirate Nathan Zachary, leader of the infamous Fortune Hunters, players take off on a high-flying adventure, filled with daring escapes and damsels in distress.",
+      "rating": 94,
+      "cover": "covers/crimson-skies-high-road-to-revenge.jpg",
+      "igdbUrl": "https://www.igdb.com/games/crimson-skies-high-road-to-revenge"
+    },
+    {
+      "id": 111,
+      "title": "Dead to Rights II",
+      "platform": "Xbox",
+      "kind": "wanted",
+      "because": "Nella tua lista CeX la voce si chiama «Dead to rights», ma la copertina è quella del II: controlla la custodia.",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 1.5,
+      "cexSoldOut": true,
+      "year": 2005,
+      "genres": [
+        "Shooter"
+      ],
+      "developer": "Widescreen Games",
+      "publisher": "Namco",
+      "summary": "Dead to Rights II is a third-person action video game developed by Widescreen Games, published by Namco, and released in 2005. It is a prequel to Dead to Rights. A prequel to Dead to Rights II for the PlayStation Portable, titled Dead to Rights: Reckoning, was released in June 2005.",
+      "rating": 65,
+      "cover": "covers/dead-to-rights-ii.jpg",
+      "igdbUrl": "https://www.igdb.com/games/dead-to-rights-ii"
+    },
+    {
+      "id": 98,
+      "title": "Journey: Collector's Edition",
+      "platform": "PlayStation 4",
+      "kind": "wanted",
+      "because": "Raccolta su disco con Journey, flOw e Flower.",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 28,
+      "cexSoldOut": true,
+      "year": 2012,
+      "genres": [
+        "Music",
+        "Platform",
+        "Puzzle",
+        "Strategy",
+        "Adventure"
+      ],
+      "developer": "ThatGameCompany",
+      "publisher": "Sony Computer Entertainment",
+      "summary": "Journey Collectors Edition is the first retail disc release for thatgamecompany. It features Journey as well as the studio's previously released flOw and Flower and more. It was released August 28th, 2012 for the PlayStation 3.\n\nFeatures\n- 30-minute behind-the-scenes documentary about the making of Journey\n- Creator Commentary play-throughs of all three games\n- Three exclusive mini-games from thatgamecompany\n- Concept art and screenshot galleries for all three games\n- Original soundtracks for all three games\n- PS3 dynamic themes and wallpapers\n- PSN avatars including 8 exclusive new Journey avatars never released before\n- Official game trailers and developer diary videos\n- Reversible cover art\n- One-month trial subscription of PlayStation Plus",
+      "rating": 85,
+      "cover": "covers/journey-collectors-edition.jpg",
+      "igdbUrl": "https://www.igdb.com/games/journey-collectors-edition"
+    },
+    {
+      "id": 99,
+      "title": "L.A. Noire",
+      "platform": "Xbox One",
+      "kind": "wanted",
+      "because": "",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 15,
+      "cexSoldOut": true,
+      "year": 2017,
+      "genres": [
+        "Shooter",
+        "Strategy",
+        "Adventure"
+      ],
+      "developer": "Rockstar Games",
+      "publisher": "Rockstar Games",
+      "summary": "L.A. Noire for PlayStation 4 and Xbox One delivers the complete original game and all additional downloadable content with a range of technical enhancements for greater visual fidelity and authenticity, including enhanced lighting and clouds, new cinematic camera angles, high resolution textures and more. L.A. Noire plays natively in 1080p for the PlayStation 4 and Xbox One consoles, and stunning 4K for PlayStation 4 Pro and Xbox One X, capturing the grit and grime of the City of Angels like never before.",
+      "rating": 75,
+      "cover": "covers/la-noire.jpg",
+      "igdbUrl": "https://www.igdb.com/games/la-noire"
+    },
+    {
+      "id": 101,
+      "title": "Lords of the Fallen (2014)",
+      "platform": "Xbox One",
+      "kind": "wanted",
+      "because": "È il gioco del 2014 (nella tua lista in Limited Edition). Il reboot del 2023 non esce su Xbox One.",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 3,
+      "cexSoldOut": true,
+      "year": 2014,
+      "genres": [
+        "Role-playing (RPG)",
+        "Hack and slash/Beat 'em up"
+      ],
+      "developer": "Deck13 Interactive, City Interactive",
+      "publisher": "Bandai Namco Entertainment",
+      "summary": "Lords of the Fallen is a fantasy action role-playing game set in a world where humanity has overthrown its god. The story follows Harkyn, a convicted criminal chosen to confront the returning demonic forces known as the Rhogar and their leaders, the Lords.\n\nThe game focuses on melee combat, with weapons, armor, and character attributes affecting movement, defense, and attack style. Players explore interconnected areas, fight enemies and bosses, collect equipment, and use magic alongside physical attacks. It was developed by CI Games in collaboration with Deck13.",
+      "rating": 69,
+      "cover": "covers/lords-of-the-fallen.jpg",
+      "igdbUrl": "https://www.igdb.com/games/lords-of-the-fallen"
+    },
+    {
+      "id": 103,
+      "title": "Metal Gear Solid HD Collection",
+      "platform": "Xbox 360",
+      "kind": "wanted",
+      "because": "Dentro ci sono anche MGS 2, MGS 3 e Peace Walker: se la prendi, Peace Walker per PSP non ti serve.",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 30,
+      "year": 2011,
+      "genres": [
+        "Shooter",
+        "Tactical",
+        "Adventure"
+      ],
+      "developer": "Kojima Productions",
+      "publisher": "Konami",
+      "summary": "From the critically acclaimed director, Hideo Kojima, Metal Gear Solid HD Collection offers a handful of the most popular Metal Gear Solid titles from the past in true HD for the first time ever. Featuring three complete games, Metal Gear Solid 2: Sons of Liberty, Metal Gear Solid: Snake Eater and Metal Gear Solid: Peace Walker, the HD Collection offers old and new fans a chance to experience the epic game play, design and storytelling of the MGS franchise. The \"Metal Gear Solid (MGS)\" series is the seminal work of Hideo Kojima, Japan's master game creator, and the progenitor of the stealth action game genre. The series has become a global phenomenon, with over 27 million copies sold worldwide. The player controls a secret agent from an elite special forces unit who is sent on solo sneaking missions through enemy installations, vast jungles, and sometimes even the thick of battle. Alone and surrounded by the enemy, even a special forces agent will find it tough to come out alive. But that is the secret behind the series' popularity-the cerebral challenge of figuring out how to avoid combat, and the thrill of sneaking through enemy territory undetected.The MGS series is also known for its storyline, which blends seamlessly with the gameplay. The scenarios are based on extensive research and incorporate the drama of actual developments in society. These elements have made MGS what it is today: a mature work of entertainment that transcends national borders and the confines of video games, and one of the leading products of the Japanese content business.",
+      "rating": 89,
+      "cover": "covers/metal-gear-solid-hd-collection.jpg",
+      "igdbUrl": "https://www.igdb.com/games/metal-gear-solid-hd-collection"
+    },
+    {
+      "id": 100,
+      "title": "Metroid Prime 3: Corruption",
+      "platform": "Wii",
+      "kind": "wanted",
+      "because": "",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 18,
+      "year": 2007,
+      "genres": [
+        "Shooter",
+        "Platform",
+        "Adventure"
+      ],
+      "developer": "Retro Studios",
+      "publisher": "Nintendo",
+      "summary": "The trilogy closes as corruption creeps over the universe… and into Samus Aran. Using the Wii Remote and Nunchuk, players control Samus as she partners with other bounty hunters, shoots down enemies, and explores alien worlds in a harrowing mission to stop the mutagenic Phazon from spreading across the galaxy.",
+      "rating": 86,
+      "cover": "covers/metroid-prime-3-corruption.jpg",
+      "igdbUrl": "https://www.igdb.com/games/metroid-prime-3-corruption"
+    },
+    {
+      "id": 102,
+      "title": "Portal 2",
+      "platform": "Xbox 360",
+      "kind": "wanted",
+      "because": "",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 22,
+      "year": 2011,
+      "genres": [
+        "Platform",
+        "Puzzle",
+        "Adventure"
+      ],
+      "developer": "Valve",
+      "publisher": "Valve, Electronic Arts",
+      "summary": "Sequel to the acclaimed Portal (2007), Portal 2 pits the protagonist of the original game, Chell, and her new robot friend, Wheatley, against more puzzles conceived by GLaDOS, an A.I. with the sole purpose of testing the Portal Gun's mechanics and taking revenge on Chell for the events of Portal. As a result of several interactions and revelations, Chell once again pushes to escape Aperture Science Labs.",
+      "rating": 92,
+      "cover": "covers/portal-2.jpg",
+      "igdbUrl": "https://www.igdb.com/games/portal-2"
+    },
+    {
+      "id": 109,
+      "title": "Red Dead Revolver",
+      "platform": "Xbox",
+      "kind": "wanted",
+      "because": "Il predecessore di Red Dead Redemption, che hai su PS4.",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 10,
+      "cexSoldOut": true,
+      "year": 2004,
+      "genres": [
+        "Shooter",
+        "Adventure"
+      ],
+      "developer": "Capcom, Rockstar San Diego",
+      "publisher": "Take-Two Interactive, Rockstar Games, Capcom",
+      "summary": "Red Dead Revolver is a 2004 action-adventure game developed by Rockstar San Diego and published by Rockstar Games. It is the first entry in the Red Dead series and was released for the PlayStation 2 and Xbox in May 2004.\n\nSet in the 1880s, during the American frontier, the single-player story follows bounty hunter Red Harlow's quest for revenge after the murder of his parents.\n\nA local multiplayer mode allows up to four players to face off against each other or AI-controlled bots in free-for-all battles.",
+      "rating": 66,
+      "cover": "covers/red-dead-revolver.jpg",
+      "igdbUrl": "https://www.igdb.com/games/red-dead-revolver"
+    },
+    {
+      "id": 108,
+      "title": "Star Wars: Jedi Knight II - Jedi Outcast",
+      "platform": "Xbox",
+      "kind": "wanted",
+      "because": "È il capitolo che precede il tuo Jedi Academy.",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 8,
+      "year": 2002,
+      "genres": [
+        "Shooter",
+        "Adventure"
+      ],
+      "developer": "Vicarious Visions, Raven Software, Westlake Interactive",
+      "publisher": "Activision, LucasArts, CyberFront, Aspyr Media",
+      "summary": "In the tradition of the highly acclaimed Star Wars: Jedi Knight series, Star Wars: Jedi Knight 2, Jedi Outcast features rebel agent Kyle Katarn in exhilarating first-person action. Several years have passed since Kyle avenged his father's death and saved the Valley of the Jedi from Jerec and his band of Dark Jedi. Allowing his Force powers to languish for fear of falling to the dark side, Kyle entrusted his lightsaber to Luke Skywalker, vowing never to use it again. But when a new and menacing threat to the galaxy emerges, Kyle knows he must reclaim his past in order to save his future.\n\nExplore breathtaking Star Wars locales such as Cloud City, the Jedi Academy on Yavin 4, Nar Shaddaa, and the smugglers' moon. Multiplayer options include deathmatch, saber-only deathmatch, and team capture the flag.",
+      "rating": 73,
+      "cover": "covers/star-wars-jedi-knight-ii-jedi-outcast.jpg",
+      "igdbUrl": "https://www.igdb.com/games/star-wars-jedi-knight-ii-jedi-outcast"
+    },
+    {
+      "id": 110,
+      "title": "The Elder Scrolls III: Morrowind",
+      "platform": "Xbox",
+      "kind": "wanted",
+      "because": "",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 25,
+      "year": 2002,
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure"
+      ],
+      "developer": "Bethesda Game Studios",
+      "publisher": "ZeniMax Media, Bethesda Softworks",
+      "summary": "The Elder Scrolls III: Morrowind is an open-world first-person role-playing game and the third main entry in The Elder Scrolls series. Set on the island of Vvardenfell in the province of Morrowind, the player arrives as a released prisoner and becomes involved in the political and religious conflicts of the Dunmer people. Gameplay combines freeform exploration, real-time combat, and character customization across a vast landscape of ashlands, swamps, and volcanic terrain, with a main quest centered on an ancient prophecy.",
+      "rating": 63,
+      "cover": "covers/the-elder-scrolls-iii-morrowind.jpg",
+      "igdbUrl": "https://www.igdb.com/games/the-elder-scrolls-iii-morrowind"
+    },
+    {
+      "id": 97,
+      "title": "The Fast and the Furious: Tokyo Drift",
+      "platform": "PlayStation Portable",
+      "kind": "wanted",
+      "because": "",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 2,
+      "cexSoldOut": true,
+      "year": 2006,
+      "genres": [
+        "Racing"
+      ],
+      "developer": "Eutechnyx",
+      "publisher": "Deep Silver, Bandai Namco Entertainment",
+      "summary": "This game features many different races that may take place on the Wangan, or on the local mountain roads called Touge. There are two types of races that can take place on the Wangan: Destination Races - a simple point to point race, and Top Speed Battles - whoever can set the highest speed record in between the start and finish wins. The Touge also features two events: Grip Battles - point to point race going uphill or downhill through tight Hairpin Turns, and Drift Battles - whoever can accumulate the most points by the end of the run wins. Throughout the Wangan are several exits which can lead to hotspots - where Wangan races can be started, touges, Car Dealerships, tune shops, and Robo-Garages. These garages were featured in the movie The Fast and the Furious: Tokyo Drift.",
+      "rating": 60,
+      "cover": "covers/the-fast-and-the-furious.jpg",
+      "igdbUrl": "https://www.igdb.com/games/the-fast-and-the-furious"
+    },
+    {
+      "id": 107,
+      "title": "Tom Clancy's Splinter Cell: Double Agent",
+      "platform": "Xbox",
+      "kind": "wanted",
+      "because": "Hai i primi due su Xbox. Prima di questo c'è Chaos Theory, che trovi tra i consigli.",
+      "source": "",
+      "priority": 0,
+      "cexPrice": 1,
+      "cexSoldOut": true,
+      "year": 2006,
+      "genres": [
+        "Shooter",
+        "Tactical"
+      ],
+      "developer": "Ubisoft Shanghai",
+      "publisher": "Ubisoft Entertainment",
+      "summary": "In the highly anticipated sequel, Tom Clancy's Splinter Cell: Double Agent, play as a double agent spy for the first time ever. Take on dual roles of covert operative and ruthless terrorist, where your choices of whom to betray and whom to protect actually affect the outcome of your game. This is the Ubisoft Montreal version, which plays more like the classic Splinter Cell games. The games share the same general plot but feature different storylines, plot twists, and levels. They do however, share the same background music, a few cut scenes and all voice actors.",
+      "rating": 79,
+      "cover": "covers/tom-clancys-splinter-cell-double-agent.jpg",
+      "igdbUrl": "https://www.igdb.com/games/tom-clancys-splinter-cell-double-agent"
+    },
     {
       "id": 42,
       "title": "Alan Wake Remastered",
@@ -955,7 +1435,7 @@
       "title": "Metal Gear Solid: Peace Walker",
       "platform": "PlayStation Portable",
       "kind": "saga",
-      "because": "Precede direttamente MGS V, che hai su PS4: stesso Kojima, stessa base madre.",
+      "because": "Precede direttamente MGS V, che hai su PS4: stesso Kojima, stessa base madre. È già dentro la Metal Gear Solid HD Collection per 360, che hai tra i most wanted: ne basta una.",
       "source": "Metal Gear Solid V: The Definitive Experience",
       "priority": 2,
       "year": 2010,
